@@ -20,6 +20,10 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("Instrumenta Brundisii"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.AURI.get());
+                        pOutput.accept(ModItems.DENARI.get());
+                        pOutput.accept(ModItems.SESTERCI.get());
+                        pOutput.accept(ModItems.AS.get());
+                        pOutput.accept(ModItems.SEMI.get());
 
                     })
                     .build());

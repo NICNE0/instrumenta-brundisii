@@ -14,7 +14,20 @@ public class ModItems{
 
     public static final RegistryObject<Item> AURI = ITEMS.register("auri",
             () -> new Item(new Item.Properties().stacksTo(64)));
+
     public static final RegistryObject<Item> MOD_LOGO = ITEMS.register("mod_logo",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> DENARI = ITEMS.register("denari",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> SESTERCI = ITEMS.register("sesterci",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> AS = ITEMS.register("as",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> SEMI = ITEMS.register("semi",
             () -> new Item(new Item.Properties().stacksTo(64)));
 
 
