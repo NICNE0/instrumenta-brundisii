@@ -4,5 +4,9 @@
   "item.instrumenta_brundisii.sesterci": "Sesterci",
   "item.instrumenta_brundisii.as": "As",
   "item.instrumenta_brundisii.semi": "Semi",
-  "item.instrumenta_brundisii.mod_logo": "Mod Logo"
+  "item.instrumenta_brundisii.mod_logo": "Mod Logo",
+
+  "block.instrumenta_brundisii.plaster_block": "Block of Plaster",
+
+  "instrumenta.brundisii_tab":"Instrumenta Brundisii"
 }

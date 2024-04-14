@@ -1,5 +1,6 @@
 package net.nicneo.instrumenta_brundisii.item;
 
+import net.nicneo.instrumenta_brundisii.block.ModBlocks;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -17,13 +18,17 @@ public class ModCreativeModTabs {
 
     public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutorial_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.MOD_LOGO.get()))
-                    .title(Component.translatable("Instrumenta Brundisii"))
+                    .title(Component.translatable("instrumenta.brundisii_tab"))
                     .displayItems((pParameters, pOutput) -> {
+//                      COINS:
                         pOutput.accept(ModItems.AURI.get());
                         pOutput.accept(ModItems.DENARI.get());
                         pOutput.accept(ModItems.SESTERCI.get());
                         pOutput.accept(ModItems.AS.get());
                         pOutput.accept(ModItems.SEMI.get());
+
+//                      BLOCKS:
+                        pOutput.accept(ModBlocks.PLASTER.get());
 
                     })
                     .build());
