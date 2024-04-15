@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "instrumenta_brundisii:block/dark_blue_plaster_block"
+  }
+}

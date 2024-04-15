@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/instrumenta-brundisii.main.iml" filepath="$PROJECT_DIR$/.idea/modules/instrumenta-brundisii.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/instrumenta-brundisii.test.iml" filepath="$PROJECT_DIR$/.idea/modules/instrumenta-brundisii.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/net.nicneo.instrumenta_brundisii.instrumenta-brundisii.main.iml" filepath="$PROJECT_DIR$/.idea/modules/net.nicneo.instrumenta_brundisii.instrumenta-brundisii.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/net.nicneo.instrumenta_brundisii.instrumenta-brundisii.test.iml" filepath="$PROJECT_DIR$/.idea/modules/net.nicneo.instrumenta_brundisii.instrumenta-brundisii.test.iml" />
     </modules>
   </component>
 </project>

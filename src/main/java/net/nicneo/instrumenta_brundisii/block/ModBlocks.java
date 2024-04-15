@@ -21,7 +21,34 @@ public class ModBlocks {
 //  This Section defines the new block, in this case it is copying the properties of another block, cobblestone,
 //    just as in other cases, the name is defined first as a method using upper case and then it's internal
 //    identifier in the registerBlock argument.
-    public static final RegistryObject<Block> PLASTER = registerBlock("plaster_block",
+    public static final RegistryObject<Block> PLASTER_BLOCK = registerBlock("plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+    public static final RegistryObject<Block> RED_PLASTER_BLOCK = registerBlock("red_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+    public static final RegistryObject<Block> SCARLET_PLASTER_BLOCK = registerBlock("scarlet_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+    public static final RegistryObject<Block> BLUE_PLASTER_BLOCK = registerBlock("blue_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_PLASTER_BLOCK = registerBlock("light_blue_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+    public static final RegistryObject<Block> DARK_BLUE_PLASTER_BLOCK = registerBlock("dark_blue_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+    public static final RegistryObject<Block> YELLOW_PLASTER_BLOCK = registerBlock("yellow_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+    public static final RegistryObject<Block> LIGHT_YELLOW_PLASTER_BLOCK = registerBlock("light_yellow_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+    public static final RegistryObject<Block> GREEN_PLASTER_BLOCK = registerBlock("green_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+    public static final RegistryObject<Block> DARK_GREEN_PLASTER_BLOCK = registerBlock("dark_green_plaster_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
 
 

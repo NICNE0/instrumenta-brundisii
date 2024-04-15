@@ -6,7 +6,16 @@
   "item.instrumenta_brundisii.semi": "Semi",
   "item.instrumenta_brundisii.mod_logo": "Mod Logo",
 
-  "block.instrumenta_brundisii.plaster_block": "Block of Plaster",
+  "block.instrumenta_brundisii.plaster_block": "Plaster Block",
+  "block.instrumenta_brundisii.red_plaster_block": "Red Plaster Block",
+  "block.instrumenta_brundisii.scarlet_plaster_block": "Scarlet Plaster Block",
+  "block.instrumenta_brundisii.blue_plaster_block": "Blue Plaster Block",
+  "block.instrumenta_brundisii.light_blue_plaster_block": "Light Blue Plaster Block",
+  "block.instrumenta_brundisii.dark_blue_plaster_block": "Dark Blue Plaster Block",
+  "block.instrumenta_brundisii.yellow_plaster_block": "Yellow Plaster Block",
+  "block.instrumenta_brundisii.light_yellow_plaster_block": "Light Yellow Plaster Block",
+  "block.instrumenta_brundisii.green_plaster_block": "Green Plaster Block",
+  "block.instrumenta_brundisii.dark_green_plaster_block": "Dark Green Plaster Block",
 
   "instrumenta.brundisii_tab":"Instrumenta Brundisii"
 }

@@ -20,16 +20,25 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.MOD_LOGO.get()))
                     .title(Component.translatable("instrumenta.brundisii_tab"))
                     .displayItems((pParameters, pOutput) -> {
+
+//                      BLOCKS:
+                        pOutput.accept(ModBlocks.PLASTER_BLOCK.get());
+                        pOutput.accept(ModBlocks.RED_PLASTER_BLOCK.get());
+                        pOutput.accept(ModBlocks.SCARLET_PLASTER_BLOCK.get());
+                        pOutput.accept(ModBlocks.BLUE_PLASTER_BLOCK.get());
+                        pOutput.accept(ModBlocks.LIGHT_BLUE_PLASTER_BLOCK.get());
+                        pOutput.accept(ModBlocks.DARK_BLUE_PLASTER_BLOCK.get());
+                        pOutput.accept(ModBlocks.YELLOW_PLASTER_BLOCK.get());
+                        pOutput.accept(ModBlocks.LIGHT_YELLOW_PLASTER_BLOCK.get());
+                        pOutput.accept(ModBlocks.GREEN_PLASTER_BLOCK.get());
+                        pOutput.accept(ModBlocks.DARK_GREEN_PLASTER_BLOCK.get());
+
 //                      COINS:
                         pOutput.accept(ModItems.AURI.get());
                         pOutput.accept(ModItems.DENARI.get());
                         pOutput.accept(ModItems.SESTERCI.get());
                         pOutput.accept(ModItems.AS.get());
                         pOutput.accept(ModItems.SEMI.get());
-
-//                      BLOCKS:
-                        pOutput.accept(ModBlocks.PLASTER.get());
-
                     })
                     .build());
 
