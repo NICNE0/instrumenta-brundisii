@@ -706,5 +706,35 @@
     },
     "done": true
   },
+  "instrumenta_brundisii:recipes/misc/auri": {
+    "criteria": {
+      "has_gold_nugget": "2024-04-22 12:28:00 -0400"
+    },
+    "done": true
+  },
+  "instrumenta_brundisii:recipes/misc/as": {
+    "criteria": {
+      "has_copper_ingot": "2024-04-22 12:28:00 -0400"
+    },
+    "done": true
+  },
+  "instrumenta_brundisii:recipes/misc/semi": {
+    "criteria": {
+      "has_netherite_scrap": "2024-04-22 12:28:00 -0400"
+    },
+    "done": true
+  },
+  "instrumenta_brundisii:recipes/misc/sesterci": {
+    "criteria": {
+      "has_netherite_ingot": "2024-04-22 12:28:00 -0400"
+    },
+    "done": true
+  },
+  "instrumenta_brundisii:recipes/misc/denari": {
+    "criteria": {
+      "has_iron_nugget": "2024-04-22 12:29:13 -0400"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

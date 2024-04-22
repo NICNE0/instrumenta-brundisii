@@ -16,7 +16,7 @@ public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, instrumentaBrundisii.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutorial_tab",
+    public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("instrumenta_brundisii",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.MOD_LOGO.get()))
                     .title(Component.translatable("instrumenta.brundisii_tab"))
                     .displayItems((pParameters, pOutput) -> {
@@ -32,6 +32,9 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.LIGHT_YELLOW_PLASTER_BLOCK.get());
                         pOutput.accept(ModBlocks.GREEN_PLASTER_BLOCK.get());
                         pOutput.accept(ModBlocks.DARK_GREEN_PLASTER_BLOCK.get());
+
+                        pOutput.accept(ModBlocks.RETICULA.get());
+
 
 //                      COINS:
                         pOutput.accept(ModItems.AURI.get());

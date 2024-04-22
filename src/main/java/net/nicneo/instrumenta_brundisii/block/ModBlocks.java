@@ -51,6 +51,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> DARK_GREEN_PLASTER_BLOCK = registerBlock("dark_green_plaster_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
 
+    public static final RegistryObject<Block> RETICULA = registerBlock("reticula",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
