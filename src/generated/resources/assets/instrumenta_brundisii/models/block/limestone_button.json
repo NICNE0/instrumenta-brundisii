@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "instrumenta_brundisii:block/limestone_bricks"
+  }
+}

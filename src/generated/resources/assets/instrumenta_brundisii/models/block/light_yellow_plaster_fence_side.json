@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "instrumenta_brundisii:block/light_yellow_plaster_block"
+  }
+}

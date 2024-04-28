@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate",
+  "textures": {
+    "texture": "instrumenta_brundisii:block/blue_plaster_block"
+  }
+}

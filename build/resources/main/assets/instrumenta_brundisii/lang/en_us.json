@@ -7,6 +7,94 @@
   "item.instrumenta_brundisii.mod_logo": "Mod Logo",
 
   "block.instrumenta_brundisii.plaster_block": "Plaster Block",
+  "block.instrumenta_brundisii.plaster_stairs": "Plaster Stairs",
+  "block.instrumenta_brundisii.plaster_slab": "Plaster Slab",
+  "block.instrumenta_brundisii.plaster_button": "Plaster Button",
+  "block.instrumenta_brundisii.plaster_pressure_plate": "Plaster Pressure Plate",
+  "block.instrumenta_brundisii.plaster_fence": "Plaster Fence",
+  "block.instrumenta_brundisii.plaster_fence_door": "Plaster Fence Door",
+  "block.instrumenta_brundisii.plaster_wall": "Plaster Wall",
+
+  "block.instrumenta_brundisii.blue_plaster_stairs": "Blue Plaster Stairs",
+  "block.instrumenta_brundisii.blue_plaster_slab": "Blue Plaster Slab",
+  "block.instrumenta_brundisii.blue_plaster_button": "Blue Plaster Button",
+  "block.instrumenta_brundisii.blue_plaster_pressure_plate": "Blue Plaster Pressure Plate",
+  "block.instrumenta_brundisii.blue_plaster_fence": "Blue Plaster Fence",
+  "block.instrumenta_brundisii.blue_plaster_fence_door": "Blue Plaster Fence Door",
+  "block.instrumenta_brundisii.blue_plaster_wall": "Blue Plaster Wall",
+
+
+  "block.instrumenta_brundisii.dark_blue_plaster_stairs": "Dark Blue Plaster Stairs",
+  "block.instrumenta_brundisii.dark_blue_plaster_slab": "Dark Blue Plaster Slab",
+  "block.instrumenta_brundisii.dark_blue_plaster_button": "Dark Blue Plaster Button",
+  "block.instrumenta_brundisii.dark_blue_plaster_pressure_plate": "Dark Blue Plaster Pressure Plate",
+  "block.instrumenta_brundisii.dark_blue_plaster_fence": "Dark Blue Plaster Fence",
+  "block.instrumenta_brundisii.dark_blue_plaster_fence_door": "Dark Blue Plaster Fence Door",
+  "block.instrumenta_brundisii.dark_blue_plaster_wall": "Dark Blue Plaster Wall",
+
+
+  "block.instrumenta_brundisii.light_blue_plaster_stairs": "Light Blue Plaster Stairs",
+  "block.instrumenta_brundisii.light_blue_plaster_slab": "Light Blue Plaster Slab",
+  "block.instrumenta_brundisii.light_blue_plaster_button": "Light Blue Plaster Button",
+  "block.instrumenta_brundisii.light_blue_plaster_pressure_plate": "Light Blue Plaster Pressure Plate",
+  "block.instrumenta_brundisii.light_blue_plaster_fence": "Light Blue Plaster Fence",
+  "block.instrumenta_brundisii.light_blue_plaster_fence_door": "Light Blue Plaster Fence Door",
+  "block.instrumenta_brundisii.light_blue_plaster_wall": "Light Blue Plaster Wall",
+
+
+  "block.instrumenta_brundisii.green_plaster_stairs": "Green Plaster Stairs",
+  "block.instrumenta_brundisii.green_plaster_slab": "Green Plaster Slab",
+  "block.instrumenta_brundisii.green_plaster_button": "Green Plaster Button",
+  "block.instrumenta_brundisii.green_plaster_pressure_plate": "Green Plaster Pressure Plate",
+  "block.instrumenta_brundisii.green_plaster_fence": "Green Plaster Fence",
+  "block.instrumenta_brundisii.green_plaster_fence_door": "Green Plaster Fence Door",
+  "block.instrumenta_brundisii.green_plaster_wall": "Green Plaster Wall",
+
+
+  "block.instrumenta_brundisii.dark_green_plaster_stairs": "Dark Green Plaster Stairs",
+  "block.instrumenta_brundisii.dark_green_plaster_slab": "Dark Green Plaster Slab",
+  "block.instrumenta_brundisii.dark_green_plaster_button": "Dark Green Plaster Button",
+  "block.instrumenta_brundisii.dark_green_plaster_pressure_plate": "Dark Green Plaster Pressure Plate",
+  "block.instrumenta_brundisii.dark_green_plaster_fence": "Dark Green Plaster Fence",
+  "block.instrumenta_brundisii.dark_green_plaster_fence_door": "Dark Green Plaster Fence Door",
+  "block.instrumenta_brundisii.dark_green_plaster_wall": "Dark Green Plaster Wall",
+
+
+  "block.instrumenta_brundisii.red_plaster_stairs": "Red Plaster Stairs",
+  "block.instrumenta_brundisii.red_plaster_slab": "Red Plaster Slab",
+  "block.instrumenta_brundisii.red_plaster_button": "Red Plaster Button",
+  "block.instrumenta_brundisii.red_plaster_pressure_plate": "Red Plaster Pressure Plate",
+  "block.instrumenta_brundisii.red_plaster_fence": "Red Plaster Fence",
+  "block.instrumenta_brundisii.red_plaster_fence_door": "Red Plaster Fence Door",
+  "block.instrumenta_brundisii.red_plaster_wall": "Red Plaster Wall",
+
+
+  "block.instrumenta_brundisii.scarlet_plaster_stairs": "Scarlet Plaster Stairs",
+  "block.instrumenta_brundisii.scarlet_plaster_slab": "Scarlet Plaster Slab",
+  "block.instrumenta_brundisii.scarlet_plaster_button": "Scarlet Plaster Button",
+  "block.instrumenta_brundisii.scarlet_plaster_pressure_plate": "Scarlet Plaster Pressure Plate",
+  "block.instrumenta_brundisii.scarlet_plaster_fence": "Scarlet Plaster Fence",
+  "block.instrumenta_brundisii.scarlet_plaster_fence_door": "Scarlet Plaster Fence Door",
+  "block.instrumenta_brundisii.scarlet_plaster_wall": "Scarlet Plaster Wall",
+
+
+  "block.instrumenta_brundisii.yellow_plaster_stairs": "Yellow Plaster Stairs",
+  "block.instrumenta_brundisii.yellow_plaster_slab": "Yellow Plaster Slab",
+  "block.instrumenta_brundisii.yellow_plaster_button": "Yellow Plaster Button",
+  "block.instrumenta_brundisii.yellow_plaster_pressure_plate": "Yellow Plaster Pressure Plate",
+  "block.instrumenta_brundisii.yellow_plaster_fence": "Yellow Plaster Fence",
+  "block.instrumenta_brundisii.yellow_plaster_fence_door": "Yellow Plaster Fence Door",
+  "block.instrumenta_brundisii.yellow_plaster_wall": "Yellow Plaster Wall",
+
+
+  "block.instrumenta_brundisii.light_yellow_plaster_stairs": "Light Yellow Plaster Stairs",
+  "block.instrumenta_brundisii.light_yellow_plaster_slab": "Light Yellow Plaster Slab",
+  "block.instrumenta_brundisii.light_yellow_plaster_button": "Light Yellow Plaster Button",
+  "block.instrumenta_brundisii.light_yellow_plaster_pressure_plate": "Light Yellow Plaster Pressure Plate",
+  "block.instrumenta_brundisii.light_yellow_plaster_fence": "Light Yellow Plaster Fence",
+  "block.instrumenta_brundisii.light_yellow_plaster_fence_door": "Light Yellow Plaster Fence Door",
+  "block.instrumenta_brundisii.light_yellow_plaster_wall": "Light Yellow Plaster Wall",
+
   "block.instrumenta_brundisii.red_plaster_block": "Red Plaster Block",
   "block.instrumenta_brundisii.scarlet_plaster_block": "Scarlet Plaster Block",
   "block.instrumenta_brundisii.blue_plaster_block": "Blue Plaster Block",
@@ -17,7 +105,19 @@
   "block.instrumenta_brundisii.green_plaster_block": "Green Plaster Block",
   "block.instrumenta_brundisii.dark_green_plaster_block": "Dark Green Plaster Block",
 
+  "block.instrumenta_brundisii.limestone_stairs": "Limestone Stairs",
+  "block.instrumenta_brundisii.limestone_slab": "Limestone Slab",
+  "block.instrumenta_brundisii.limestone_button": "Limestone Button",
+  "block.instrumenta_brundisii.limestone_pressure_plate": "Limestone Pressure Plate",
+  "block.instrumenta_brundisii.limestone_fence": "Limestone Fence",
+  "block.instrumenta_brundisii.limestone_fence_door": "Limestone Fence Door",
+  "block.instrumenta_brundisii.limestone_wall": "Limestone Wall",
+
   "block.instrumenta_brundisii.reticula": "Reticula",
+  "block.instrumenta_brundisii.light_reticula": "Light Reticula",
+  "block.instrumenta_brundisii.mixed_reticula": "Mixed Reticula",
+  "block.instrumenta_brundisii.lime_brick_mix": "Lime-Brick Mix",
+  "block.instrumenta_brundisii.limestone_bricks": "Limestone Bricks",
 
   "instrumenta.brundisii_tab":"Instrumenta Brundisii"
 }

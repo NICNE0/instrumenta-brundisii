@@ -54,6 +54,51 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.DARK_GREEN_PLASTER_BLOCK.get()
                 );
 
+        this.tag(BlockTags.FENCES)
+                .add(
+                        ModBlocks.PLASTER_FENCE.get(),
+                        ModBlocks.BLUE_PLASTER_FENCE.get(),
+                        ModBlocks.DARK_BLUE_PLASTER_FENCE.get(),
+                        ModBlocks.LIGHT_BLUE_PLASTER_FENCE.get(),
+                        ModBlocks.GREEN_PLASTER_FENCE.get(),
+                        ModBlocks.DARK_GREEN_PLASTER_FENCE.get(),
+                        ModBlocks.RED_PLASTER_FENCE.get(),
+                        ModBlocks.SCARLET_PLASTER_FENCE.get(),
+                        ModBlocks.YELLOW_PLASTER_FENCE.get(),
+                        ModBlocks.LIGHT_YELLOW_PLASTER_FENCE.get(),
+                        ModBlocks.LIMESTONE_FENCE.get()
+                );
+
+        this.tag(BlockTags.FENCE_GATES)
+                .add(
+                        ModBlocks.PLASTER_FENCE_DOOR.get(),
+                        ModBlocks.BLUE_PLASTER_FENCE_DOOR.get(),
+                        ModBlocks.DARK_BLUE_PLASTER_FENCE_DOOR.get(),
+                        ModBlocks.LIGHT_BLUE_PLASTER_FENCE_DOOR.get(),
+                        ModBlocks.GREEN_PLASTER_FENCE_DOOR.get(),
+                        ModBlocks.DARK_GREEN_PLASTER_FENCE_DOOR.get(),
+                        ModBlocks.RED_PLASTER_FENCE_DOOR.get(),
+                        ModBlocks.SCARLET_PLASTER_FENCE_DOOR.get(),
+                        ModBlocks.YELLOW_PLASTER_FENCE_DOOR.get(),
+                        ModBlocks.LIGHT_YELLOW_PLASTER_FENCE_DOOR.get(),
+                        ModBlocks.LIMESTONE_FENCE_DOOR.get()
+                );
+
+        this.tag(BlockTags.WALLS)
+                .add(
+                        ModBlocks.PLASTER_WALL.get(),
+                        ModBlocks.BLUE_PLASTER_WALL.get(),
+                        ModBlocks.DARK_BLUE_PLASTER_WALL.get(),
+                        ModBlocks.LIGHT_BLUE_PLASTER_WALL.get(),
+                        ModBlocks.GREEN_PLASTER_WALL.get(),
+                        ModBlocks.DARK_GREEN_PLASTER_WALL.get(),
+                        ModBlocks.RED_PLASTER_WALL.get(),
+                        ModBlocks.SCARLET_PLASTER_WALL.get(),
+                        ModBlocks.YELLOW_PLASTER_WALL.get(),
+                        ModBlocks.LIGHT_YELLOW_PLASTER_WALL.get(),
+                        ModBlocks.LIMESTONE_WALL.get()
+                );
+
 //        this.tag(BlockTags.NEEDS_IRON_TOOL)
 //                .add(ModBlocks.SAPPHIRE_BLOCK.get());
 
@@ -63,13 +108,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 //        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
 //                .add(ModBlocks.END_STONE_SAPPHIRE_ORE.get());
 
-
-//        this.tag(BlockTags.FENCES)
-//                .add(ModBlocks.SAPPHIRE_FENCE.get());
-//        this.tag(BlockTags.FENCE_GATES)
-//                .add(ModBlocks.SAPPHIRE_FENCE_GATE.get());
-//        this.tag(BlockTags.WALLS)
-//                .add(ModBlocks.SAPPHIRE_WALL.get());
 //
 //        this.tag(BlockTags.LOGS_THAT_BURN)
 //                .add(ModBlocks.PINE_LOG.get())
