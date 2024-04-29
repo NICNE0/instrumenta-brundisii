@@ -226,6 +226,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MIXED_RETICULA = registerBlock("mixed_reticula",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
 
+
     public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlock("limestone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> LIMESTONE_STAIRS = registerBlock("limestone_stairs",
@@ -244,6 +245,48 @@ public class ModBlocks {
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
     public static final RegistryObject<Block> LIMESTONE_WALL = registerBlock("limestone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+// ======================================== TERRACOTTA ========================================
+    public static final RegistryObject<Block> TERRACOTTA_STAIRS = registerBlock("terracotta_stairs",
+            () -> new StairBlock(() -> Blocks.TERRACOTTA.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> TERRACOTTA_SLAB = registerBlock("terracotta_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+
+    public static final RegistryObject<Block> WHITE_TERRACOTTA_STAIRS = registerBlock("white_terracotta_stairs",
+            () -> new StairBlock(() -> Blocks.WHITE_TERRACOTTA.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> WHITE_TERRACOTTA_SLAB = registerBlock("white_terracotta_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+
+    public static final RegistryObject<Block> ORANGE_TERRACOTTA_STAIRS = registerBlock("orange_terracotta_stairs",
+            () -> new StairBlock(() -> Blocks.ORANGE_TERRACOTTA.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> ORANGE_TERRACOTTA_SLAB = registerBlock("orange_terracotta_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+
+    public static final RegistryObject<Block> LIGHT_BLUE_TERRACOTTA_STAIRS = registerBlock("light_blue_terracotta_stairs",
+            () -> new StairBlock(() -> Blocks.LIGHT_BLUE_TERRACOTTA.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> LIGHT_BLUE_TERRACOTTA_SLAB = registerBlock("light_blue_terracotta_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+
+    public static final RegistryObject<Block> LIGHT_GRAY_TERRACOTTA_STAIRS = registerBlock("light_gray_terracotta_stairs",
+            () -> new StairBlock(() -> Blocks.LIGHT_GRAY_TERRACOTTA.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> LIGHT_GRAY_TERRACOTTA_SLAB = registerBlock("light_gray_terracotta_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+
+    public static final RegistryObject<Block> RED_TERRACOTTA_STAIRS = registerBlock("red_terracotta_stairs",
+            () -> new StairBlock(() -> Blocks.RED_TERRACOTTA.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> RED_TERRACOTTA_SLAB = registerBlock("red_terracotta_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
 
 
 

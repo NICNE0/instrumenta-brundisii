@@ -20,6 +20,7 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.MOD_LOGO.get()))
                     .title(Component.translatable("instrumenta.brundisii_tab"))
                     .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModBlocks.TERRACOTTA_STAIRS.get());
 
 //                      BLOCKS:
                         pOutput.accept(ModBlocks.PLASTER_BLOCK.get());
@@ -130,9 +131,24 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.YELLOW_PLASTER_BUTTON.get());
                         pOutput.accept(ModBlocks.LIGHT_YELLOW_PLASTER_BUTTON.get());
 
+//                      TERRACOTTA:
+                        pOutput.accept(ModBlocks.TERRACOTTA_STAIRS.get());
+                        pOutput.accept(ModBlocks.TERRACOTTA_SLAB.get());
 
+                        pOutput.accept(ModBlocks.WHITE_TERRACOTTA_STAIRS.get());
+                        pOutput.accept(ModBlocks.WHITE_TERRACOTTA_SLAB.get());
 
+                        pOutput.accept(ModBlocks.ORANGE_TERRACOTTA_STAIRS.get());
+                        pOutput.accept(ModBlocks.ORANGE_TERRACOTTA_SLAB.get());
 
+                        pOutput.accept(ModBlocks.LIGHT_BLUE_TERRACOTTA_STAIRS.get());
+                        pOutput.accept(ModBlocks.LIGHT_BLUE_TERRACOTTA_SLAB.get());
+
+                        pOutput.accept(ModBlocks.LIGHT_GRAY_TERRACOTTA_STAIRS.get());
+                        pOutput.accept(ModBlocks.LIGHT_GRAY_TERRACOTTA_SLAB.get());
+
+                        pOutput.accept(ModBlocks.RED_TERRACOTTA_STAIRS.get());
+                        pOutput.accept(ModBlocks.RED_TERRACOTTA_SLAB.get());
 
 
 

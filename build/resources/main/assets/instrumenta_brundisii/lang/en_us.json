@@ -119,5 +119,19 @@
   "block.instrumenta_brundisii.lime_brick_mix": "Lime-Brick Mix",
   "block.instrumenta_brundisii.limestone_bricks": "Limestone Bricks",
 
+  "block.instrumenta_brundisii.terracotta_stairs": "Terracota Stairs",
+  "block.instrumenta_brundisii.white_terracotta_stairs": "White Terracotta Stairs",
+  "block.instrumenta_brundisii.orange_terracotta_stairs": "Orange Terracotta Stairs",
+  "block.instrumenta_brundisii.light_blue_terracotta_stairs": "Light Blue Terracotta Stairs",
+  "block.instrumenta_brundisii.light_gray_terracotta_stairs": "Light Gray Terracotta Stairs",
+  "block.instrumenta_brundisii.red_terracotta_stairs": "Red Terracotta Stairs",
+
+  "block.instrumenta_brundisii.terracotta_slab": "Terracota Slab",
+  "block.instrumenta_brundisii.white_terracotta_slab": "White Terracotta Slab",
+  "block.instrumenta_brundisii.orange_terracotta_slab": "Orange Terracotta Slab",
+  "block.instrumenta_brundisii.light_blue_terracotta_slab": "Light Blue_Terracotta Slab",
+  "block.instrumenta_brundisii.light_gray_terracotta_slab": "Light Gray_Terracotta Slab",
+  "block.instrumenta_brundisii.red_terracotta_slab": "Red Terracotta Slab",
+
   "instrumenta.brundisii_tab":"Instrumenta Brundisii"
 }

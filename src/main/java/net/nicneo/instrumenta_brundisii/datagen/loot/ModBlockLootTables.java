@@ -1,5 +1,6 @@
 package net.nicneo.instrumenta_brundisii.datagen.loot;
 
+import net.minecraft.world.level.block.Blocks;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -131,6 +132,36 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LIGHT_RETICULA.get());
         this.dropSelf(ModBlocks.MIXED_RETICULA.get());
         this.dropSelf(ModBlocks.LIME_BRICK_MIX.get());
+
+
+        this.dropSelf(ModBlocks.TERRACOTTA_STAIRS.get());
+        this.add(ModBlocks.TERRACOTTA_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.TERRACOTTA_SLAB.get()));
+
+        this.dropSelf(ModBlocks.WHITE_TERRACOTTA_STAIRS.get());
+        this.add(ModBlocks.WHITE_TERRACOTTA_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.WHITE_TERRACOTTA_SLAB.get()));
+
+
+        this.dropSelf(ModBlocks.ORANGE_TERRACOTTA_STAIRS.get());
+        this.add(ModBlocks.ORANGE_TERRACOTTA_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ORANGE_TERRACOTTA_SLAB.get()));
+
+
+        this.dropSelf(ModBlocks.LIGHT_BLUE_TERRACOTTA_STAIRS.get());
+        this.add(ModBlocks.LIGHT_BLUE_TERRACOTTA_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LIGHT_BLUE_TERRACOTTA_SLAB.get()));
+
+
+        this.dropSelf(ModBlocks.LIGHT_GRAY_TERRACOTTA_STAIRS.get());
+        this.add(ModBlocks.LIGHT_GRAY_TERRACOTTA_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LIGHT_GRAY_TERRACOTTA_SLAB.get()));
+
+
+        this.dropSelf(ModBlocks.RED_TERRACOTTA_STAIRS.get());
+        this.add(ModBlocks.RED_TERRACOTTA_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.RED_TERRACOTTA_SLAB.get()));
+
 
     }
 

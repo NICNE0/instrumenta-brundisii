@@ -1,6 +1,7 @@
 package net.nicneo.instrumenta_brundisii.datagen;
 
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
@@ -12,7 +13,6 @@ import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.nicneo.instrumenta_brundisii.item.ModItems;
-
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -78,6 +78,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.YELLOW_PLASTER_STAIRS);
         evenSimplerBlockItem(ModBlocks.LIGHT_YELLOW_PLASTER_STAIRS);
         evenSimplerBlockItem(ModBlocks.LIMESTONE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.TERRACOTTA_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WHITE_TERRACOTTA_STAIRS);
+        evenSimplerBlockItem(ModBlocks.ORANGE_TERRACOTTA_STAIRS);
+        evenSimplerBlockItem(ModBlocks.LIGHT_BLUE_TERRACOTTA_STAIRS);
+        evenSimplerBlockItem(ModBlocks.LIGHT_GRAY_TERRACOTTA_STAIRS);
+        evenSimplerBlockItem(ModBlocks.RED_TERRACOTTA_STAIRS);
 
 //      ========== SLABS ==========
         evenSimplerBlockItem(ModBlocks.PLASTER_SLAB);
@@ -91,6 +97,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.YELLOW_PLASTER_SLAB);
         evenSimplerBlockItem(ModBlocks.LIGHT_YELLOW_PLASTER_SLAB);
         evenSimplerBlockItem(ModBlocks.LIMESTONE_SLAB);
+        evenSimplerBlockItem(ModBlocks.TERRACOTTA_SLAB);
+        evenSimplerBlockItem(ModBlocks.WHITE_TERRACOTTA_SLAB);
+        evenSimplerBlockItem(ModBlocks.ORANGE_TERRACOTTA_SLAB);
+        evenSimplerBlockItem(ModBlocks.LIGHT_BLUE_TERRACOTTA_SLAB);
+        evenSimplerBlockItem(ModBlocks.LIGHT_GRAY_TERRACOTTA_SLAB);
+        evenSimplerBlockItem(ModBlocks.RED_TERRACOTTA_SLAB);
 
 //      ========== PRESSURE PLATES ==========
         evenSimplerBlockItem(ModBlocks.PLASTER_PRESSURE_PLATE);
