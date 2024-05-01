@@ -21,6 +21,9 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("instrumenta.brundisii_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.TERRACOTTA_STAIRS.get());
+                        pOutput.accept(ModItems.CORN_COB.get());
+                        pOutput.accept(ModItems.CORN_SEEDS.get());
+
 
 //                      BLOCKS:
                         pOutput.accept(ModBlocks.PLASTER_BLOCK.get());

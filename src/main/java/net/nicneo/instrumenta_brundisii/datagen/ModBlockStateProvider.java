@@ -1,12 +1,18 @@
 package net.nicneo.instrumenta_brundisii.datagen;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
+import net.nicneo.instrumenta_brundisii.block.custom.CornCropBlock;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -142,6 +148,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.LIME_BRICK_MIX);
         blockWithItem(ModBlocks.MIXED_RETICULA);
 
+        makeCornCrop(((CropBlock) ModBlocks.CORN_CROP.get()), "corn_bottom_stage_", "corn_top_stage_");
 
 
     }
@@ -149,6 +156,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
 //    This lets you pass the registry Object and creates a custom block and an item for it
     private void  blockWithItem(RegistryObject<Block> blockRegistryObject){
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    public void makeCornCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> cornStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] cornStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CornCropBlock) block).getAgeProperty()),
+                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((CornCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
     }
 
 }

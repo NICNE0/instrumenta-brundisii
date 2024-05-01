@@ -12,6 +12,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.nicneo.instrumenta_brundisii.block.custom.CornCropBlock;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
 import net.nicneo.instrumenta_brundisii.item.ModItems;
 
@@ -24,6 +25,12 @@ public class ModBlocks {
 //  This Section defines the new block, in this case it is copying the properties of another block, cobblestone,
 //    just as in other cases, the name is defined first as a method using upper case and then it's internal
 //    identifier in the registerBlock argument.
+
+    public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
+            () -> new CornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+
+
     public static final RegistryObject<Block> PLASTER_BLOCK = registerBlock("plaster_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> PLASTER_STAIRS = registerBlock("plaster_stairs",

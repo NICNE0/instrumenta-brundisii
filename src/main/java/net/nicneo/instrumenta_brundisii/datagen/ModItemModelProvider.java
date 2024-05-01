@@ -27,6 +27,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SEMI);
         simpleItem(ModItems.SESTERCI);
 
+        simpleItem(ModItems.CORN_SEEDS);
+        simpleItem(ModItems.CORN_COB);
+
 //      ========== FENCES ==========
         fenceItem(ModBlocks.PLASTER_FENCE, ModBlocks.PLASTER_BLOCK);
         fenceItem(ModBlocks.BLUE_PLASTER_FENCE, ModBlocks.BLUE_PLASTER_BLOCK);
