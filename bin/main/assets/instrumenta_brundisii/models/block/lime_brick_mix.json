@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "instrumenta_brundisii:block/lime_brick_mix"
+  }
+}

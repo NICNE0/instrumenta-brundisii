@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "instrumenta_brundisii:block/dark_blue_plaster_slab"
+    },
+    "type=double": {
+      "model": "instrumenta_brundisii:block/dark_blue_plaster_block"
+    },
+    "type=top": {
+      "model": "instrumenta_brundisii:block/dark_blue_plaster_slab_top"
+    }
+  }
+}

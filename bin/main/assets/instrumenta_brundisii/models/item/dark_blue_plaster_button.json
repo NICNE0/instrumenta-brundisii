@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "instrumenta_brundisii:block/dark_blue_plaster_block"
+  }
+}
