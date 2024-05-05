@@ -1,64 +1,32 @@
 package net.nicneo.instrumenta_brundisii.block.custom;
 
-
+import net.nicneo.instrumenta_brundisii.item.ModItems;
+import net.minecraftforge.common.ForgeHooks;
+import net.minecraftforge.common.IPlantable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.Ravager;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.common.IPlantable;
-import net.nicneo.instrumenta_brundisii.item.ModItems;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 
-import javax.annotation.Nullable;
 
 public class CornCropBlock extends CropBlock {
-    public static final int FIRST_STAGE_MAX_AGE = 4;
-    public static final int SECOND_STAGE_MAX_AGE = 4;
-
-//    private static final VoxelShape FULL_UPPER_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 15.0D, 13.0D);
-//    private static final VoxelShape FULL_LOWER_SHAPE = Block.box(3.0D, -1.0D, 3.0D, 13.0D, 16.0D, 13.0D);
-//    private static final VoxelShape COLLISION_SHAPE_BULB = Block.box(5.0D, -1.0D, 5.0D, 11.0D, 3.0D, 11.0D);
-//    private static final VoxelShape COLLISION_SHAPE_CROP = Block.box(3.0D, -1.0D, 3.0D, 13.0D, 5.0D, 13.0D);
-//
-//
-//    private static final VoxelShape[] UPPER_SHAPE_BY_AGE = new VoxelShape[]{
-//            Block.box(3.0D, 0.0D, 3.0D, 13.0D, 11.0D, 13.0D),
-//            FULL_UPPER_SHAPE};
-//    private static final VoxelShape[] LOWER_SHAPE_BY_AGE = new VoxelShape[]{
-//            COLLISION_SHAPE_BULB,
-//            Block.box(3.0D, -1.0D, 3.0D, 13.0D, 14.0D, 13.0D),
-//            FULL_LOWER_SHAPE,
-//            FULL_LOWER_SHAPE,
-//            FULL_LOWER_SHAPE};
-
-
+    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 4);
+    public static final int MAX_AGE = 4;
+    private static final int DOUBLE_PLANT_AGE_INTERSECTION = 2;
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
-            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
-            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
-            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
-            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)
     };
-
-    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 4);
 
     public CornCropBlock(Properties pProperties) {
         super(pProperties);
@@ -69,28 +37,41 @@ public class CornCropBlock extends CropBlock {
         return SHAPE_BY_AGE[this.getAge(pState)];
     }
 
-    public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
-        if (!pLevel.isAreaLoaded(pPos, 1)) return;
-        if (pLevel.getRawBrightness(pPos, 0) >= 9) {
-            int currentAge = this.getAge(pState);
+    @Override
+    public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        if (!level.isAreaLoaded(pos, 1)) return;
+        int currentAge = state.getValue(AGE);
 
-            if (currentAge < this.getMaxAge()) {
-                float growthSpeed = getGrowthSpeed(this, pLevel, pPos);
+        if (currentAge < MAX_AGE && level.getRawBrightness(pos, 0) >= 9) {
+            float growthSpeed = getGrowthSpeed(this, level, pos);
 
-                if (net.minecraftforge.common.ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt((int)(25.0F / growthSpeed) + 1) == 0)) {
-                    if(currentAge == FIRST_STAGE_MAX_AGE) {
-                        if(pLevel.getBlockState(pPos.above(1)).is(Blocks.AIR)) {
-                            pLevel.setBlock(pPos.above(1), this.getStateForAge(currentAge + 1), 2);
-                        }
-                    } else {
-                        pLevel.setBlock(pPos, this.getStateForAge(currentAge + 1), 2);
-                    }
-
-                    net.minecraftforge.common.ForgeHooks.onCropsGrowPost(pLevel, pPos, pState);
+            if (ForgeHooks.onCropsGrowPre(level, pos, state, random.nextInt((int)(25.0F / growthSpeed) + 1) == 0)) {
+                // Increment the age of the bottom block
+                int newAge = currentAge + 1;
+                if (newAge > MAX_AGE) {
+                    newAge = MAX_AGE;
                 }
+                BlockState newState = state.setValue(AGE, newAge);
+                level.setBlock(pos, newState, 2);
+
+                // Check if it's time to manage the top block
+                BlockPos posAbove = pos.above();
+                BlockState stateAbove = level.getBlockState(posAbove);
+
+                if (newAge >= DOUBLE_PLANT_AGE_INTERSECTION) {
+                    if (stateAbove.is(Blocks.AIR)) {
+                        // Place the top block with an initial age
+                        level.setBlock(posAbove, this.defaultBlockState().setValue(AGE, 1), 2);
+                    } else if (stateAbove.getBlock() == this && newAge - 1 > stateAbove.getValue(AGE)) {
+                        // Only update the top block if the new age is greater than the top block's age
+                        level.setBlock(posAbove, stateAbove.setValue(AGE, newAge - 1), 2);
+                    }
+                }
+                ForgeHooks.onCropsGrowPost(level, pos, newState);
             }
         }
     }
+
 
     @Override
     public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, IPlantable plantable) {
@@ -100,27 +81,36 @@ public class CornCropBlock extends CropBlock {
     @Override
     public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
         return super.canSurvive(pState, pLevel, pPos) || (pLevel.getBlockState(pPos.below(1)).is(this) &&
-                pLevel.getBlockState(pPos.below(1)).getValue(AGE) == 7);
+                pLevel.getBlockState(pPos.below(1)).getValue(AGE) == 4);
     }
 
     @Override
     public void growCrops(Level pLevel, BlockPos pPos, BlockState pState) {
-        int nextAge = this.getAge(pState) + this.getBonemealAgeIncrease(pLevel);
-        int maxAge = this.getMaxAge();
-        if(nextAge > maxAge) {
-            nextAge = maxAge;
-        }
+        int currentAge = this.getAge(pState);
+        if (currentAge < this.getMaxAge()) {
+            int nextAge = currentAge + this.getBonemealAgeIncrease(pLevel);
 
-        if(this.getAge(pState) == FIRST_STAGE_MAX_AGE && pLevel.getBlockState(pPos.above(1)).is(Blocks.AIR)) {
-            pLevel.setBlock(pPos.above(1), this.getStateForAge(nextAge), 2);
-        } else {
-            pLevel.setBlock(pPos, this.getStateForAge(nextAge - SECOND_STAGE_MAX_AGE), 2);
+            if (nextAge > this.getMaxAge()) {
+                nextAge = this.getMaxAge();
+            }
+
+            pLevel.setBlock(pPos, pState.setValue(AGE, nextAge), 2);
+
+            if (currentAge >= 1) {
+                BlockPos posAbove = pPos.above();
+                BlockState stateAbove = pLevel.getBlockState(posAbove);
+                if (stateAbove.getBlock() == this) {  // Ensure top is already this block type or air for placing
+                    pLevel.setBlock(posAbove, stateAbove.setValue(AGE, nextAge), 2);
+                } else if (stateAbove.is(Blocks.AIR) && nextAge >= 2) {
+                    pLevel.setBlock(posAbove, this.defaultBlockState().setValue(AGE, nextAge), 2);
+                }
+            }
         }
     }
 
     @Override
     public int getMaxAge() {
-        return FIRST_STAGE_MAX_AGE + SECOND_STAGE_MAX_AGE;
+        return MAX_AGE;
     }
 
     @Override

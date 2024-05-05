@@ -2,6 +2,6 @@
   "parent": "minecraft:block/crop",
   "render_type": "minecraft:cutout",
   "textures": {
-    "crop": "instrumenta_brundisii:block/corn_top_stage_2"
+    "crop": "instrumenta_brundisii:block/corn_bottom_stage_2"
   }
 }

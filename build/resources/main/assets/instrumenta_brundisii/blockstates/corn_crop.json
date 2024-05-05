@@ -6,14 +6,29 @@
     "age=1": {
       "model": "instrumenta_brundisii:block/corn_bottom_stage_1"
     },
-    "age=2": {
-      "model": "instrumenta_brundisii:block/corn_bottom_stage_2"
-    },
-    "age=3": {
-      "model": "instrumenta_brundisii:block/corn_bottom_stage_3"
-    },
-    "age=4": {
-      "model": "instrumenta_brundisii:block/corn_bottom_stage_4"
-    }
+    "age=2": [
+      {
+        "model": "instrumenta_brundisii:block/corn_bottom_stage_2"
+      },
+      {
+        "model": "instrumenta_brundisii:block/corn_top_stage_2"
+      }
+    ],
+    "age=3": [
+      {
+        "model": "instrumenta_brundisii:block/corn_bottom_stage_3"
+      },
+      {
+        "model": "instrumenta_brundisii:block/corn_top_stage_3"
+      }
+    ],
+    "age=4": [
+      {
+        "model": "instrumenta_brundisii:block/corn_bottom_stage_4"
+      },
+      {
+        "model": "instrumenta_brundisii:block/corn_top_stage_4"
+      }
+    ]
   }
 }

@@ -148,10 +148,34 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.LIME_BRICK_MIX);
         blockWithItem(ModBlocks.MIXED_RETICULA);
 
-        makeCornCrop(((CropBlock) ModBlocks.CORN_CROP.get()), "corn_bottom_stage_", "corn_top_stage_");
-
+//        makeCornCrop(((CropBlock) ModBlocks.CORN_CROP.get()), "corn_top_stage_", "corn_bottom_stage_");
+        makeCornCrop(ModBlocks.CORN_CROP.get(), "corn_top_stage_", "corn_bottom_stage_");
 
     }
+
+    private void makeCornCrop(Block block, String topModelName, String bottomModelName) {
+        getVariantBuilder(block).forAllStates(state -> {
+            int age = state.getValue(CornCropBlock.AGE);
+            String bottomModel = bottomModelName + age; // bottom models for all ages
+            String bottomTexture = "block/" + bottomModelName + age; // bottom textures for all ages
+
+            String topModel = topModelName + age; // top models for ages 2 and up
+            String topTexture = "block/" + topModelName + age; // top textures for ages 2 and up
+
+            ResourceLocation bottomTextureLocation = new ResourceLocation(instrumentaBrundisii.MOD_ID, bottomTexture);
+            ConfiguredModel bottomConfiguredModel = new ConfiguredModel(models().crop(bottomModel, bottomTextureLocation).renderType("cutout"));
+
+            if (age >= 2) {
+                ResourceLocation topTextureLocation = new ResourceLocation(instrumentaBrundisii.MOD_ID, topTexture);
+                ConfiguredModel topConfiguredModel = new ConfiguredModel(models().crop(topModel, topTextureLocation).renderType("cutout"));
+
+                return new ConfiguredModel[] { bottomConfiguredModel, topConfiguredModel };
+            } else {
+                return new ConfiguredModel[] { bottomConfiguredModel };
+            }
+        });
+    }
+
 
 //    This lets you pass the registry Object and creates a custom block and an item for it
     private void  blockWithItem(RegistryObject<Block> blockRegistryObject){
