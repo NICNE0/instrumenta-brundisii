@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "all": "instrumenta_brundisii:block/lime_brick_mix"
+    "bottom": "instrumenta_brundisii:block/lime_brick_mix_bottom",
+    "side": "instrumenta_brundisii:block/lime_brick_mix",
+    "top": "instrumenta_brundisii:block/lime_brick_mix_top"
   }
 }
