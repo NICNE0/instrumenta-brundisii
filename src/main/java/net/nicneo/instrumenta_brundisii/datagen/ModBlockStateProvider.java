@@ -205,16 +205,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 
-    public void makeCornCrop(CropBlock block, String modelName, String textureName) {
+    public void makeCornCrop(CornCropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> cornStates(state, block, modelName, textureName);
 
         getVariantBuilder(block).forAllStates(function);
     }
 
-    private ConfiguredModel[] cornStates(BlockState state, CropBlock block, String modelName, String textureName) {
+    private ConfiguredModel[] cornStates(BlockState state, CornCropBlock block, String modelName, String textureName) {
+        int age = state.getValue(CornCropBlock.AGE);  // Use the AGE property directly
         ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CornCropBlock) block).getAgeProperty()),
-                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((CornCropBlock) block).getAgeProperty()))).renderType("cutout"));
+        models[0] = new ConfiguredModel(models().crop(modelName + age,
+                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + age)).renderType("cutout"));
 
         return models;
     }
