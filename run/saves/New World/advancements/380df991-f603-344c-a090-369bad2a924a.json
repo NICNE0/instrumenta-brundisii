@@ -898,15 +898,15 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/magenta_dye_from_lilac": {
-    "criteria": {
-      "has_lilac": "2024-05-03 01:42:14 -0400"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/orange_dye_from_torchflower": {
     "criteria": {
       "has_torchflower": "2024-05-03 01:42:00 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/magenta_dye_from_lilac": {
+    "criteria": {
+      "has_lilac": "2024-05-03 01:42:14 -0400"
     },
     "done": true
   },
@@ -919,6 +919,12 @@
   "minecraft:husbandry/plant_any_sniffer_seed": {
     "criteria": {
       "pitcher_pod": "2024-05-03 01:42:39 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/yellow_glazed_terracotta": {
+    "criteria": {
+      "has_yellow_terracotta": "2024-05-05 04:57:06 -0400"
     },
     "done": true
   },

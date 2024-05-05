@@ -8,6 +8,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -224,8 +226,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> RETICULA = registerBlock("reticula",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
 
+//    public static final RegistryObject<Block> LIME_BRICK_MIX = registerBlock("lime_brick_mix",
+//            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
     public static final RegistryObject<Block> LIME_BRICK_MIX = registerBlock("lime_brick_mix",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+
+//    public static final RegistryObject<Block> LIME_BRICK_MIX = registerBlock("lime_brick_mix",
+//            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
+
 
     public static final RegistryObject<Block> LIGHT_RETICULA = registerBlock("light_reticula",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));

@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
@@ -145,15 +146,35 @@ public class ModBlockStateProvider extends BlockStateProvider {
 //      ========================== OTHERS ==========================
         blockWithItem(ModBlocks.RETICULA);
         blockWithItem(ModBlocks.LIGHT_RETICULA);
-        blockWithItem(ModBlocks.LIME_BRICK_MIX);
         blockWithItem(ModBlocks.MIXED_RETICULA);
 
+        makeMultiFacedBlock(ModBlocks.LIME_BRICK_MIX, "lime_brick_mix");
 
-//        CORN CROP DEBUG :
+
+
+
 //        makeCornCrop(((CropBlock) ModBlocks.CORN_CROP.get()), "corn_top_stage_", "corn_bottom_stage_");
         makeCornCrop(ModBlocks.CORN_CROP.get(), "corn_top_stage_", "corn_bottom_stage_");
 
     }
+
+    private void makeMultiFacedBlock(RegistryObject<Block> blockRegistryObject, String textureBase) {
+        Block block = blockRegistryObject.get();
+        ResourceLocation blockName = blockRegistryObject.getId(); // Get the block's registry name
+
+        // Define the model with top, side, and bottom textures
+        ModelFile blockModel = models().withExistingParent(blockName.getPath(), "minecraft:block/cube_bottom_top")
+                .texture("bottom", modLoc("block/" + textureBase + "_bottom"))
+                .texture("side", modLoc("block/" + textureBase))
+                .texture("top", modLoc("block/" + textureBase + "_top"));
+
+        // Register the block model
+        simpleBlockWithItem(block, blockModel);
+
+        // Generate an item model for this block that uses the block model
+        itemModels().withExistingParent(blockName.getPath(), modLoc("block/" + blockName.getPath()));
+    }
+
 
     private void makeCornCrop(Block block, String topModelName, String bottomModelName) {
         getVariantBuilder(block).forAllStates(state -> {

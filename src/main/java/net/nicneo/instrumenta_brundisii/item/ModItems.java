@@ -1,5 +1,6 @@
 package net.nicneo.instrumenta_brundisii.item;
 
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
@@ -37,7 +38,6 @@ public class ModItems{
 
     public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds",
             () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
-
 
 
     public static void register(IEventBus eventBus) {
