@@ -142,6 +142,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock(((SlabBlock) ModBlocks.RED_TERRACOTTA_SLAB.get()), blockTexture(Blocks.RED_TERRACOTTA), blockTexture(Blocks.RED_TERRACOTTA));
 
 
+//  DUCK
+
+
 //      ========================== OTHERS ==========================
         blockWithItem(ModBlocks.RETICULA);
         blockWithItem(ModBlocks.LIGHT_RETICULA);
