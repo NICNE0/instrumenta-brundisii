@@ -181,6 +181,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN_COB.get(),
                 ModItems.CORN_SEEDS.get(), lootitemcondition$builder2));
 
+        this.dropSelf(ModBlocks.TEST_BLOCK_1.get());
+
 
 
     }

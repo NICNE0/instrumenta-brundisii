@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-01T02:36:11.9983735	Loot Tables
+// 1.20.1	2024-05-05T21:40:53.4188945	Loot Tables
 b2d159447048ecffa0520036ea2dab31caa4d4ac data/instrumenta_brundisii/loot_tables/blocks/blue_plaster_block.json
 65c825862bc33016b392bd0f12b5cf72505b2564 data/instrumenta_brundisii/loot_tables/blocks/blue_plaster_button.json
 78c0a3294d53e2c8e9b2da4721db1f43d377a591 data/instrumenta_brundisii/loot_tables/blocks/blue_plaster_fence.json
@@ -94,6 +94,7 @@ e3a69ca1a79e9ca7fe0b82d7d2d9dc9cba0690fb data/instrumenta_brundisii/loot_tables/
 b41c9a48fd6b9c758253d150b8cdd21763571d27 data/instrumenta_brundisii/loot_tables/blocks/scarlet_plaster_wall.json
 39eab369c4d7f9d7461db2991aaf2cc51e076e03 data/instrumenta_brundisii/loot_tables/blocks/terracotta_slab.json
 653b1f91c83fe5ac7d1cb7ac67763930b5c774b0 data/instrumenta_brundisii/loot_tables/blocks/terracotta_stairs.json
+761ff34d2a062f972f7609a4f43741a3bd849b84 data/instrumenta_brundisii/loot_tables/blocks/test_block_1.json
 5922c9db77527da345afa5fb3120ad4eb7c1d561 data/instrumenta_brundisii/loot_tables/blocks/white_terracotta_slab.json
 bf7e73b88965e7ae036b9c4e80b4d61de3f4f460 data/instrumenta_brundisii/loot_tables/blocks/white_terracotta_stairs.json
 61724d23680772c4238b37138d8658fe75cc0a86 data/instrumenta_brundisii/loot_tables/blocks/yellow_plaster_block.json
