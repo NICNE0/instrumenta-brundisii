@@ -1007,5 +1007,11 @@
     },
     "done": true
   },
+  "minecraft:husbandry/breed_an_animal": {
+    "criteria": {
+      "bred": "2024-05-09 04:44:24 -0400"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }
