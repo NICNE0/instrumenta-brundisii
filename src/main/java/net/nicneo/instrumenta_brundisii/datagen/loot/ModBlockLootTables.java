@@ -4,6 +4,7 @@ import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraftforge.fml.common.Mod;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -182,6 +183,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 ModItems.CORN_SEEDS.get(), lootitemcondition$builder2));
 
         this.dropSelf(ModBlocks.TEST_BLOCK_1.get());
+
+        this.dropSelf(ModBlocks.PILLAR_TEST.get());
+        this.dropSelf(ModBlocks.BLACK_FLOOR_TILE.get());
+        this.dropSelf(ModBlocks.BLACK_FLOOR_TILE_CORNER.get());
+        this.dropSelf(ModBlocks.ORIENTABLE_TEST.get());
 
 
 

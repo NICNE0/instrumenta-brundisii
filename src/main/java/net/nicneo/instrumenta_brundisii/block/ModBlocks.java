@@ -1,20 +1,17 @@
 package net.nicneo.instrumenta_brundisii.block;
 
-import net.minecraft.client.resources.sounds.Sound;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nicneo.instrumenta_brundisii.block.custom.CornCropBlock;
+import net.nicneo.instrumenta_brundisii.block.custom.PlayerFacingBlock;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
 import net.nicneo.instrumenta_brundisii.item.ModItems;
 
@@ -307,6 +304,17 @@ public class ModBlocks {
     public static final RegistryObject<Block> TEST_BLOCK_1 = registerBlock("test_block_1",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
 
+    public static final RegistryObject<Block> PILLAR_TEST = registerBlock("pillar_test",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+
+    public static final RegistryObject<Block> BLACK_FLOOR_TILE = registerBlock("black_floor_tile",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR).strength(3f)));
+
+    public static final RegistryObject<Block> BLACK_FLOOR_TILE_CORNER = registerBlock("black_floor_tile_corner",
+            () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
+
+    public static final RegistryObject<Block> ORIENTABLE_TEST = registerBlock("orientable_test",
+            () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.PISTON)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

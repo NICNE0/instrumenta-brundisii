@@ -1,19 +1,24 @@
 package net.nicneo.instrumenta_brundisii.datagen;
 
+import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
 import net.nicneo.instrumenta_brundisii.block.custom.CornCropBlock;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
 
 import java.util.function.Function;
+
+import static net.nicneo.instrumenta_brundisii.block.custom.PlayerFacingBlock.FACING;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -154,6 +159,45 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         makeCornCrop(((CropBlock) ModBlocks.CORN_CROP.get()), "corn_stage_", "corn_stage_");
 
+
+        // COLUMN BLOCKS:
+        logBlock(((RotatedPillarBlock) ModBlocks.PILLAR_TEST.get()));
+        blockItem(ModBlocks.PILLAR_TEST);
+
+        logBlock(((RotatedPillarBlock) ModBlocks.BLACK_FLOOR_TILE.get()));
+        blockItem(ModBlocks.BLACK_FLOOR_TILE);
+
+        makePlayerFacingBlock(ModBlocks.BLACK_FLOOR_TILE_CORNER, "black_floor_tile_corner");
+        makePlayerFacingBlock(ModBlocks.ORIENTABLE_TEST, "orientable_test");
+
+    }
+
+    private void makePlayerFacingBlock(RegistryObject<Block> blockRegistryObject, String textureBase) {
+        Block block = blockRegistryObject.get();
+        ResourceLocation blockName = blockRegistryObject.getId(); // Get the block's registry name
+
+        // Assuming you have a simple cube model that uses the same texture on all sides.
+        ModelFile blockModel = models().withExistingParent(blockName.getPath(), "minecraft:block/cube_bottom_top")
+                .texture("bottom", modLoc("block/" + textureBase + "_bottom"))
+                .texture("side", modLoc("block/" + textureBase))
+                .texture("top", modLoc("block/" + textureBase + "_top"));
+
+        // Define block states for different horizontal facings
+        getVariantBuilder(block).forAllStates(state -> {
+            Direction dir = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int yRot = switch (dir) {
+                case EAST -> 90;
+                case SOUTH -> 180;
+                case WEST -> 270;
+                default -> 0;
+            };
+            return ConfiguredModel.builder()
+                    .modelFile(blockModel)
+                    .rotationY(yRot)
+                    .build();
+        });
+
+        simpleBlockItem(block, blockModel);  // Generate an item model for this block.
     }
 
     private void makeMultiFacedBlock(RegistryObject<Block> blockRegistryObject, String textureBase) {
@@ -173,6 +217,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         itemModels().withExistingParent(blockName.getPath(), modLoc("block/" + blockName.getPath()));
     }
 
+    private void blockItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(instrumentaBrundisii.MOD_ID +
+                ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+    }
 
     public void makeCornCrop(CropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> cornStates(state, block, modelName, textureName);

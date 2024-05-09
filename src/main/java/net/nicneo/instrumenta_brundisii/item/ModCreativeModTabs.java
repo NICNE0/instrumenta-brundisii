@@ -43,6 +43,9 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.LIME_BRICK_MIX.get());
                         pOutput.accept(ModBlocks.LIMESTONE_BRICKS.get());
 
+                        pOutput.accept(ModBlocks.BLACK_FLOOR_TILE.get());
+                        pOutput.accept(ModBlocks.BLACK_FLOOR_TILE_CORNER.get());
+
 //                      SLABS:
                         pOutput.accept(ModBlocks.LIMESTONE_SLAB.get());
                         pOutput.accept(ModBlocks.PLASTER_SLAB.get());
