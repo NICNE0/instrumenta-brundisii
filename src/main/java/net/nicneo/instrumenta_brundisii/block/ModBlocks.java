@@ -220,22 +220,68 @@ public class ModBlocks {
     public static final RegistryObject<Block> DARK_GREEN_PLASTER_WALL = registerBlock("dark_green_plaster_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
 
-    public static final RegistryObject<Block> RETICULA = registerBlock("reticula",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
-
-//    public static final RegistryObject<Block> LIME_BRICK_MIX = registerBlock("lime_brick_mix",
-//            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
-
     public static final RegistryObject<Block> LIME_BRICK_MIX = registerBlock("lime_brick_mix",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
 
-//    public static final RegistryObject<Block> LIME_BRICK_MIX = registerBlock("lime_brick_mix",
-//            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
+    public static final RegistryObject<Block> LINTEL_BLACK_TERRACOTTA = registerBlock("lintel_black_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_BLUE_TERRACOTTA = registerBlock("lintel_blue_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_BROWN_TERRACOTTA = registerBlock("lintel_brown_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_CYAN_TERRACOTTA = registerBlock("lintel_cyan_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_GRAY_TERRACOTTA = registerBlock("lintel_gray_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_GREEN_TERRACOTTA = registerBlock("lintel_green_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_LIGHT_BLUE_TERRACOTTA = registerBlock("lintel_light_blue_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_LIGHT_GRAY_TERRACOTTA = registerBlock("lintel_light_gray_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_LIME_TERRACOTTA = registerBlock("lintel_lime_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_MAGENTA_TERRACOTTA = registerBlock("lintel_magenta_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_ORANGE_TERRACOTTA = registerBlock("lintel_orange_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_PINK_TERRACOTTA = registerBlock("lintel_pink_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_PURPLE_TERRACOTTA = registerBlock("lintel_purple_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_RED_TERRACOTTA = registerBlock("lintel_red_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_TERRACOTTA = registerBlock("lintel_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_WHITE_TERRACOTTA = registerBlock("lintel_white_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_YELLOW_TERRACOTTA = registerBlock("lintel_yellow_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_BLUE_PLASTER_BLOCK = registerBlock("lintel_blue_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_DARK_BLUE_PLASTER_BLOCK = registerBlock("lintel_dark_blue_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_DARK_GREEN_PLASTER_BLOCK = registerBlock("lintel_dark_green_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_GREEN_PLASTER_BLOCK = registerBlock("lintel_green_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_LIGHT_BLUE_PLASTER_BLOCK = registerBlock("lintel_light_blue_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_LIGHT_YELLOW_PLASTER_BLOCK = registerBlock("lintel_light_yellow_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_PLASTER_BLOCK = registerBlock("lintel_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_RED_PLASTER_BLOCK = registerBlock("lintel_red_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_SCARLET_PLASTER_BLOCK = registerBlock("lintel_scarlet_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_YELLOW_PLASTER_BLOCK = registerBlock("lintel_yellow_plaster_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
 
-
+    public static final RegistryObject<Block> RETICULA = registerBlock("reticula",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> LIGHT_RETICULA = registerBlock("light_reticula",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
-
     public static final RegistryObject<Block> MIXED_RETICULA = registerBlock("mixed_reticula",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
 

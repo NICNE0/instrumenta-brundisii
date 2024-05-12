@@ -140,6 +140,35 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LIME_BRICK_MIX.get());
 
 
+        this.dropSelf(ModBlocks.LINTEL_BLACK_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_BLUE_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_BROWN_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_CYAN_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_GRAY_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_GREEN_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_LIGHT_BLUE_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_LIGHT_GRAY_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_LIME_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_MAGENTA_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_ORANGE_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_PINK_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_PURPLE_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_RED_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_WHITE_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_YELLOW_TERRACOTTA.get());
+        this.dropSelf(ModBlocks.LINTEL_BLUE_PLASTER_BLOCK.get());
+        this.dropSelf(ModBlocks.LINTEL_DARK_BLUE_PLASTER_BLOCK.get());
+        this.dropSelf(ModBlocks.LINTEL_DARK_GREEN_PLASTER_BLOCK.get());
+        this.dropSelf(ModBlocks.LINTEL_GREEN_PLASTER_BLOCK.get());
+        this.dropSelf(ModBlocks.LINTEL_LIGHT_BLUE_PLASTER_BLOCK.get());
+        this.dropSelf(ModBlocks.LINTEL_LIGHT_YELLOW_PLASTER_BLOCK.get());
+        this.dropSelf(ModBlocks.LINTEL_PLASTER_BLOCK.get());
+        this.dropSelf(ModBlocks.LINTEL_RED_PLASTER_BLOCK.get());
+        this.dropSelf(ModBlocks.LINTEL_SCARLET_PLASTER_BLOCK.get());
+        this.dropSelf(ModBlocks.LINTEL_YELLOW_PLASTER_BLOCK.get());
+
+
         this.dropSelf(ModBlocks.TERRACOTTA_STAIRS.get());
         this.add(ModBlocks.TERRACOTTA_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.TERRACOTTA_SLAB.get()));

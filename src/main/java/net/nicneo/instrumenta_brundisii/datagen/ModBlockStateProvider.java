@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -17,6 +18,9 @@ import net.nicneo.instrumenta_brundisii.block.custom.CornCropBlock;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
 
 import java.util.function.Function;
+
+import java.util.Map;
+import java.util.HashMap;
 
 import static net.nicneo.instrumenta_brundisii.block.custom.PlayerFacingBlock.FACING;
 
@@ -157,6 +161,34 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         makeMultiFacedBlock(ModBlocks.LIME_BRICK_MIX, "lime_brick_mix");
 
+        makeLintelBlock(ModBlocks.LINTEL_BLACK_TERRACOTTA, "lintel_black_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_BLUE_TERRACOTTA, "lintel_blue_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_BROWN_TERRACOTTA, "lintel_brown_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_CYAN_TERRACOTTA, "lintel_cyan_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_GRAY_TERRACOTTA, "lintel_gray_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_GREEN_TERRACOTTA, "lintel_green_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_LIGHT_BLUE_TERRACOTTA, "lintel_light_blue_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_LIGHT_GRAY_TERRACOTTA, "lintel_light_gray_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_LIME_TERRACOTTA, "lintel_lime_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_MAGENTA_TERRACOTTA, "lintel_magenta_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_ORANGE_TERRACOTTA, "lintel_orange_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_PINK_TERRACOTTA, "lintel_pink_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_PURPLE_TERRACOTTA, "lintel_purple_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_RED_TERRACOTTA, "lintel_red_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_TERRACOTTA, "lintel_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_WHITE_TERRACOTTA, "lintel_white_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_YELLOW_TERRACOTTA, "lintel_yellow_terracotta");
+        makeLintelBlock(ModBlocks.LINTEL_BLUE_PLASTER_BLOCK, "lintel_blue_plaster_block");
+        makeLintelBlock(ModBlocks.LINTEL_DARK_BLUE_PLASTER_BLOCK, "lintel_dark_blue_plaster_block");
+        makeLintelBlock(ModBlocks.LINTEL_DARK_GREEN_PLASTER_BLOCK, "lintel_dark_green_plaster_block");
+        makeLintelBlock(ModBlocks.LINTEL_GREEN_PLASTER_BLOCK, "lintel_green_plaster_block");
+        makeLintelBlock(ModBlocks.LINTEL_LIGHT_BLUE_PLASTER_BLOCK, "lintel_light_blue_plaster_block");
+        makeLintelBlock(ModBlocks.LINTEL_LIGHT_YELLOW_PLASTER_BLOCK, "lintel_light_yellow_plaster_block");
+        makeLintelBlock(ModBlocks.LINTEL_PLASTER_BLOCK, "lintel_plaster_block");
+        makeLintelBlock(ModBlocks.LINTEL_RED_PLASTER_BLOCK, "lintel_red_plaster_block");
+        makeLintelBlock(ModBlocks.LINTEL_SCARLET_PLASTER_BLOCK, "lintel_scarlet_plaster_block");
+        makeLintelBlock(ModBlocks.LINTEL_YELLOW_PLASTER_BLOCK, "lintel_yellow_plaster_block");
+
         makeCornCrop(((CropBlock) ModBlocks.CORN_CROP.get()), "corn_stage_", "corn_stage_");
 
 
@@ -215,6 +247,47 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         // Generate an item model for this block that uses the block model
         itemModels().withExistingParent(blockName.getPath(), modLoc("block/" + blockName.getPath()));
+    }
+
+    private void makeLintelBlock(RegistryObject<Block> blockRegistryObject, String textureBase) {
+        Block block = blockRegistryObject.get();
+        ResourceLocation blockName = blockRegistryObject.getId(); // Get the block's registry name
+
+        if (textureBase.contains("Plaster")) {
+            ModelFile blockModel = models().withExistingParent(blockName.getPath(), "minecraft:block/cube_bottom_top")
+                    .texture("bottom", mcLoc("block/oak_log"))
+                    .texture("side", modLoc("block/" + textureBase))
+                    .texture("top", modLoc("block/" + textureBase.replace("lintel", "") + "_top"));
+
+            // Register the block model
+            simpleBlockWithItem(block, blockModel);
+
+            // Generate an item model for this block that uses the block model
+            itemModels().withExistingParent(blockName.getPath(), modLoc("block/" + blockName.getPath()));
+        } else if (textureBase.contains("terracotta")) {
+            String modifiedTextureBase = textureBase.replace("lintel_", "");
+            ModelFile blockModel = models().withExistingParent(blockName.getPath(), "minecraft:block/cube_bottom_top")
+                    .texture("bottom", mcLoc("block/oak_log"))
+                    .texture("side", modLoc("block/" + textureBase))
+                    .texture("top", mcLoc("block/"+modifiedTextureBase));
+
+            // Register the block model
+            simpleBlockWithItem(block, blockModel);
+
+            // Generate an item model for this block that uses the block model
+            itemModels().withExistingParent(blockName.getPath(), modLoc("block/" + blockName.getPath()));
+        } else {
+            ModelFile blockModel = models().withExistingParent(blockName.getPath(), "minecraft:block/cube_bottom_top")
+                    .texture("bottom", mcLoc("block/oak_log"))
+                    .texture("side", modLoc("block/" + textureBase))
+                    .texture("top", modLoc("block/" + textureBase + "_top"));
+
+            // Register the block model
+            simpleBlockWithItem(block, blockModel);
+
+            // Generate an item model for this block that uses the block model
+            itemModels().withExistingParent(blockName.getPath(), modLoc("block/" + blockName.getPath()));
+        }
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {

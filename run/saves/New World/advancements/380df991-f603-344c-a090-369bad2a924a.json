@@ -1013,5 +1013,23 @@
     },
     "done": true
   },
+  "instrumenta_brundisii:recipes/misc/lintel_white_terracotta": {
+    "criteria": {
+      "has_white_terracotta": "2024-05-12 12:17:07 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_planks": {
+    "criteria": {
+      "has_logs": "2024-05-12 12:17:17 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_wood": {
+    "criteria": {
+      "has_log": "2024-05-12 12:17:17 -0400"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

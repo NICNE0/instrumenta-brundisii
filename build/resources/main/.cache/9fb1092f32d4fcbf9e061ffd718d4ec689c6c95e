@@ -1,11 +1,13 @@
-// 1.20.1	2024-04-22T12:23:55.5663587	Recipes
+// 1.20.1	2024-05-12T12:16:31.6743403	Recipes
 01c89d151318080c79871f60e7d4c243b13a3696 data/instrumenta_brundisii/advancements/recipes/misc/as.json
 f27888e52e176fb714ac8bc148ac92d8e01652af data/instrumenta_brundisii/advancements/recipes/misc/auri.json
 bd1b6ad4c50c8818251cc817cd8611df384d803f data/instrumenta_brundisii/advancements/recipes/misc/denari.json
+d8da0fc734bbcda01e52b73e85dd32b9552e0180 data/instrumenta_brundisii/advancements/recipes/misc/lintel_white_terracotta.json
 31650bc7b2b7d848916f30dc5bd46cafa36e5406 data/instrumenta_brundisii/advancements/recipes/misc/semi.json
 406d07f9795133268d8409a8688cdb8590cfcff5 data/instrumenta_brundisii/advancements/recipes/misc/sesterci.json
 cb39f66ae56a1c599a13fb88ab43e5cffb767a08 data/instrumenta_brundisii/recipes/as.json
 cc3ce9f2e5a693b1add5c2bdeaa316f0cdf993d5 data/instrumenta_brundisii/recipes/auri.json
 1cdefc9eb47ea2810a5f801e40fb369e27a7ca80 data/instrumenta_brundisii/recipes/denari.json
+83694c04b76302e8eb4416a555e1667ba15f78a3 data/instrumenta_brundisii/recipes/lintel_white_terracotta.json
 440c281d384e7c98879971b7ae30b65771921370 data/instrumenta_brundisii/recipes/semi.json
 8dd614eb38c973cb062aef07dd34f2b2e2d447c5 data/instrumenta_brundisii/recipes/sesterci.json

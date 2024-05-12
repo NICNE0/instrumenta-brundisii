@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-09T00:43:43.2263677	Loot Tables
+// 1.20.1	2024-05-12T06:17:47.1473948	Loot Tables
 504afa84f5edecfa13eb7b1bebe7f8de7414f1a2 data/instrumenta_brundisii/loot_tables/blocks/black_floor_tile.json
 92bd4328d1deae1f84b7a7c8e26b7bd567e777eb data/instrumenta_brundisii/loot_tables/blocks/black_floor_tile_corner.json
 b2d159447048ecffa0520036ea2dab31caa4d4ac data/instrumenta_brundisii/loot_tables/blocks/blue_plaster_block.json
@@ -64,6 +64,7 @@ c28c156b285493997e6bf45248e8ae0c7c60c2bc data/instrumenta_brundisii/loot_tables/
 b3c7d257fbce38a5ed101ad8f1d6ebfe367cc1f8 data/instrumenta_brundisii/loot_tables/blocks/limestone_stairs.json
 3386ad0152fcef39d40474606c1aaf1a987053ec data/instrumenta_brundisii/loot_tables/blocks/limestone_wall.json
 14e616f792a6d449ed7c47f5fd04e481ed13afc4 data/instrumenta_brundisii/loot_tables/blocks/lime_brick_mix.json
+3de33df84609947a5e64c55d92500f1bc167a830 data/instrumenta_brundisii/loot_tables/blocks/lintel_white_terracotta.json
 9e2206788c60e1d8b11467a748af439e93d23ce3 data/instrumenta_brundisii/loot_tables/blocks/mixed_reticula.json
 e674c038d5359b67b7f74203779f6aa4d9ed9b9a data/instrumenta_brundisii/loot_tables/blocks/orange_terracotta_slab.json
 f338124405a666ab927ed793e3e4466bb9e5ccba data/instrumenta_brundisii/loot_tables/blocks/orange_terracotta_stairs.json
