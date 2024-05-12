@@ -253,11 +253,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         Block block = blockRegistryObject.get();
         ResourceLocation blockName = blockRegistryObject.getId(); // Get the block's registry name
 
-        if (textureBase.contains("Plaster")) {
+        if (textureBase.contains("plaster")) {
             ModelFile blockModel = models().withExistingParent(blockName.getPath(), "minecraft:block/cube_bottom_top")
                     .texture("bottom", mcLoc("block/oak_log"))
                     .texture("side", modLoc("block/" + textureBase))
-                    .texture("top", modLoc("block/" + textureBase.replace("lintel", "") + "_top"));
+                    .texture("top", modLoc("block/" + textureBase.replace("lintel_", "")));
 
             // Register the block model
             simpleBlockWithItem(block, blockModel);

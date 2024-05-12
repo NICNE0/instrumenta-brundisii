@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "minecraft:block/oak_log",
+    "side": "instrumenta_brundisii:block/lintel_green_plaster_block",
+    "top": "instrumenta_brundisii:block/green_plaster_block"
+  }
+}
