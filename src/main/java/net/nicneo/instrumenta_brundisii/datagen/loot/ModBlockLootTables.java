@@ -167,6 +167,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LINTEL_RED_PLASTER_BLOCK.get());
         this.dropSelf(ModBlocks.LINTEL_SCARLET_PLASTER_BLOCK.get());
         this.dropSelf(ModBlocks.LINTEL_YELLOW_PLASTER_BLOCK.get());
+        this.dropSelf(ModBlocks.LINTEL_BRICKS.get());
 
 
         this.dropSelf(ModBlocks.TERRACOTTA_STAIRS.get());

@@ -273,6 +273,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.YELLOW_PLASTER_BLOCK.get()), has(ModBlocks.YELLOW_PLASTER_BLOCK.get()))
                 .save(p_251297_);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LINTEL_BRICKS.get())
+                .define('#', Items.OAK_LOG)
+                .define('O', Items.BRICKS)
+                .pattern("   ")
+                .pattern("  O")
+                .pattern("  #")
+                .unlockedBy(getHasName(Items.BRICKS), has(Items.BRICKS))
+                .save(p_251297_);
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.AURI.get())
                 .pattern(" # ")

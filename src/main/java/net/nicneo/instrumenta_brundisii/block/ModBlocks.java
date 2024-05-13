@@ -277,6 +277,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
     public static final RegistryObject<Block> LINTEL_YELLOW_PLASTER_BLOCK = registerBlock("lintel_yellow_plaster_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final RegistryObject<Block> LINTEL_BRICKS = registerBlock("lintel_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
 
     public static final RegistryObject<Block> RETICULA = registerBlock("reticula",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));

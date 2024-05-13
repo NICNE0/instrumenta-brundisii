@@ -1,9 +1,7 @@
 package net.nicneo.instrumenta_brundisii.entity.client;
 
 import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
-import net.nicneo.instrumenta_brundisii.entity.custom.CommonTailedEntity;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
 
 public class ModModelLayers {

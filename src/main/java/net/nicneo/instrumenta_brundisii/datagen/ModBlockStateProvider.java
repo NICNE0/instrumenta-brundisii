@@ -19,11 +19,6 @@ import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
 
 import java.util.function.Function;
 
-import java.util.Map;
-import java.util.HashMap;
-
-import static net.nicneo.instrumenta_brundisii.block.custom.PlayerFacingBlock.FACING;
-
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, instrumentaBrundisii.MOD_ID, exFileHelper);
@@ -188,6 +183,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeLintelBlock(ModBlocks.LINTEL_RED_PLASTER_BLOCK, "lintel_red_plaster_block");
         makeLintelBlock(ModBlocks.LINTEL_SCARLET_PLASTER_BLOCK, "lintel_scarlet_plaster_block");
         makeLintelBlock(ModBlocks.LINTEL_YELLOW_PLASTER_BLOCK, "lintel_yellow_plaster_block");
+        makeLintelBlock(ModBlocks.LINTEL_BRICKS, "lintel_bricks");
 
         makeCornCrop(((CropBlock) ModBlocks.CORN_CROP.get()), "corn_stage_", "corn_stage_");
 
@@ -244,7 +240,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         // Register the block model
         simpleBlockWithItem(block, blockModel);
-
         // Generate an item model for this block that uses the block model
         itemModels().withExistingParent(blockName.getPath(), modLoc("block/" + blockName.getPath()));
     }
@@ -253,6 +248,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         Block block = blockRegistryObject.get();
         ResourceLocation blockName = blockRegistryObject.getId(); // Get the block's registry name
 
+    //  MOD BRICKS:
         if (textureBase.contains("plaster")) {
             ModelFile blockModel = models().withExistingParent(blockName.getPath(), "minecraft:block/cube_bottom_top")
                     .texture("bottom", mcLoc("block/oak_log"))
@@ -261,10 +257,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
             // Register the block model
             simpleBlockWithItem(block, blockModel);
-
             // Generate an item model for this block that uses the block model
             itemModels().withExistingParent(blockName.getPath(), modLoc("block/" + blockName.getPath()));
-        } else if (textureBase.contains("terracotta")) {
+
+    //  VANILLA BRICKS:
+        } else if (textureBase.contains("terracotta") || textureBase.contains("bricks")) {
             String modifiedTextureBase = textureBase.replace("lintel_", "");
             ModelFile blockModel = models().withExistingParent(blockName.getPath(), "minecraft:block/cube_bottom_top")
                     .texture("bottom", mcLoc("block/oak_log"))
@@ -273,9 +270,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
             // Register the block model
             simpleBlockWithItem(block, blockModel);
-
             // Generate an item model for this block that uses the block model
             itemModels().withExistingParent(blockName.getPath(), modLoc("block/" + blockName.getPath()));
+
+    //  SPECIFIC TEXTURE BRICKS:
         } else {
             ModelFile blockModel = models().withExistingParent(blockName.getPath(), "minecraft:block/cube_bottom_top")
                     .texture("bottom", mcLoc("block/oak_log"))
@@ -284,7 +282,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
             // Register the block model
             simpleBlockWithItem(block, blockModel);
-
             // Generate an item model for this block that uses the block model
             itemModels().withExistingParent(blockName.getPath(), modLoc("block/" + blockName.getPath()));
         }

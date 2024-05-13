@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-12T13:06:13.3458774	Loot Tables
+// 1.20.1	2024-05-12T23:23:24.0771425	Loot Tables
 504afa84f5edecfa13eb7b1bebe7f8de7414f1a2 data/instrumenta_brundisii/loot_tables/blocks/black_floor_tile.json
 92bd4328d1deae1f84b7a7c8e26b7bd567e777eb data/instrumenta_brundisii/loot_tables/blocks/black_floor_tile_corner.json
 b2d159447048ecffa0520036ea2dab31caa4d4ac data/instrumenta_brundisii/loot_tables/blocks/blue_plaster_block.json
@@ -67,6 +67,7 @@ b3c7d257fbce38a5ed101ad8f1d6ebfe367cc1f8 data/instrumenta_brundisii/loot_tables/
 9f20f45675908347d0694a0dc0d6e4f370ae7d71 data/instrumenta_brundisii/loot_tables/blocks/lintel_black_terracotta.json
 f281a424265d2d7327b200dfa25d3cf5ec076f00 data/instrumenta_brundisii/loot_tables/blocks/lintel_blue_plaster_block.json
 17284021dfbb68a897f99ab5ef81983cd1a089ab data/instrumenta_brundisii/loot_tables/blocks/lintel_blue_terracotta.json
+5aa5c6a3860a5ddef578efe07cd9be965a2cd9b0 data/instrumenta_brundisii/loot_tables/blocks/lintel_bricks.json
 fdddb530aed127eea0c85ec57dc96551e463e19d data/instrumenta_brundisii/loot_tables/blocks/lintel_brown_terracotta.json
 9f546c3e64347e1bfb5d5ff142b74291eb0897c4 data/instrumenta_brundisii/loot_tables/blocks/lintel_cyan_terracotta.json
 67acf50f97e326fb363e1391a1f719c668152db1 data/instrumenta_brundisii/loot_tables/blocks/lintel_dark_blue_plaster_block.json

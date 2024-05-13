@@ -1031,15 +1031,21 @@
     },
     "done": true
   },
+  "instrumenta_brundisii:recipes/misc/lintel_plaster_block": {
+    "criteria": {
+      "has_plaster_block": "2024-05-12 13:07:49 -0400"
+    },
+    "done": true
+  },
   "instrumenta_brundisii:recipes/misc/lintel_light_blue_plaster_block": {
     "criteria": {
       "has_light_blue_plaster_block": "2024-05-12 13:07:50 -0400"
     },
     "done": true
   },
-  "instrumenta_brundisii:recipes/misc/lintel_plaster_block": {
+  "instrumenta_brundisii:recipes/misc/lintel_bricks": {
     "criteria": {
-      "has_plaster_block": "2024-05-12 13:07:49 -0400"
+      "has_bricks": "2024-05-12 23:24:34 -0400"
     },
     "done": true
   },
