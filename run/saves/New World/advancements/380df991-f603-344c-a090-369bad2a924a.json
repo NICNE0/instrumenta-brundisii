@@ -1049,15 +1049,15 @@
     },
     "done": true
   },
-  "instrumenta_brundisii:recipes/misc/lintel_light_gray_terracotta": {
-    "criteria": {
-      "has_light_gray_terracotta": "2024-05-13 14:56:28 -0400"
-    },
-    "done": true
-  },
   "minecraft:story/root": {
     "criteria": {
       "crafting_table": "2024-05-13 14:55:38 -0400"
+    },
+    "done": true
+  },
+  "instrumenta_brundisii:recipes/misc/lintel_light_gray_terracotta": {
+    "criteria": {
+      "has_light_gray_terracotta": "2024-05-13 14:56:28 -0400"
     },
     "done": true
   },
