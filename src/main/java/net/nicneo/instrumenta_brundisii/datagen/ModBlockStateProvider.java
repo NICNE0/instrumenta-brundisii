@@ -117,6 +117,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock(((FenceGateBlock) ModBlocks.LIGHT_YELLOW_PLASTER_FENCE_DOOR.get()), blockTexture(ModBlocks.LIGHT_YELLOW_PLASTER_BLOCK.get()));
         wallBlock(((WallBlock) ModBlocks.LIGHT_YELLOW_PLASTER_WALL.get()), blockTexture(ModBlocks.LIGHT_YELLOW_PLASTER_BLOCK.get()));
 
+//      ============================= TUFF =============================
+        stairsBlock(((StairBlock) ModBlocks.TUFF_STAIRS.get()), blockTexture(Blocks.TUFF));
+        slabBlock(((SlabBlock) ModBlocks.TUFF_SLAB.get()), blockTexture(Blocks.TUFF), blockTexture(Blocks.TUFF));
+        buttonBlock(((ButtonBlock) ModBlocks.TUFF_BUTTON.get()), blockTexture(Blocks.TUFF));
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.TUFF_PRESSURE_PLATE.get()), blockTexture(Blocks.TUFF));
+        fenceBlock(((FenceBlock) ModBlocks.TUFF_FENCE.get()), blockTexture(Blocks.TUFF));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.TUFF_FENCE_DOOR.get()), blockTexture(Blocks.TUFF));
+        wallBlock(((WallBlock) ModBlocks.TUFF_WALL.get()), blockTexture(Blocks.TUFF));
+
 //      ========================== LIMESTONE ==========================
         blockWithItem(ModBlocks.LIMESTONE_BRICKS);
         stairsBlock(((StairBlock) ModBlocks.LIMESTONE_STAIRS.get()), blockTexture(ModBlocks.LIMESTONE_BRICKS.get()));
@@ -130,21 +139,45 @@ public class ModBlockStateProvider extends BlockStateProvider {
 //      ========================== TERRACOTTA ==========================
         stairsBlock(((StairBlock) ModBlocks.TERRACOTTA_STAIRS.get()), blockTexture(Blocks.TERRACOTTA));
         slabBlock(((SlabBlock) ModBlocks.TERRACOTTA_SLAB.get()), blockTexture(Blocks.TERRACOTTA), blockTexture(Blocks.TERRACOTTA));
+        fenceBlock(((FenceBlock) ModBlocks.TERRACOTTA_FENCE.get()), blockTexture(Blocks.TERRACOTTA));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.TERRACOTTA_FENCE_DOOR.get()), blockTexture(Blocks.TERRACOTTA));
+        wallBlock(((WallBlock) ModBlocks.TERRACOTTA_WALL.get()), blockTexture(Blocks.TERRACOTTA));
 
         stairsBlock(((StairBlock) ModBlocks.WHITE_TERRACOTTA_STAIRS.get()), blockTexture(Blocks.WHITE_TERRACOTTA));
         slabBlock(((SlabBlock) ModBlocks.WHITE_TERRACOTTA_SLAB.get()), blockTexture(Blocks.WHITE_TERRACOTTA), blockTexture(Blocks.WHITE_TERRACOTTA));
+        fenceBlock(((FenceBlock) ModBlocks.WHITE_TERRACOTTA_FENCE.get()), blockTexture(Blocks.WHITE_TERRACOTTA));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.WHITE_TERRACOTTA_FENCE_DOOR.get()), blockTexture(Blocks.WHITE_TERRACOTTA));
+        wallBlock(((WallBlock) ModBlocks.WHITE_TERRACOTTA_WALL.get()), blockTexture(Blocks.WHITE_TERRACOTTA));
 
         stairsBlock(((StairBlock) ModBlocks.ORANGE_TERRACOTTA_STAIRS.get()), blockTexture(Blocks.ORANGE_TERRACOTTA));
         slabBlock(((SlabBlock) ModBlocks.ORANGE_TERRACOTTA_SLAB.get()), blockTexture(Blocks.ORANGE_TERRACOTTA), blockTexture(Blocks.ORANGE_TERRACOTTA));
+        fenceBlock(((FenceBlock) ModBlocks.ORANGE_TERRACOTTA_FENCE.get()), blockTexture(Blocks.ORANGE_TERRACOTTA));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.ORANGE_TERRACOTTA_FENCE_DOOR.get()), blockTexture(Blocks.ORANGE_TERRACOTTA));
+        wallBlock(((WallBlock) ModBlocks.ORANGE_TERRACOTTA_WALL.get()), blockTexture(Blocks.ORANGE_TERRACOTTA));
 
         stairsBlock(((StairBlock) ModBlocks.LIGHT_BLUE_TERRACOTTA_STAIRS.get()), blockTexture(Blocks.LIGHT_BLUE_TERRACOTTA));
         slabBlock(((SlabBlock) ModBlocks.LIGHT_BLUE_TERRACOTTA_SLAB.get()), blockTexture(Blocks.LIGHT_BLUE_TERRACOTTA), blockTexture(Blocks.LIGHT_BLUE_TERRACOTTA));
+        fenceBlock(((FenceBlock) ModBlocks.LIGHT_BLUE_TERRACOTTA_FENCE.get()), blockTexture(Blocks.LIGHT_BLUE_TERRACOTTA));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.LIGHT_BLUE_TERRACOTTA_FENCE_DOOR.get()), blockTexture(Blocks.LIGHT_BLUE_TERRACOTTA));
+        wallBlock(((WallBlock) ModBlocks.LIGHT_BLUE_TERRACOTTA_WALL.get()), blockTexture(Blocks.LIGHT_BLUE_TERRACOTTA));
 
         stairsBlock(((StairBlock) ModBlocks.LIGHT_GRAY_TERRACOTTA_STAIRS.get()), blockTexture(Blocks.LIGHT_GRAY_TERRACOTTA));
         slabBlock(((SlabBlock) ModBlocks.LIGHT_GRAY_TERRACOTTA_SLAB.get()), blockTexture(Blocks.LIGHT_GRAY_TERRACOTTA), blockTexture(Blocks.LIGHT_GRAY_TERRACOTTA));
+        fenceBlock(((FenceBlock) ModBlocks.LIGHT_GRAY_TERRACOTTA_FENCE.get()), blockTexture(Blocks.LIGHT_GRAY_TERRACOTTA));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.LIGHT_GRAY_TERRACOTTA_FENCE_DOOR.get()), blockTexture(Blocks.LIGHT_GRAY_TERRACOTTA));
+        wallBlock(((WallBlock) ModBlocks.LIGHT_GRAY_TERRACOTTA_WALL.get()), blockTexture(Blocks.LIGHT_GRAY_TERRACOTTA));
 
         stairsBlock(((StairBlock) ModBlocks.RED_TERRACOTTA_STAIRS.get()), blockTexture(Blocks.RED_TERRACOTTA));
         slabBlock(((SlabBlock) ModBlocks.RED_TERRACOTTA_SLAB.get()), blockTexture(Blocks.RED_TERRACOTTA), blockTexture(Blocks.RED_TERRACOTTA));
+        fenceBlock(((FenceBlock) ModBlocks.RED_TERRACOTTA_FENCE.get()), blockTexture(Blocks.RED_TERRACOTTA));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.RED_TERRACOTTA_FENCE_DOOR.get()), blockTexture(Blocks.RED_TERRACOTTA));
+        wallBlock(((WallBlock) ModBlocks.RED_TERRACOTTA_WALL.get()), blockTexture(Blocks.RED_TERRACOTTA));
+
+        stairsBlock(((StairBlock) ModBlocks.BLACK_TERRACOTTA_STAIRS.get()), blockTexture(Blocks.BLACK_TERRACOTTA));
+        slabBlock(((SlabBlock) ModBlocks.BLACK_TERRACOTTA_SLAB.get()), blockTexture(Blocks.BLACK_TERRACOTTA), blockTexture(Blocks.BLACK_TERRACOTTA));
+        fenceBlock(((FenceBlock) ModBlocks.BLACK_TERRACOTTA_FENCE.get()), blockTexture(Blocks.BLACK_TERRACOTTA));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.BLACK_TERRACOTTA_FENCE_DOOR.get()), blockTexture(Blocks.BLACK_TERRACOTTA));
+        wallBlock(((WallBlock) ModBlocks.BLACK_TERRACOTTA_WALL.get()), blockTexture(Blocks.BLACK_TERRACOTTA));
 
 
 //      ========================== OTHERS ==========================

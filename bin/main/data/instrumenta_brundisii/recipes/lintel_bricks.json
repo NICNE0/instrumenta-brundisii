@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:oak_log"
+    },
+    "O": {
+      "item": "minecraft:bricks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "  O",
+    "  #"
+  ],
+  "result": {
+    "item": "instrumenta_brundisii:lintel_bricks"
+  },
+  "show_notification": true
+}

@@ -24,6 +24,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        this.dropSelf(ModBlocks.TUFF_STAIRS.get());
+        this.dropSelf(ModBlocks.TUFF_BUTTON.get());
+        this.dropSelf(ModBlocks.TUFF_FENCE.get());
+        this.dropSelf(ModBlocks.TUFF_FENCE_DOOR.get());
+        this.dropSelf(ModBlocks.TUFF_WALL.get());
+        this.dropSelf(ModBlocks.TUFF_PRESSURE_PLATE.get());
+        this.add(ModBlocks.TUFF_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.TUFF_SLAB.get()));
+
         this.dropSelf(ModBlocks.PLASTER_BLOCK.get());
         this.dropSelf(ModBlocks.PLASTER_STAIRS.get());
         this.dropSelf(ModBlocks.PLASTER_BUTTON.get());
@@ -169,34 +178,59 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LINTEL_YELLOW_PLASTER_BLOCK.get());
         this.dropSelf(ModBlocks.LINTEL_BRICKS.get());
 
-
         this.dropSelf(ModBlocks.TERRACOTTA_STAIRS.get());
         this.add(ModBlocks.TERRACOTTA_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.TERRACOTTA_SLAB.get()));
+        this.dropSelf(ModBlocks.TERRACOTTA_FENCE.get());
+        this.dropSelf(ModBlocks.TERRACOTTA_FENCE_DOOR.get());
+        this.dropSelf(ModBlocks.TERRACOTTA_WALL.get());
 
         this.dropSelf(ModBlocks.WHITE_TERRACOTTA_STAIRS.get());
         this.add(ModBlocks.WHITE_TERRACOTTA_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.WHITE_TERRACOTTA_SLAB.get()));
+        this.dropSelf(ModBlocks.WHITE_TERRACOTTA_FENCE.get());
+        this.dropSelf(ModBlocks.WHITE_TERRACOTTA_FENCE_DOOR.get());
+        this.dropSelf(ModBlocks.WHITE_TERRACOTTA_WALL.get());
 
 
         this.dropSelf(ModBlocks.ORANGE_TERRACOTTA_STAIRS.get());
         this.add(ModBlocks.ORANGE_TERRACOTTA_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.ORANGE_TERRACOTTA_SLAB.get()));
+        this.dropSelf(ModBlocks.ORANGE_TERRACOTTA_FENCE.get());
+        this.dropSelf(ModBlocks.ORANGE_TERRACOTTA_FENCE_DOOR.get());
+        this.dropSelf(ModBlocks.ORANGE_TERRACOTTA_WALL.get());
 
 
         this.dropSelf(ModBlocks.LIGHT_BLUE_TERRACOTTA_STAIRS.get());
         this.add(ModBlocks.LIGHT_BLUE_TERRACOTTA_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.LIGHT_BLUE_TERRACOTTA_SLAB.get()));
+        this.dropSelf(ModBlocks.LIGHT_BLUE_TERRACOTTA_FENCE.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_TERRACOTTA_FENCE_DOOR.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_TERRACOTTA_WALL.get());
 
 
         this.dropSelf(ModBlocks.LIGHT_GRAY_TERRACOTTA_STAIRS.get());
         this.add(ModBlocks.LIGHT_GRAY_TERRACOTTA_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.LIGHT_GRAY_TERRACOTTA_SLAB.get()));
+        this.dropSelf(ModBlocks.LIGHT_GRAY_TERRACOTTA_FENCE.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_TERRACOTTA_FENCE_DOOR.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_TERRACOTTA_WALL.get());
 
 
         this.dropSelf(ModBlocks.RED_TERRACOTTA_STAIRS.get());
         this.add(ModBlocks.RED_TERRACOTTA_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.RED_TERRACOTTA_SLAB.get()));
+        this.dropSelf(ModBlocks.RED_TERRACOTTA_FENCE.get());
+        this.dropSelf(ModBlocks.RED_TERRACOTTA_FENCE_DOOR.get());
+        this.dropSelf(ModBlocks.RED_TERRACOTTA_WALL.get());
+
+
+        this.dropSelf(ModBlocks.BLACK_TERRACOTTA_STAIRS.get());
+        this.add(ModBlocks.BLACK_TERRACOTTA_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BLACK_TERRACOTTA_SLAB.get()));
+        this.dropSelf(ModBlocks.BLACK_TERRACOTTA_FENCE.get());
+        this.dropSelf(ModBlocks.BLACK_TERRACOTTA_FENCE_DOOR.get());
+        this.dropSelf(ModBlocks.BLACK_TERRACOTTA_WALL.get());
 
         LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.CORN_CROP.get())

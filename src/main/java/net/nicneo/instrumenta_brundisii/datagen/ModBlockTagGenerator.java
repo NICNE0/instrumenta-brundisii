@@ -66,7 +66,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.SCARLET_PLASTER_FENCE.get(),
                         ModBlocks.YELLOW_PLASTER_FENCE.get(),
                         ModBlocks.LIGHT_YELLOW_PLASTER_FENCE.get(),
-                        ModBlocks.LIMESTONE_FENCE.get()
+                        ModBlocks.LIMESTONE_FENCE.get(),
+                        ModBlocks.TUFF_FENCE.get(),
+
+                        ModBlocks.TERRACOTTA_FENCE.get(),
+                        ModBlocks.WHITE_TERRACOTTA_FENCE.get(),
+                        ModBlocks.ORANGE_TERRACOTTA_FENCE.get(),
+                        ModBlocks.LIGHT_BLUE_TERRACOTTA_FENCE.get(),
+                        ModBlocks.LIGHT_GRAY_TERRACOTTA_FENCE.get(),
+                        ModBlocks.RED_TERRACOTTA_FENCE.get(),
+                        ModBlocks.BLACK_TERRACOTTA_FENCE.get()
                 );
 
         this.tag(BlockTags.FENCE_GATES)
@@ -81,7 +90,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.SCARLET_PLASTER_FENCE_DOOR.get(),
                         ModBlocks.YELLOW_PLASTER_FENCE_DOOR.get(),
                         ModBlocks.LIGHT_YELLOW_PLASTER_FENCE_DOOR.get(),
-                        ModBlocks.LIMESTONE_FENCE_DOOR.get()
+                        ModBlocks.LIMESTONE_FENCE_DOOR.get(),
+                        ModBlocks.TUFF_FENCE_DOOR.get(),
+
+                        ModBlocks.TERRACOTTA_FENCE_DOOR.get(),
+                        ModBlocks.WHITE_TERRACOTTA_FENCE_DOOR.get(),
+                        ModBlocks.ORANGE_TERRACOTTA_FENCE_DOOR.get(),
+                        ModBlocks.LIGHT_BLUE_TERRACOTTA_FENCE_DOOR.get(),
+                        ModBlocks.LIGHT_GRAY_TERRACOTTA_FENCE_DOOR.get(),
+                        ModBlocks.RED_TERRACOTTA_FENCE_DOOR.get(),
+                        ModBlocks.BLACK_TERRACOTTA_FENCE_DOOR.get()
                 );
 
         this.tag(BlockTags.WALLS)
@@ -96,7 +114,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.SCARLET_PLASTER_WALL.get(),
                         ModBlocks.YELLOW_PLASTER_WALL.get(),
                         ModBlocks.LIGHT_YELLOW_PLASTER_WALL.get(),
-                        ModBlocks.LIMESTONE_WALL.get()
+                        ModBlocks.LIMESTONE_WALL.get(),
+                        ModBlocks.TUFF_WALL.get(),
+
+                        ModBlocks.TERRACOTTA_WALL.get(),
+                        ModBlocks.WHITE_TERRACOTTA_WALL.get(),
+                        ModBlocks.ORANGE_TERRACOTTA_WALL.get(),
+                        ModBlocks.LIGHT_BLUE_TERRACOTTA_WALL.get(),
+                        ModBlocks.LIGHT_GRAY_TERRACOTTA_WALL.get(),
+                        ModBlocks.RED_TERRACOTTA_WALL.get(),
+                        ModBlocks.BLACK_TERRACOTTA_WALL.get()
                 );
 
 //        this.tag(BlockTags.NEEDS_IRON_TOOL)

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:oak_log"
+    },
+    "O": {
+      "item": "instrumenta_brundisii:light_yellow_plaster_block"
+    }
+  },
+  "pattern": [
+    "   ",
+    "  O",
+    "  #"
+  ],
+  "result": {
+    "item": "instrumenta_brundisii:lintel_light_yellow_plaster_block"
+  },
+  "show_notification": true
+}

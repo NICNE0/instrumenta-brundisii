@@ -31,43 +31,60 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CORN_COB);
 
 //      ========== FENCES ==========
-        fenceItem(ModBlocks.PLASTER_FENCE, ModBlocks.PLASTER_BLOCK);
-        fenceItem(ModBlocks.BLUE_PLASTER_FENCE, ModBlocks.BLUE_PLASTER_BLOCK);
-        fenceItem(ModBlocks.DARK_BLUE_PLASTER_FENCE, ModBlocks.DARK_BLUE_PLASTER_BLOCK);
-        fenceItem(ModBlocks.LIGHT_BLUE_PLASTER_FENCE, ModBlocks.LIGHT_BLUE_PLASTER_BLOCK);
-        fenceItem(ModBlocks.GREEN_PLASTER_FENCE, ModBlocks.GREEN_PLASTER_BLOCK);
-        fenceItem(ModBlocks.DARK_GREEN_PLASTER_FENCE, ModBlocks.DARK_GREEN_PLASTER_BLOCK);
-        fenceItem(ModBlocks.RED_PLASTER_FENCE, ModBlocks.RED_PLASTER_BLOCK);
-        fenceItem(ModBlocks.SCARLET_PLASTER_FENCE, ModBlocks.SCARLET_PLASTER_BLOCK);
-        fenceItem(ModBlocks.YELLOW_PLASTER_FENCE, ModBlocks.YELLOW_PLASTER_BLOCK);
-        fenceItem(ModBlocks.LIGHT_YELLOW_PLASTER_FENCE, ModBlocks.LIGHT_YELLOW_PLASTER_BLOCK);
-        fenceItem(ModBlocks.LIMESTONE_FENCE, ModBlocks.LIMESTONE_BRICKS);
+        fenceItem(ModBlocks.PLASTER_FENCE, ModBlocks.PLASTER_BLOCK, false);
+        fenceItem(ModBlocks.BLUE_PLASTER_FENCE, ModBlocks.BLUE_PLASTER_BLOCK, false);
+        fenceItem(ModBlocks.DARK_BLUE_PLASTER_FENCE, ModBlocks.DARK_BLUE_PLASTER_BLOCK, false);
+        fenceItem(ModBlocks.LIGHT_BLUE_PLASTER_FENCE, ModBlocks.LIGHT_BLUE_PLASTER_BLOCK, false);
+        fenceItem(ModBlocks.GREEN_PLASTER_FENCE, ModBlocks.GREEN_PLASTER_BLOCK, false);
+        fenceItem(ModBlocks.DARK_GREEN_PLASTER_FENCE, ModBlocks.DARK_GREEN_PLASTER_BLOCK, false);
+        fenceItem(ModBlocks.RED_PLASTER_FENCE, ModBlocks.RED_PLASTER_BLOCK, false);
+        fenceItem(ModBlocks.SCARLET_PLASTER_FENCE, ModBlocks.SCARLET_PLASTER_BLOCK, false);
+        fenceItem(ModBlocks.YELLOW_PLASTER_FENCE, ModBlocks.YELLOW_PLASTER_BLOCK, false);
+        fenceItem(ModBlocks.LIGHT_YELLOW_PLASTER_FENCE, ModBlocks.LIGHT_YELLOW_PLASTER_BLOCK, false);
+        fenceItem(ModBlocks.LIMESTONE_FENCE, ModBlocks.LIMESTONE_BRICKS, false);
+        fenceItem(ModBlocks.TUFF_FENCE, Blocks.TUFF, true);
+        fenceItem(ModBlocks.TERRACOTTA_FENCE, Blocks.TERRACOTTA, true);
+        fenceItem(ModBlocks.WHITE_TERRACOTTA_FENCE, Blocks.WHITE_TERRACOTTA, true);
+        fenceItem(ModBlocks.ORANGE_TERRACOTTA_FENCE, Blocks.ORANGE_TERRACOTTA, true);
+        fenceItem(ModBlocks.LIGHT_BLUE_TERRACOTTA_FENCE, Blocks.LIGHT_BLUE_TERRACOTTA, true);
+        fenceItem(ModBlocks.LIGHT_GRAY_TERRACOTTA_FENCE, Blocks.LIGHT_GRAY_TERRACOTTA, true);
+        fenceItem(ModBlocks.RED_TERRACOTTA_FENCE, Blocks.RED_TERRACOTTA, true);
+        fenceItem(ModBlocks.BLACK_TERRACOTTA_FENCE, Blocks.BLACK_TERRACOTTA, true);
 
 //      ========== BUTTONS ==========
-        buttonItem(ModBlocks.PLASTER_BUTTON, ModBlocks.PLASTER_BLOCK);
-        buttonItem(ModBlocks.BLUE_PLASTER_BUTTON, ModBlocks.BLUE_PLASTER_BLOCK);
-        buttonItem(ModBlocks.DARK_BLUE_PLASTER_BUTTON, ModBlocks.DARK_BLUE_PLASTER_BLOCK);
-        buttonItem(ModBlocks.LIGHT_BLUE_PLASTER_BUTTON, ModBlocks.LIGHT_BLUE_PLASTER_BLOCK);
-        buttonItem(ModBlocks.GREEN_PLASTER_BUTTON, ModBlocks.GREEN_PLASTER_BLOCK);
-        buttonItem(ModBlocks.DARK_GREEN_PLASTER_BUTTON, ModBlocks.DARK_GREEN_PLASTER_BLOCK);
-        buttonItem(ModBlocks.RED_PLASTER_BUTTON, ModBlocks.RED_PLASTER_BLOCK);
-        buttonItem(ModBlocks.SCARLET_PLASTER_BUTTON, ModBlocks.SCARLET_PLASTER_BLOCK);
-        buttonItem(ModBlocks.YELLOW_PLASTER_BUTTON, ModBlocks.YELLOW_PLASTER_BLOCK);
-        buttonItem(ModBlocks.LIGHT_YELLOW_PLASTER_BUTTON, ModBlocks.LIGHT_YELLOW_PLASTER_BLOCK);
-        buttonItem(ModBlocks.LIMESTONE_BUTTON, ModBlocks.LIMESTONE_BRICKS);
+        buttonItem(ModBlocks.PLASTER_BUTTON, ModBlocks.PLASTER_BLOCK, false);
+        buttonItem(ModBlocks.BLUE_PLASTER_BUTTON, ModBlocks.BLUE_PLASTER_BLOCK, false);
+        buttonItem(ModBlocks.DARK_BLUE_PLASTER_BUTTON, ModBlocks.DARK_BLUE_PLASTER_BLOCK, false);
+        buttonItem(ModBlocks.LIGHT_BLUE_PLASTER_BUTTON, ModBlocks.LIGHT_BLUE_PLASTER_BLOCK, false);
+        buttonItem(ModBlocks.GREEN_PLASTER_BUTTON, ModBlocks.GREEN_PLASTER_BLOCK, false);
+        buttonItem(ModBlocks.DARK_GREEN_PLASTER_BUTTON, ModBlocks.DARK_GREEN_PLASTER_BLOCK, false);
+        buttonItem(ModBlocks.RED_PLASTER_BUTTON, ModBlocks.RED_PLASTER_BLOCK, false);
+        buttonItem(ModBlocks.SCARLET_PLASTER_BUTTON, ModBlocks.SCARLET_PLASTER_BLOCK, false);
+        buttonItem(ModBlocks.YELLOW_PLASTER_BUTTON, ModBlocks.YELLOW_PLASTER_BLOCK, false);
+        buttonItem(ModBlocks.LIGHT_YELLOW_PLASTER_BUTTON, ModBlocks.LIGHT_YELLOW_PLASTER_BLOCK, false);
+        buttonItem(ModBlocks.LIMESTONE_BUTTON, ModBlocks.LIMESTONE_BRICKS, false);
+        buttonItem(ModBlocks.TUFF_BUTTON, Blocks.TUFF, true);
 
 //      ========== WALLS ==========
-        wallItem(ModBlocks.PLASTER_WALL, ModBlocks.PLASTER_BLOCK);
-        wallItem(ModBlocks.BLUE_PLASTER_WALL, ModBlocks.BLUE_PLASTER_BLOCK);
-        wallItem(ModBlocks.DARK_BLUE_PLASTER_WALL, ModBlocks.DARK_BLUE_PLASTER_BLOCK);
-        wallItem(ModBlocks.LIGHT_BLUE_PLASTER_WALL, ModBlocks.LIGHT_BLUE_PLASTER_BLOCK);
-        wallItem(ModBlocks.GREEN_PLASTER_WALL, ModBlocks.GREEN_PLASTER_BLOCK);
-        wallItem(ModBlocks.DARK_GREEN_PLASTER_WALL, ModBlocks.DARK_GREEN_PLASTER_BLOCK);
-        wallItem(ModBlocks.RED_PLASTER_WALL, ModBlocks.RED_PLASTER_BLOCK);
-        wallItem(ModBlocks.SCARLET_PLASTER_WALL, ModBlocks.SCARLET_PLASTER_BLOCK);
-        wallItem(ModBlocks.YELLOW_PLASTER_WALL, ModBlocks.YELLOW_PLASTER_BLOCK);
-        wallItem(ModBlocks.LIGHT_YELLOW_PLASTER_WALL, ModBlocks.LIGHT_YELLOW_PLASTER_BLOCK);
-        wallItem(ModBlocks.LIMESTONE_WALL, ModBlocks.LIMESTONE_BRICKS);
+        wallItem(ModBlocks.PLASTER_WALL, ModBlocks.PLASTER_BLOCK, false);
+        wallItem(ModBlocks.BLUE_PLASTER_WALL, ModBlocks.BLUE_PLASTER_BLOCK, false);
+        wallItem(ModBlocks.DARK_BLUE_PLASTER_WALL, ModBlocks.DARK_BLUE_PLASTER_BLOCK, false);
+        wallItem(ModBlocks.LIGHT_BLUE_PLASTER_WALL, ModBlocks.LIGHT_BLUE_PLASTER_BLOCK, false);
+        wallItem(ModBlocks.GREEN_PLASTER_WALL, ModBlocks.GREEN_PLASTER_BLOCK, false);
+        wallItem(ModBlocks.DARK_GREEN_PLASTER_WALL, ModBlocks.DARK_GREEN_PLASTER_BLOCK, false);
+        wallItem(ModBlocks.RED_PLASTER_WALL, ModBlocks.RED_PLASTER_BLOCK, false);
+        wallItem(ModBlocks.SCARLET_PLASTER_WALL, ModBlocks.SCARLET_PLASTER_BLOCK, false);
+        wallItem(ModBlocks.YELLOW_PLASTER_WALL, ModBlocks.YELLOW_PLASTER_BLOCK, false);
+        wallItem(ModBlocks.LIGHT_YELLOW_PLASTER_WALL, ModBlocks.LIGHT_YELLOW_PLASTER_BLOCK, false);
+        wallItem(ModBlocks.LIMESTONE_WALL, ModBlocks.LIMESTONE_BRICKS, false);
+        wallItem(ModBlocks.TUFF_WALL, Blocks.TUFF, true);
+        wallItem(ModBlocks.TERRACOTTA_WALL, Blocks.TERRACOTTA, true);
+        wallItem(ModBlocks.WHITE_TERRACOTTA_WALL, Blocks.WHITE_TERRACOTTA, true);
+        wallItem(ModBlocks.ORANGE_TERRACOTTA_WALL, Blocks.ORANGE_TERRACOTTA, true);
+        wallItem(ModBlocks.LIGHT_BLUE_TERRACOTTA_WALL, Blocks.LIGHT_BLUE_TERRACOTTA, true);
+        wallItem(ModBlocks.LIGHT_GRAY_TERRACOTTA_WALL, Blocks.LIGHT_GRAY_TERRACOTTA, true);
+        wallItem(ModBlocks.RED_TERRACOTTA_WALL, Blocks.RED_TERRACOTTA, true);
+        wallItem(ModBlocks.BLACK_TERRACOTTA_WALL, Blocks.BLACK_TERRACOTTA, true);
 
 //      ========== STAIRS ==========
         evenSimplerBlockItem(ModBlocks.PLASTER_STAIRS);
@@ -87,6 +104,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.LIGHT_BLUE_TERRACOTTA_STAIRS);
         evenSimplerBlockItem(ModBlocks.LIGHT_GRAY_TERRACOTTA_STAIRS);
         evenSimplerBlockItem(ModBlocks.RED_TERRACOTTA_STAIRS);
+        evenSimplerBlockItem(ModBlocks.BLACK_TERRACOTTA_STAIRS);
+        evenSimplerBlockItem(ModBlocks.TUFF_STAIRS);
 
 //      ========== SLABS ==========
         evenSimplerBlockItem(ModBlocks.PLASTER_SLAB);
@@ -106,6 +125,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.LIGHT_BLUE_TERRACOTTA_SLAB);
         evenSimplerBlockItem(ModBlocks.LIGHT_GRAY_TERRACOTTA_SLAB);
         evenSimplerBlockItem(ModBlocks.RED_TERRACOTTA_SLAB);
+        evenSimplerBlockItem(ModBlocks.BLACK_TERRACOTTA_SLAB);
+        evenSimplerBlockItem(ModBlocks.TUFF_SLAB);
 
 //      ========== PRESSURE PLATES ==========
         evenSimplerBlockItem(ModBlocks.PLASTER_PRESSURE_PLATE);
@@ -119,6 +140,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.YELLOW_PLASTER_PRESSURE_PLATE);
         evenSimplerBlockItem(ModBlocks.LIGHT_YELLOW_PLASTER_PRESSURE_PLATE);
         evenSimplerBlockItem(ModBlocks.LIMESTONE_PRESSURE_PLATE);
+        evenSimplerBlockItem(ModBlocks.TUFF_PRESSURE_PLATE);
 
 //      ========== FENCE DOORS ==========
         evenSimplerBlockItem(ModBlocks.PLASTER_FENCE_DOOR);
@@ -132,6 +154,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.YELLOW_PLASTER_FENCE_DOOR);
         evenSimplerBlockItem(ModBlocks.LIGHT_YELLOW_PLASTER_FENCE_DOOR);
         evenSimplerBlockItem(ModBlocks.LIMESTONE_FENCE_DOOR);
+        evenSimplerBlockItem(ModBlocks.TUFF_FENCE_DOOR);
+        evenSimplerBlockItem(ModBlocks.TERRACOTTA_FENCE_DOOR);
+        evenSimplerBlockItem(ModBlocks.WHITE_TERRACOTTA_FENCE_DOOR);
+        evenSimplerBlockItem(ModBlocks.ORANGE_TERRACOTTA_FENCE_DOOR);
+        evenSimplerBlockItem(ModBlocks.LIGHT_BLUE_TERRACOTTA_FENCE_DOOR);
+        evenSimplerBlockItem(ModBlocks.LIGHT_GRAY_TERRACOTTA_FENCE_DOOR);
+        evenSimplerBlockItem(ModBlocks.RED_TERRACOTTA_FENCE_DOOR);
+        evenSimplerBlockItem(ModBlocks.BLACK_TERRACOTTA_FENCE_DOOR);
     }
 
     public void evenSimplerBlockItem(RegistryObject<Block> block) {
@@ -139,21 +169,78 @@ public class ModItemModelProvider extends ItemModelProvider {
                 modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
     }
 
+    public void fenceItem(RegistryObject<Block> block, Object baseBlock, boolean vanilla) {
+        ResourceLocation textureLocation;
 
-    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        if (vanilla) {
+            if (baseBlock instanceof Block) {
+                textureLocation = new ResourceLocation("minecraft", "block/" + ForgeRegistries.BLOCKS.getKey((Block) baseBlock).getPath());
+            } else {
+                throw new IllegalArgumentException("Expected a Block for baseBlock when vanilla is true.");
+            }
+        } else {
+            if (baseBlock instanceof RegistryObject) {
+                textureLocation = new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(((RegistryObject<Block>) baseBlock).get()).getPath());
+            } else {
+                throw new IllegalArgumentException("Expected a RegistryObject<Block> for baseBlock when vanilla is false.");
+            }
+        }
+
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture",  new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("texture", textureLocation);
     }
 
-    public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+    public void buttonItem(RegistryObject<Block> block, Object baseBlock, boolean vanilla) {
+        ResourceLocation textureLocation;
+
+        if (vanilla) {
+            if (baseBlock instanceof Block) {
+                textureLocation = new ResourceLocation("minecraft", "block/" + ForgeRegistries.BLOCKS.getKey((Block) baseBlock).getPath());
+            } else {
+                throw new IllegalArgumentException("Expected a Block for baseBlock when vanilla is true.");
+            }
+        } else {
+            if (baseBlock instanceof RegistryObject) {
+                textureLocation = new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(((RegistryObject<Block>) baseBlock).get()).getPath());
+            } else {
+                throw new IllegalArgumentException("Expected a RegistryObject<Block> for baseBlock when vanilla is false.");
+            }
+        }
+
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
-                .texture("texture",  new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("texture", textureLocation);
     }
 
-    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+    public void wallItem(RegistryObject<Block> block, Object baseBlock, boolean vanilla) {
+        ResourceLocation textureLocation;
+
+        if (vanilla) {
+            if (baseBlock instanceof Block) {
+                textureLocation = new ResourceLocation("minecraft", "block/" + ForgeRegistries.BLOCKS.getKey((Block) baseBlock).getPath());
+            } else {
+                throw new IllegalArgumentException("Expected a Block for baseBlock when vanilla is true.");
+            }
+        } else {
+            if (baseBlock instanceof RegistryObject) {
+                textureLocation = new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(((RegistryObject<Block>) baseBlock).get()).getPath());
+            } else {
+                throw new IllegalArgumentException("Expected a RegistryObject<Block> for baseBlock when vanilla is false.");
+            }
+        }
+
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall",  new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("wall", textureLocation);
     }
+
+//    public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+//        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
+//                .texture("texture",  new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+//    }
+
+//    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+//        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
+//                .texture("wall",  new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+//    }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),

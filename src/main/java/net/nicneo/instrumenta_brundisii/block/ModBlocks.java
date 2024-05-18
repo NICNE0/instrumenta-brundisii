@@ -28,8 +28,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
             () -> new CornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
-
-
     public static final RegistryObject<Block> PLASTER_BLOCK = registerBlock("plaster_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> PLASTER_STAIRS = registerBlock("plaster_stairs",
@@ -313,6 +311,12 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> TERRACOTTA_SLAB = registerBlock("terracotta_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> TERRACOTTA_FENCE = registerBlock("terracotta_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> TERRACOTTA_FENCE_DOOR = registerBlock("terracotta_fence_door",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
+    public static final RegistryObject<Block> TERRACOTTA_WALL = registerBlock("terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
 
     public static final RegistryObject<Block> WHITE_TERRACOTTA_STAIRS = registerBlock("white_terracotta_stairs",
@@ -320,6 +324,12 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> WHITE_TERRACOTTA_SLAB = registerBlock("white_terracotta_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> WHITE_TERRACOTTA_FENCE = registerBlock("white_terracotta_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> WHITE_TERRACOTTA_FENCE_DOOR = registerBlock("white_terracotta_fence_door",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
+    public static final RegistryObject<Block> WHITE_TERRACOTTA_WALL = registerBlock("white_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
 
     public static final RegistryObject<Block> ORANGE_TERRACOTTA_STAIRS = registerBlock("orange_terracotta_stairs",
@@ -327,6 +337,12 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> ORANGE_TERRACOTTA_SLAB = registerBlock("orange_terracotta_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> ORANGE_TERRACOTTA_FENCE = registerBlock("orange_terracotta_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> ORANGE_TERRACOTTA_FENCE_DOOR = registerBlock("orange_terracotta_fence_door",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
+    public static final RegistryObject<Block> ORANGE_TERRACOTTA_WALL = registerBlock("orange_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
 
     public static final RegistryObject<Block> LIGHT_BLUE_TERRACOTTA_STAIRS = registerBlock("light_blue_terracotta_stairs",
@@ -334,6 +350,12 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> LIGHT_BLUE_TERRACOTTA_SLAB = registerBlock("light_blue_terracotta_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> LIGHT_BLUE_TERRACOTTA_FENCE = registerBlock("light_blue_terracotta_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> LIGHT_BLUE_TERRACOTTA_FENCE_DOOR = registerBlock("light_blue_terracotta_fence_door",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
+    public static final RegistryObject<Block> LIGHT_BLUE_TERRACOTTA_WALL = registerBlock("light_blue_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
 
     public static final RegistryObject<Block> LIGHT_GRAY_TERRACOTTA_STAIRS = registerBlock("light_gray_terracotta_stairs",
@@ -341,6 +363,12 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> LIGHT_GRAY_TERRACOTTA_SLAB = registerBlock("light_gray_terracotta_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> LIGHT_GRAY_TERRACOTTA_FENCE = registerBlock("light_gray_terracotta_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> LIGHT_GRAY_TERRACOTTA_FENCE_DOOR = registerBlock("light_gray_terracotta_fence_door",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
+    public static final RegistryObject<Block> LIGHT_GRAY_TERRACOTTA_WALL = registerBlock("light_gray_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
 
     public static final RegistryObject<Block> RED_TERRACOTTA_STAIRS = registerBlock("red_terracotta_stairs",
@@ -348,6 +376,27 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> RED_TERRACOTTA_SLAB = registerBlock("red_terracotta_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> RED_TERRACOTTA_FENCE = registerBlock("red_terracotta_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> RED_TERRACOTTA_FENCE_DOOR = registerBlock("red_terracotta_fence_door",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
+    public static final RegistryObject<Block> RED_TERRACOTTA_WALL = registerBlock("red_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+
+    public static final RegistryObject<Block> BLACK_TERRACOTTA_STAIRS = registerBlock("black_terracotta_stairs",
+            () -> new StairBlock(() -> Blocks.BLACK_TERRACOTTA.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> BLACK_TERRACOTTA_SLAB = registerBlock("black_terracotta_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> BLACK_TERRACOTTA_FENCE = registerBlock("black_terracotta_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> BLACK_TERRACOTTA_FENCE_DOOR = registerBlock("black_terracotta_fence_door",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
+    public static final RegistryObject<Block> BLACK_TERRACOTTA_WALL = registerBlock("black_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+
 
     public static final RegistryObject<Block> TEST_BLOCK_1 = registerBlock("test_block_1",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
@@ -363,6 +412,23 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ORIENTABLE_TEST = registerBlock("orientable_test",
             () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.PISTON)));
+
+    public static final RegistryObject<Block> TUFF_STAIRS = registerBlock("tuff_stairs",
+            () -> new StairBlock(() -> Blocks.TUFF.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> TUFF_SLAB = registerBlock("tuff_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> TUFF_BUTTON = registerBlock("tuff_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON),
+                    BlockSetType.IRON, 10, true));
+    public static final RegistryObject<Block> TUFF_PRESSURE_PLATE = registerBlock("tuff_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), BlockSetType.IRON));
+    public static final RegistryObject<Block> TUFF_FENCE = registerBlock("tuff_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> TUFF_FENCE_DOOR = registerBlock("tuff_fence_door",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
+    public static final RegistryObject<Block> TUFF_WALL = registerBlock("tuff_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
