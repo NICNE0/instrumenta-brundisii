@@ -35,9 +35,28 @@ public class ModItems{
 
     public static final RegistryObject<Item> CORN_COB = ITEMS.register("corn_cob",
             () -> new Item(new Item.Properties().food(ModFoods.CORN_COB)));
-
     public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds",
             () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> FLAX_SEEDS = ITEMS.register("flax_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.FLAX_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> FLAX_FIBERS = ITEMS.register("flax_fibers",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> BARLEY_SEEDS = ITEMS.register("barley_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.BARLEY_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BARLEY = ITEMS.register("barley",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> OAT_SEEDS = ITEMS.register("oat_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.OAT_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> OATS = ITEMS.register("oats",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> RYE_SEEDS = ITEMS.register("rye_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.RYE_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> RYE = ITEMS.register("rye",
+            () -> new Item(new Item.Properties().stacksTo(64)));
 
 
     public static void register(IEventBus eventBus) {

@@ -212,6 +212,22 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.CORN_COB.get());
                         pOutput.accept(ModItems.CORN_SEEDS.get());
 
+//                      FLAX:
+                        pOutput.accept(ModItems.FLAX_FIBERS.get());
+                        pOutput.accept(ModItems.FLAX_SEEDS.get());
+
+//                      BARLEY:
+                        pOutput.accept(ModItems.BARLEY.get());
+                        pOutput.accept(ModItems.BARLEY_SEEDS.get());
+
+//                      OATS:
+                        pOutput.accept(ModItems.OATS.get());
+                        pOutput.accept(ModItems.OAT_SEEDS.get());
+
+//                      RYE:
+                        pOutput.accept(ModItems.RYE.get());
+                        pOutput.accept(ModItems.RYE_SEEDS.get());
+
                     })
                     .build());
 

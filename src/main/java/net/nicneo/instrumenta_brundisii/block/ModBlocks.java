@@ -10,24 +10,39 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.nicneo.instrumenta_brundisii.block.custom.CornCropBlock;
-import net.nicneo.instrumenta_brundisii.block.custom.PlayerFacingBlock;
+import net.nicneo.instrumenta_brundisii.block.custom.*;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
 import net.nicneo.instrumenta_brundisii.item.ModItems;
 
 import java.util.function.Supplier;
 
-public class ModBlocks {
-    public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, instrumentaBrundisii.MOD_ID);
 
 //  This Section defines the new block, in this case it is copying the properties of another block, cobblestone,
 //    just as in other cases, the name is defined first as a method using upper case and then it's internal
 //    identifier in the registerBlock argument.
+public class ModBlocks {
+    public static final DeferredRegister<Block> BLOCKS =
+            DeferredRegister.create(ForgeRegistries.BLOCKS, instrumentaBrundisii.MOD_ID);
 
+//  CROPS:
+//  ====================================================================================================================
     public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
             () -> new CornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
+    public static final RegistryObject<Block> FLAX_CROP = BLOCKS.register("flax_crop",
+            () -> new FlaxCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> BARLEY_CROP = BLOCKS.register("barley_crop",
+            () -> new BarleyCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> OAT_CROP = BLOCKS.register("oat_crop",
+            () -> new OatCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> RYE_CROP = BLOCKS.register("rye_crop",
+            () -> new RyeCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+//  PLASTERS:
+//  ====================================================================================================================
     public static final RegistryObject<Block> PLASTER_BLOCK = registerBlock("plaster_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> PLASTER_STAIRS = registerBlock("plaster_stairs",
@@ -218,9 +233,35 @@ public class ModBlocks {
     public static final RegistryObject<Block> DARK_GREEN_PLASTER_WALL = registerBlock("dark_green_plaster_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
 
+
+
+//  LIMESTONE:
+//  ====================================================================================================================
+    public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlock("limestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> LIMESTONE_STAIRS = registerBlock("limestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIMESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> LIMESTONE_SLAB = registerBlock("limestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> LIMESTONE_BUTTON = registerBlock("limestone_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON),
+                    BlockSetType.IRON, 10, true));
+    public static final RegistryObject<Block> LIMESTONE_PRESSURE_PLATE = registerBlock("limestone_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), BlockSetType.IRON));
+    public static final RegistryObject<Block> LIMESTONE_FENCE = registerBlock("limestone_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> LIMESTONE_FENCE_DOOR = registerBlock("limestone_fence_door",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
+    public static final RegistryObject<Block> LIMESTONE_WALL = registerBlock("limestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> LIME_BRICK_MIX = registerBlock("lime_brick_mix",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
 
+
+
+//  LINTELS:
+//  ====================================================================================================================
     public static final RegistryObject<Block> LINTEL_BLACK_TERRACOTTA = registerBlock("lintel_black_terracotta",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
     public static final RegistryObject<Block> LINTEL_BLUE_TERRACOTTA = registerBlock("lintel_blue_terracotta",
@@ -278,6 +319,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> LINTEL_BRICKS = registerBlock("lintel_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
 
+
+
+//  RETICULA:
+//  ====================================================================================================================
     public static final RegistryObject<Block> RETICULA = registerBlock("reticula",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> LIGHT_RETICULA = registerBlock("light_reticula",
@@ -286,26 +331,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
 
 
-    public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlock("limestone_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
-    public static final RegistryObject<Block> LIMESTONE_STAIRS = registerBlock("limestone_stairs",
-            () -> new StairBlock(() -> ModBlocks.LIMESTONE_BRICKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
-    public static final RegistryObject<Block> LIMESTONE_SLAB = registerBlock("limestone_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
-    public static final RegistryObject<Block> LIMESTONE_BUTTON = registerBlock("limestone_button",
-            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON),
-                    BlockSetType.IRON, 10, true));
-    public static final RegistryObject<Block> LIMESTONE_PRESSURE_PLATE = registerBlock("limestone_pressure_plate",
-            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), BlockSetType.IRON));
-    public static final RegistryObject<Block> LIMESTONE_FENCE = registerBlock("limestone_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
-    public static final RegistryObject<Block> LIMESTONE_FENCE_DOOR = registerBlock("limestone_fence_door",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
-    public static final RegistryObject<Block> LIMESTONE_WALL = registerBlock("limestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
 
-// ======================================== TERRACOTTA ========================================
+//  TERRACOTTA:
+//  ====================================================================================================================
     public static final RegistryObject<Block> TERRACOTTA_STAIRS = registerBlock("terracotta_stairs",
             () -> new StairBlock(() -> Blocks.TERRACOTTA.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
@@ -317,7 +345,6 @@ public class ModBlocks {
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
     public static final RegistryObject<Block> TERRACOTTA_WALL = registerBlock("terracotta_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-
 
     public static final RegistryObject<Block> WHITE_TERRACOTTA_STAIRS = registerBlock("white_terracotta_stairs",
             () -> new StairBlock(() -> Blocks.WHITE_TERRACOTTA.defaultBlockState(),
@@ -331,7 +358,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> WHITE_TERRACOTTA_WALL = registerBlock("white_terracotta_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
-
     public static final RegistryObject<Block> ORANGE_TERRACOTTA_STAIRS = registerBlock("orange_terracotta_stairs",
             () -> new StairBlock(() -> Blocks.ORANGE_TERRACOTTA.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
@@ -343,7 +369,6 @@ public class ModBlocks {
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
     public static final RegistryObject<Block> ORANGE_TERRACOTTA_WALL = registerBlock("orange_terracotta_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-
 
     public static final RegistryObject<Block> LIGHT_BLUE_TERRACOTTA_STAIRS = registerBlock("light_blue_terracotta_stairs",
             () -> new StairBlock(() -> Blocks.LIGHT_BLUE_TERRACOTTA.defaultBlockState(),
@@ -357,7 +382,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> LIGHT_BLUE_TERRACOTTA_WALL = registerBlock("light_blue_terracotta_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
-
     public static final RegistryObject<Block> LIGHT_GRAY_TERRACOTTA_STAIRS = registerBlock("light_gray_terracotta_stairs",
             () -> new StairBlock(() -> Blocks.LIGHT_GRAY_TERRACOTTA.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
@@ -370,7 +394,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> LIGHT_GRAY_TERRACOTTA_WALL = registerBlock("light_gray_terracotta_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
-
     public static final RegistryObject<Block> RED_TERRACOTTA_STAIRS = registerBlock("red_terracotta_stairs",
             () -> new StairBlock(() -> Blocks.RED_TERRACOTTA.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
@@ -382,7 +405,6 @@ public class ModBlocks {
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
     public static final RegistryObject<Block> RED_TERRACOTTA_WALL = registerBlock("red_terracotta_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-
 
     public static final RegistryObject<Block> BLACK_TERRACOTTA_STAIRS = registerBlock("black_terracotta_stairs",
             () -> new StairBlock(() -> Blocks.BLACK_TERRACOTTA.defaultBlockState(),
@@ -398,21 +420,18 @@ public class ModBlocks {
 
 
 
-    public static final RegistryObject<Block> TEST_BLOCK_1 = registerBlock("test_block_1",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
-
-    public static final RegistryObject<Block> PILLAR_TEST = registerBlock("pillar_test",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
-
+//  FLOORS:
+//  ====================================================================================================================
     public static final RegistryObject<Block> BLACK_FLOOR_TILE = registerBlock("black_floor_tile",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR).strength(3f)));
 
     public static final RegistryObject<Block> BLACK_FLOOR_TILE_CORNER = registerBlock("black_floor_tile_corner",
             () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
 
-    public static final RegistryObject<Block> ORIENTABLE_TEST = registerBlock("orientable_test",
-            () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.PISTON)));
 
+
+//  TUFF:
+//  ====================================================================================================================
     public static final RegistryObject<Block> TUFF_STAIRS = registerBlock("tuff_stairs",
             () -> new StairBlock(() -> Blocks.TUFF.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
@@ -429,6 +448,19 @@ public class ModBlocks {
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
     public static final RegistryObject<Block> TUFF_WALL = registerBlock("tuff_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+
+
+//  DEBUG:
+//  ====================================================================================================================
+    public static final RegistryObject<Block> TEST_BLOCK_1 = registerBlock("test_block_1",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+    public static final RegistryObject<Block> PILLAR_TEST = registerBlock("pillar_test",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+
+    public static final RegistryObject<Block> ORIENTABLE_TEST = registerBlock("orientable_test",
+            () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.PISTON)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
