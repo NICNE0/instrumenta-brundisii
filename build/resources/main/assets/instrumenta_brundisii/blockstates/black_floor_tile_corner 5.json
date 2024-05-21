@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "instrumenta_brundisii:block/black_floor_tile_corner",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "instrumenta_brundisii:block/black_floor_tile_corner"
+    },
+    "facing=south": {
+      "model": "instrumenta_brundisii:block/black_floor_tile_corner",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "instrumenta_brundisii:block/black_floor_tile_corner",
+      "y": 270
+    }
+  }
+}

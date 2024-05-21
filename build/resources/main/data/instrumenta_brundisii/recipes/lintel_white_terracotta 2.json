@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:oak_log"
+    },
+    "O": {
+      "item": "minecraft:white_terracotta"
+    }
+  },
+  "pattern": [
+    "   ",
+    "  O",
+    "  #"
+  ],
+  "result": {
+    "item": "instrumenta_brundisii:lintel_white_terracotta"
+  },
+  "show_notification": true
+}

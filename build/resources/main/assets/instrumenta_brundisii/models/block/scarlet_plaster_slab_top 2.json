@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "instrumenta_brundisii:block/scarlet_plaster_block",
+    "side": "instrumenta_brundisii:block/scarlet_plaster_block",
+    "top": "instrumenta_brundisii:block/scarlet_plaster_block"
+  }
+}

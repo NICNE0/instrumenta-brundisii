@@ -8,8 +8,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
-import net.nicneo.instrumenta_brundisii.block.custom.CornCropBlock;
-import net.nicneo.instrumenta_brundisii.block.custom.FlaxCropBlock;
+import net.nicneo.instrumenta_brundisii.block.custom.*;
 import net.nicneo.instrumenta_brundisii.item.ModItems;
 
 import java.util.Set;
@@ -279,23 +278,23 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 //      BARLEY CROP:
         LootItemCondition.Builder lootitemcondition$builder_barley = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.BARLEY_CROP.get())
-                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FlaxCropBlock.AGE, 5));
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BarleyCropBlock.AGE, 5));
 
         this.add(ModBlocks.BARLEY_CROP.get(), createCropDrops(ModBlocks.BARLEY_CROP.get(), ModItems.BARLEY.get(),
                 ModItems.BARLEY_SEEDS.get(), lootitemcondition$builder_barley));
 
-//      BARLEY CROP:
+//      OAT CROP:
         LootItemCondition.Builder lootitemcondition$builder_oat = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.OAT_CROP.get())
-                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FlaxCropBlock.AGE, 5));
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(OatCropBlock.AGE, 5));
 
         this.add(ModBlocks.OAT_CROP.get(), createCropDrops(ModBlocks.OAT_CROP.get(), ModItems.OATS.get(),
                 ModItems.OAT_SEEDS.get(), lootitemcondition$builder_barley));
 
-//      BARLEY CROP:
+//      RYE CROP:
         LootItemCondition.Builder lootitemcondition$builder_rye = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.RYE_CROP.get())
-                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FlaxCropBlock.AGE, 5));
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RyeCropBlock.AGE, 5));
 
         this.add(ModBlocks.RYE_CROP.get(), createCropDrops(ModBlocks.RYE_CROP.get(), ModItems.RYE.get(),
                 ModItems.RYE_SEEDS.get(), lootitemcondition$builder_barley));

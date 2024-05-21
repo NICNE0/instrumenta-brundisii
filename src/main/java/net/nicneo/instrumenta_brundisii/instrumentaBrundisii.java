@@ -2,7 +2,6 @@ package net.nicneo.instrumenta_brundisii;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -32,13 +31,12 @@ public class instrumentaBrundisii {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModTabs.register(modEventBus);
-
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-
         ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(ClientSetup::onClientSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -56,7 +54,6 @@ public class instrumentaBrundisii {
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -64,7 +61,6 @@ public class instrumentaBrundisii {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.COMMON_TAILED.get(), CommonTailedRenderer::new);
-
         }
     }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "instrumenta_brundisii:block/light_yellow_plaster_block"
+  }
+}

@@ -14,8 +14,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
-import net.nicneo.instrumenta_brundisii.block.custom.CornCropBlock;
-import net.nicneo.instrumenta_brundisii.block.custom.FlaxCropBlock;
+import net.nicneo.instrumenta_brundisii.block.custom.*;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
 
 import java.util.function.Function;
@@ -221,15 +220,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 //      CROPS:
 //      ================================================================================================================
-        makeCornCrop(((CropBlock) ModBlocks.CORN_CROP.get()), "corn_stage_", "corn_stage_");
+        makeCornCrop((CropBlock) ModBlocks.CORN_CROP.get(), "corn_stage_", "corn_stage_");
 
         makeFlaxCrop((CropBlock) ModBlocks.FLAX_CROP.get(), "flax_stage", "flax_stage");
 
         makeBarleyCrop((CropBlock) ModBlocks.BARLEY_CROP.get(), "barley_stage", "barley_stage");
 
-        makeOatCrop((CropBlock) ModBlocks.BARLEY_CROP.get(), "oat_stage", "oat_stage");
+        makeOatCrop((CropBlock) ModBlocks.OAT_CROP.get(), "oat_stage", "oat_stage");
 
-        makeRyeCrop((CropBlock) ModBlocks.BARLEY_CROP.get(), "rye_stage", "rye_stage");
+        makeRyeCrop((CropBlock) ModBlocks.RYE_CROP.get(), "rye_stage", "rye_stage");
 
 
 
@@ -246,6 +245,38 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     }
 
+
+
+//    CORN
+
+//    public void makeCornCrop(CropBlock block, String modelName, String textureName) {
+//        Function<BlockState, ConfiguredModel[]> function = state -> cornStates(state, block, modelName, textureName);
+//
+//        getVariantBuilder(block).forAllStates(function);
+//    }
+//
+//    private ConfiguredModel[] cornStates(BlockState state, CropBlock block, String modelName, String textureName) {
+//        ConfiguredModel[] models = new ConfiguredModel[1];
+//        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CornCropBlock) block).getAgeProperty()),
+//                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((CornCropBlock) block).getAgeProperty()))).renderType("cutout"));
+//
+//        return models;
+//    }
+
+    public void makeCornCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> cornStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] cornStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        int age = state.getValue(CornCropBlock.AGE);
+        ModelFile model = models().withExistingParent(modelName + age, mcLoc("block/cross"))
+                .texture("cross", modLoc("block/" + textureName + age));
+        return new ConfiguredModel[] { new ConfiguredModel(model, 0, 0, true) };
+    }
+
+//  FLAX
     public void makeFlaxCrop(CropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> flaxStates(state, block, modelName, textureName);
 
@@ -259,19 +290,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         return models;
     }
 
+//  BARLEY
     public void makeBarleyCrop(CropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> barleyStates(state, block, modelName, textureName);
-
         getVariantBuilder(block).forAllStates(function);
     }
     private ConfiguredModel[] barleyStates(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((FlaxCropBlock) block).getAgeProperty()),
-                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((FlaxCropBlock) block).getAgeProperty()))).renderType("cutout"));
-
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((BarleyCropBlock) block).getAgeProperty()),
+                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((BarleyCropBlock) block).getAgeProperty()))).renderType("cutout"));
         return models;
     }
 
+//  OAT
     public void makeOatCrop(CropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> oatStates(state, block, modelName, textureName);
 
@@ -279,25 +310,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private ConfiguredModel[] oatStates(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((FlaxCropBlock) block).getAgeProperty()),
-                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((FlaxCropBlock) block).getAgeProperty()))).renderType("cutout"));
-
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((OatCropBlock) block).getAgeProperty()),
+                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((OatCropBlock) block).getAgeProperty()))).renderType("cutout"));
         return models;
     }
 
+//  RYE
     public void makeRyeCrop(CropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> ryeStates(state, block, modelName, textureName);
 
         getVariantBuilder(block).forAllStates(function);
     }
-
     private ConfiguredModel[] ryeStates(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((FlaxCropBlock) block).getAgeProperty()),
-                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((FlaxCropBlock) block).getAgeProperty()))).renderType("cutout"));
-
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((RyeCropBlock) block).getAgeProperty()),
+                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((RyeCropBlock) block).getAgeProperty()))).renderType("cutout"));
         return models;
     }
+
+
 
     private void makePlayerFacingBlock(RegistryObject<Block> blockRegistryObject, String textureBase) {
         Block block = blockRegistryObject.get();
@@ -391,19 +422,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
 
-    public void makeCornCrop(CropBlock block, String modelName, String textureName) {
-        Function<BlockState, ConfiguredModel[]> function = state -> cornStates(state, block, modelName, textureName);
 
-        getVariantBuilder(block).forAllStates(function);
-    }
 
-    private ConfiguredModel[] cornStates(BlockState state, CropBlock block, String modelName, String textureName) {
-        ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CornCropBlock) block).getAgeProperty()),
-                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((CornCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
-        return models;
-    }
 
 //    This lets you pass the registry Object and creates a custom block and an item for it
     private void  blockWithItem(RegistryObject<Block> blockRegistryObject){
