@@ -4,7 +4,7 @@ var gridLineWidth = 1;
 var squareSize = 16 - gridLineWidth; // Size excluding the 1-pixel grid line
 
 // Define the output folder path
-var outputFolderPath = "/Users/roberto/Documents/GitHub/instrumenta-brundisii/processed_images";
+var outputFolderPath = "/Users/roberto/Documents/GitHub/instrumenta-brundisii/photoshop/processed_images";
 
 // Get the active document
 var doc = app.activeDocument;
