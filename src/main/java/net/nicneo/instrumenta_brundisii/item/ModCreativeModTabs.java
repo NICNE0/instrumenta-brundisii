@@ -228,6 +228,18 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.RYE.get());
                         pOutput.accept(ModItems.RYE_SEEDS.get());
 
+//                      LEEK:
+                        pOutput.accept(ModItems.LEEK.get());
+                        pOutput.accept(ModItems.LEEK_SEEDS.get());
+
+//                      GARLIC:
+                        pOutput.accept(ModItems.GARLIC.get());
+                        pOutput.accept(ModItems.GARLIC_SEEDS.get());
+
+//                      ONION:
+                        pOutput.accept(ModItems.ONION.get());
+                        pOutput.accept(ModItems.ONION_SEEDS.get());
+
                     })
                     .build());
 

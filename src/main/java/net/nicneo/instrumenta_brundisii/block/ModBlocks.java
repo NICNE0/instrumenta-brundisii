@@ -41,6 +41,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> RYE_CROP = BLOCKS.register("rye_crop",
             () -> new RyeCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
+    public static final RegistryObject<Block> LEEK_CROP = BLOCKS.register("leek_crop",
+            () -> new LeekCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> GARLIC_CROP = BLOCKS.register("garlic_crop",
+            () -> new GarlicCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> ONION_CROP = BLOCKS.register("onion_crop",
+            () -> new OnionCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
 //  PLASTERS:
 //  ====================================================================================================================
     public static final RegistryObject<Block> PLASTER_BLOCK = registerBlock("plaster_block",

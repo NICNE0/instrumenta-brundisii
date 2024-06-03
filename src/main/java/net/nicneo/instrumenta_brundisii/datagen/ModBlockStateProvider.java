@@ -230,6 +230,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         makeRyeCrop((CropBlock) ModBlocks.RYE_CROP.get(), "rye_stage", "rye_stage");
 
+        makeLeekCrop((CropBlock) ModBlocks.LEEK_CROP.get(), "leek_stage", "leek_stage");
+
+        makeGarlicCrop((CropBlock) ModBlocks.GARLIC_CROP.get(), "garlic_stage", "garlic_stage");
+
+        makeOnionCrop((CropBlock) ModBlocks.ONION_CROP.get(), "onion_stage", "onion_stage");
+
 
 
 //      COLUMN BLOCKS:
@@ -325,6 +331,45 @@ public class ModBlockStateProvider extends BlockStateProvider {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((RyeCropBlock) block).getAgeProperty()),
                 new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((RyeCropBlock) block).getAgeProperty()))).renderType("cutout"));
+        return models;
+    }
+
+//  LEEK
+    public void makeLeekCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> leekStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] leekStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((LeekCropBlock) block).getAgeProperty()),
+                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((LeekCropBlock) block).getAgeProperty()))).renderType("cutout"));
+        return models;
+    }
+
+//  GARLIC
+    public void makeGarlicCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> garlicStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] garlicStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((GarlicCropBlock) block).getAgeProperty()),
+                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((GarlicCropBlock) block).getAgeProperty()))).renderType("cutout"));
+        return models;
+    }
+
+//  ONION
+    public void makeOnionCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> onionStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] onionStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((OnionCropBlock) block).getAgeProperty()),
+                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((OnionCropBlock) block).getAgeProperty()))).renderType("cutout"));
         return models;
     }
 

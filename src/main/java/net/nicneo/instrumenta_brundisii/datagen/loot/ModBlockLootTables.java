@@ -299,6 +299,30 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.RYE_CROP.get(), createCropDrops(ModBlocks.RYE_CROP.get(), ModItems.RYE.get(),
                 ModItems.RYE_SEEDS.get(), lootitemcondition$builder_barley));
 
+//      LEEK CROP:
+        LootItemCondition.Builder lootitemcondition$builder_leek = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.LEEK_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(LeekCropBlock.AGE, 5));
+
+        this.add(ModBlocks.LEEK_CROP.get(), createCropDrops(ModBlocks.LEEK_CROP.get(), ModItems.LEEK.get(),
+                ModItems.LEEK_SEEDS.get(), lootitemcondition$builder_barley));
+
+//      GARLIC CROP:
+        LootItemCondition.Builder lootitemcondition$builder_garlic = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.GARLIC_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(GarlicCropBlock.AGE, 5));
+
+        this.add(ModBlocks.GARLIC_CROP.get(), createCropDrops(ModBlocks.GARLIC_CROP.get(), ModItems.GARLIC.get(),
+                ModItems.GARLIC_SEEDS.get(), lootitemcondition$builder_barley));
+
+//      ONION CROP:
+        LootItemCondition.Builder lootitemcondition$builder_onion = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.ONION_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(OnionCropBlock.AGE, 5));
+
+        this.add(ModBlocks.ONION_CROP.get(), createCropDrops(ModBlocks.ONION_CROP.get(), ModItems.ONION.get(),
+                ModItems.ONION_SEEDS.get(), lootitemcondition$builder_barley));
+
 
 
 //      DEBUG:

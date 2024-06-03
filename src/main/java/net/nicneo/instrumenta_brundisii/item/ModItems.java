@@ -58,6 +58,21 @@ public class ModItems{
     public static final RegistryObject<Item> RYE = ITEMS.register("rye",
             () -> new Item(new Item.Properties().stacksTo(64)));
 
+    public static final RegistryObject<Item> LEEK_SEEDS = ITEMS.register("leek_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.LEEK_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LEEK = ITEMS.register("leek",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> GARLIC_SEEDS = ITEMS.register("garlic_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.GARLIC_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> ONION_SEEDS = ITEMS.register("onion_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.ONION_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ONION = ITEMS.register("onion",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
