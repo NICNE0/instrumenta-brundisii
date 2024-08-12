@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "instrumenta_brundisii:block/circle_white_tile_top",
+    "side": "instrumenta_brundisii:block/circle_white_tile"
+  }
+}

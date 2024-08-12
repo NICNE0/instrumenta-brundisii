@@ -10,7 +10,24 @@
   "block.instrumenta_brundisii.pillar_test": "Pillar Test",
   "block.instrumenta_brundisii.black_floor_tile": "Black Floor Tile",
   "block.instrumenta_brundisii.black_floor_tile_corner": "Black Floor Tile Corner",
+  "block.instrumenta_brundisii.black_dot_tile": "Black Dot Tile",
+  "block.instrumenta_brundisii.black_dot_tile_corner": "Black Dot Tile Corner",
+  "block.instrumenta_brundisii.white_dot_tile": "White Dot Tile",
+  "block.instrumenta_brundisii.white_dot_tile_corner": "White Dot Tile Corner",
+  "block.instrumenta_brundisii.circle_black_tile": "Circle Black Tile",
+  "block.instrumenta_brundisii.circle_black_tile_corner": "Circle Black Tile Corner",
+  "block.instrumenta_brundisii.circle_white_tile": "Circle White Tile",
+  "block.instrumenta_brundisii.circle_white_tile_corner": "Circle White Tile Corner",
+  "block.instrumenta_brundisii.diamond_black_tile": "Diamond Black Tile",
+  "block.instrumenta_brundisii.diamond_black_tile_corner": "Diamond Black Tile Corner",
+  "block.instrumenta_brundisii.diamond_white_tile": "Diamond White Tile",
+  "block.instrumenta_brundisii.diamond_white_tile_corner": "Diamond White Tile Corner",
+  "block.instrumenta_brundisii.diamond_black_and_yellow_tile": "Diamond Black And Yellow Tile",
+  "block.instrumenta_brundisii.diamond_black_and_yellow_tile_corner": "Diamond Black And Yellow Tile Corner",
+  "block.instrumenta_brundisii.diamond_pink_tile": "Diamond Pink Tile",
+  "block.instrumenta_brundisii.diamond_pink_tile_corner": "Diamond Pink Tile Corner",
   "block.instrumenta_brundisii.orientable_test": "Orientable Test",
+
 
   "block.instrumenta_brundisii.plaster_block": "Plaster Block",
   "block.instrumenta_brundisii.plaster_stairs": "Plaster Stairs",
@@ -228,9 +245,19 @@
   "item.instrumenta_brundisii.onion": "Onion",
   "item.instrumenta_brundisii.onion_seeds": "Onion Seeds",
 
+  "item.instrumenta_brundisii.asparagus": "Asparagus",
+  "item.instrumenta_brundisii.asparagus_seeds": "Asparagus Seeds",
+
+  "item.instrumenta_brundisii.parsnip": "Parsnip",
+  "item.instrumenta_brundisii.parsnip_seeds": "Parsnip Seeds",
+
 
 
   "instrumenta.brundisii_tab":"Instrumenta Brundisii",
   "instrumenta.brundisii_coins_tab":"Instrumenta Brundisii Coins",
-  "instrumenta.brundisii_de_re_coquinaria":"De Re Coquinaria"
+  "instrumenta.brundisii_de_re_coquinaria":"De Re Coquinaria",
+
+  "instrumenta.brundisii.book.de_re_coquinaria": "De Re Coquinaria",
+  "instrumenta.brundisii.book.de_re_coquinaria.1": "This is a sample of the book \n  Custom Book \n Testing 2021"
+
 }

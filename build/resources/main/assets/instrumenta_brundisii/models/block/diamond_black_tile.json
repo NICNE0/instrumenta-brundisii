@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "instrumenta_brundisii:block/diamond_black_tile_top",
+    "side": "instrumenta_brundisii:block/diamond_black_tile"
+  }
+}

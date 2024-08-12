@@ -16,7 +16,7 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "block": "instrumenta_brundisii:barley_crop",
+                  "block": "instrumenta_brundisii:oat_crop",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "age": "5"
@@ -38,7 +38,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "instrumenta_brundisii:barley_crop",
+          "block": "instrumenta_brundisii:oat_crop",
           "condition": "minecraft:block_state_property",
           "properties": {
             "age": "5"

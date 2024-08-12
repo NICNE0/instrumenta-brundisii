@@ -50,7 +50,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> ONION_CROP = BLOCKS.register("onion_crop",
             () -> new OnionCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
-//  PLASTERS:
+    public static final RegistryObject<Block> ASPARAGUS_CROP = BLOCKS.register("asparagus_crop",
+            () -> new AsparagusCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> PARSNIP_CROP = BLOCKS.register("parsnip_crop",
+            () -> new ParsnipCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    //  PLASTERS:
 //  ====================================================================================================================
     public static final RegistryObject<Block> PLASTER_BLOCK = registerBlock("plaster_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
@@ -433,13 +439,47 @@ public class ModBlocks {
 //  ====================================================================================================================
     public static final RegistryObject<Block> BLACK_FLOOR_TILE = registerBlock("black_floor_tile",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR).strength(3f)));
-
     public static final RegistryObject<Block> BLACK_FLOOR_TILE_CORNER = registerBlock("black_floor_tile_corner",
+            () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
+
+    public static final RegistryObject<Block> WHITE_DOT_TILE = registerBlock("white_dot_tile",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR).strength(3f)));
+    public static final RegistryObject<Block> WHITE_DOT_TILE_CORNER = registerBlock("white_dot_tile_corner",
+            () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
+
+    public static final RegistryObject<Block> CIRCLE_BLACK_TILE = registerBlock("circle_black_tile",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR).strength(3f)));
+    public static final RegistryObject<Block> CIRCLE_BLACK_TILE_CORNER = registerBlock("circle_black_tile_corner",
+            () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
+
+    public static final RegistryObject<Block> CIRCLE_WHITE_TILE = registerBlock("circle_white_tile",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR).strength(3f)));
+    public static final RegistryObject<Block> CIRCLE_WHITE_TILE_CORNER = registerBlock("circle_white_tile_corner",
+            () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
+
+    public static final RegistryObject<Block> DIAMOND_BLACK_TILE = registerBlock("diamond_black_tile",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR).strength(3f)));
+    public static final RegistryObject<Block> DIAMOND_BLACK_TILE_CORNER = registerBlock("diamond_black_tile_corner",
+            () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
+
+    public static final RegistryObject<Block> DIAMOND_WHITE_TILE = registerBlock("diamond_white_tile",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR).strength(3f)));
+    public static final RegistryObject<Block> DIAMOND_WHITE_TILE_CORNER = registerBlock("diamond_white_tile_corner",
+            () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
+
+    public static final RegistryObject<Block> DIAMOND_BLACK_AND_YELLOW_TILE = registerBlock("diamond_black_and_yellow_tile",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR).strength(3f)));
+    public static final RegistryObject<Block> DIAMOND_BLACK_AND_YELLOW_TILE_CORNER = registerBlock("diamond_black_and_yellow_tile_corner",
+            () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
+
+    public static final RegistryObject<Block> DIAMOND_PINK_TILE = registerBlock("diamond_pink_tile",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR).strength(3f)));
+    public static final RegistryObject<Block> DIAMOND_PINK_TILE_CORNER = registerBlock("diamond_pink_tile_corner",
             () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
 
 
 
-//  TUFF:
+    //  TUFF:
 //  ====================================================================================================================
     public static final RegistryObject<Block> TUFF_STAIRS = registerBlock("tuff_stairs",
             () -> new StairBlock(() -> Blocks.TUFF.defaultBlockState(),

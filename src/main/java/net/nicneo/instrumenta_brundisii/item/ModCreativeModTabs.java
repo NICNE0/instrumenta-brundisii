@@ -31,6 +31,28 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.BLACK_FLOOR_TILE.get());
                         pOutput.accept(ModBlocks.BLACK_FLOOR_TILE_CORNER.get());
 
+                        pOutput.accept(ModBlocks.WHITE_DOT_TILE.get());
+                        pOutput.accept(ModBlocks.WHITE_DOT_TILE_CORNER.get());
+
+                        pOutput.accept(ModBlocks.CIRCLE_BLACK_TILE.get());
+                        pOutput.accept(ModBlocks.CIRCLE_BLACK_TILE_CORNER.get());
+
+                        pOutput.accept(ModBlocks.CIRCLE_WHITE_TILE.get());
+                        pOutput.accept(ModBlocks.CIRCLE_WHITE_TILE_CORNER.get());
+
+                        pOutput.accept(ModBlocks.DIAMOND_BLACK_TILE.get());
+                        pOutput.accept(ModBlocks.DIAMOND_BLACK_TILE_CORNER.get());
+
+                        pOutput.accept(ModBlocks.DIAMOND_WHITE_TILE.get());
+                        pOutput.accept(ModBlocks.DIAMOND_WHITE_TILE_CORNER.get());
+
+                        pOutput.accept(ModBlocks.DIAMOND_BLACK_AND_YELLOW_TILE.get());
+                        pOutput.accept(ModBlocks.DIAMOND_BLACK_AND_YELLOW_TILE_CORNER.get());
+
+                        pOutput.accept(ModBlocks.DIAMOND_PINK_TILE.get());
+                        pOutput.accept(ModBlocks.DIAMOND_PINK_TILE_CORNER.get());
+
+
 //                      TUFF PLASTER:
                         pOutput.accept(ModBlocks.TUFF_SLAB.get());
                         pOutput.accept(ModBlocks.TUFF_STAIRS.get());
@@ -239,6 +261,15 @@ public class ModCreativeModTabs {
 //                      ONION:
                         pOutput.accept(ModItems.ONION.get());
                         pOutput.accept(ModItems.ONION_SEEDS.get());
+
+//                      Asparagus:
+                        pOutput.accept(ModItems.ASPARAGUS.get());
+                        pOutput.accept(ModItems.ASPARAGUS_SEEDS.get());
+
+
+//                      Parsnip:
+                        pOutput.accept(ModItems.PARSNIP.get());
+                        pOutput.accept(ModItems.PARSNIP_SEEDS.get());
 
                     })
                     .build());

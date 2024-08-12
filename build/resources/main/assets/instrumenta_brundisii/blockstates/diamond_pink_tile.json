@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "instrumenta_brundisii:block/diamond_pink_tile_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "instrumenta_brundisii:block/diamond_pink_tile"
+    },
+    "axis=z": {
+      "model": "instrumenta_brundisii:block/diamond_pink_tile_horizontal",
+      "x": 90
+    }
+  }
+}

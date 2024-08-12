@@ -1,6 +1,7 @@
 package net.nicneo.instrumenta_brundisii.datagen.loot;
 
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
@@ -251,6 +252,27 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BLACK_FLOOR_TILE.get());
         this.dropSelf(ModBlocks.BLACK_FLOOR_TILE_CORNER.get());
 
+        this.dropSelf(ModBlocks.WHITE_DOT_TILE.get());
+        this.dropSelf(ModBlocks.WHITE_DOT_TILE_CORNER.get());
+
+        this.dropSelf(ModBlocks.CIRCLE_BLACK_TILE.get());
+        this.dropSelf(ModBlocks.CIRCLE_BLACK_TILE_CORNER.get());
+
+        this.dropSelf(ModBlocks.CIRCLE_WHITE_TILE.get());
+        this.dropSelf(ModBlocks.CIRCLE_WHITE_TILE_CORNER.get());
+
+        this.dropSelf(ModBlocks.DIAMOND_BLACK_TILE.get());
+        this.dropSelf(ModBlocks.DIAMOND_BLACK_TILE_CORNER.get());
+
+        this.dropSelf(ModBlocks.DIAMOND_WHITE_TILE.get());
+        this.dropSelf(ModBlocks.DIAMOND_WHITE_TILE_CORNER.get());
+
+        this.dropSelf(ModBlocks.DIAMOND_BLACK_AND_YELLOW_TILE.get());
+        this.dropSelf(ModBlocks.DIAMOND_BLACK_AND_YELLOW_TILE_CORNER.get());
+
+        this.dropSelf(ModBlocks.DIAMOND_PINK_TILE.get());
+        this.dropSelf(ModBlocks.DIAMOND_PINK_TILE_CORNER.get());
+
 
 
 //      CROPS
@@ -259,10 +281,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 //      CORN CROP:
         LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
-                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 3))
-                .or(LootItemBlockStatePropertyCondition
-                        .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
-                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 4)));
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 8));
+//                .or(LootItemBlockStatePropertyCondition
+//                        .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+//                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 4)));
 
         this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN_COB.get(),
                 ModItems.CORN_SEEDS.get(), lootitemcondition$builder2));
@@ -289,7 +311,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(OatCropBlock.AGE, 5));
 
         this.add(ModBlocks.OAT_CROP.get(), createCropDrops(ModBlocks.OAT_CROP.get(), ModItems.OATS.get(),
-                ModItems.OAT_SEEDS.get(), lootitemcondition$builder_barley));
+                ModItems.OAT_SEEDS.get(), lootitemcondition$builder_oat));
 
 //      RYE CROP:
         LootItemCondition.Builder lootitemcondition$builder_rye = LootItemBlockStatePropertyCondition
@@ -297,7 +319,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RyeCropBlock.AGE, 5));
 
         this.add(ModBlocks.RYE_CROP.get(), createCropDrops(ModBlocks.RYE_CROP.get(), ModItems.RYE.get(),
-                ModItems.RYE_SEEDS.get(), lootitemcondition$builder_barley));
+                ModItems.RYE_SEEDS.get(), lootitemcondition$builder_rye));
 
 //      LEEK CROP:
         LootItemCondition.Builder lootitemcondition$builder_leek = LootItemBlockStatePropertyCondition
@@ -305,7 +327,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(LeekCropBlock.AGE, 5));
 
         this.add(ModBlocks.LEEK_CROP.get(), createCropDrops(ModBlocks.LEEK_CROP.get(), ModItems.LEEK.get(),
-                ModItems.LEEK_SEEDS.get(), lootitemcondition$builder_barley));
+                ModItems.LEEK_SEEDS.get(), lootitemcondition$builder_leek));
 
 //      GARLIC CROP:
         LootItemCondition.Builder lootitemcondition$builder_garlic = LootItemBlockStatePropertyCondition
@@ -313,7 +335,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(GarlicCropBlock.AGE, 5));
 
         this.add(ModBlocks.GARLIC_CROP.get(), createCropDrops(ModBlocks.GARLIC_CROP.get(), ModItems.GARLIC.get(),
-                ModItems.GARLIC_SEEDS.get(), lootitemcondition$builder_barley));
+                ModItems.GARLIC_SEEDS.get(), lootitemcondition$builder_garlic));
 
 //      ONION CROP:
         LootItemCondition.Builder lootitemcondition$builder_onion = LootItemBlockStatePropertyCondition
@@ -321,7 +343,24 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(OnionCropBlock.AGE, 5));
 
         this.add(ModBlocks.ONION_CROP.get(), createCropDrops(ModBlocks.ONION_CROP.get(), ModItems.ONION.get(),
-                ModItems.ONION_SEEDS.get(), lootitemcondition$builder_barley));
+                ModItems.ONION_SEEDS.get(), lootitemcondition$builder_onion));
+
+//      ASPARAGUS CROP:
+        LootItemCondition.Builder lootitemcondition$builder_asparagus = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.ASPARAGUS_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(AsparagusCropBlock.AGE, 5));
+
+        this.add(ModBlocks.ASPARAGUS_CROP.get(), createCropDrops(ModBlocks.ASPARAGUS_CROP.get(), ModItems.ASPARAGUS.get(),
+                ModItems.ASPARAGUS_SEEDS.get(), lootitemcondition$builder_asparagus));
+
+
+//      PARSNIP CROP:
+        LootItemCondition.Builder lootitemcondition$builder_parsnip = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.PARSNIP_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ParsnipCropBlock.AGE, 5));
+
+        this.add(ModBlocks.PARSNIP_CROP.get(), createCropDrops(ModBlocks.PARSNIP_CROP.get(), ModItems.PARSNIP.get(),
+                ModItems.PARSNIP_SEEDS.get(), lootitemcondition$builder_parsnip));
 
 
 

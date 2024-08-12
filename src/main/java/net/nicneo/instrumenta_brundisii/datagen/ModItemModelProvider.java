@@ -51,6 +51,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ONION_SEEDS);
         simpleItem(ModItems.ONION);
 
+        simpleItem(ModItems.ASPARAGUS_SEEDS);
+        simpleItem(ModItems.ASPARAGUS);
+
+        simpleItem(ModItems.PARSNIP_SEEDS);
+        simpleItem(ModItems.PARSNIP);
+
 //      ========== FENCES ==========
         fenceItem(ModBlocks.PLASTER_FENCE, ModBlocks.PLASTER_BLOCK, false);
         fenceItem(ModBlocks.BLUE_PLASTER_FENCE, ModBlocks.BLUE_PLASTER_BLOCK, false);

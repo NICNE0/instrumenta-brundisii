@@ -73,6 +73,17 @@ public class ModItems{
     public static final RegistryObject<Item> ONION = ITEMS.register("onion",
             () -> new Item(new Item.Properties().stacksTo(64)));
 
+    public static final RegistryObject<Item> ASPARAGUS_SEEDS = ITEMS.register("asparagus_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.ASPARAGUS_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ASPARAGUS = ITEMS.register("asparagus",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+
+    public static final RegistryObject<Item> PARSNIP_SEEDS = ITEMS.register("parsnip_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.PARSNIP_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> PARSNIP = ITEMS.register("parsnip",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

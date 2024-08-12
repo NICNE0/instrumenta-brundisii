@@ -236,18 +236,49 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         makeOnionCrop((CropBlock) ModBlocks.ONION_CROP.get(), "onion_stage", "onion_stage");
 
+        makeAsparagusCrop((CropBlock) ModBlocks.ASPARAGUS_CROP.get(), "asparagus_stage", "asparagus_stage");
 
+        makeParsnipCrop((CropBlock) ModBlocks.PARSNIP_CROP.get(), "parsnip_stage", "parsnip_stage");
 
 //      COLUMN BLOCKS:
 //      ================================================================================================================
         logBlock(((RotatedPillarBlock) ModBlocks.PILLAR_TEST.get()));
         blockItem(ModBlocks.PILLAR_TEST);
 
+        makePlayerFacingBlock(ModBlocks.ORIENTABLE_TEST, "orientable_test");
+
         logBlock(((RotatedPillarBlock) ModBlocks.BLACK_FLOOR_TILE.get()));
         blockItem(ModBlocks.BLACK_FLOOR_TILE);
-
         makePlayerFacingBlock(ModBlocks.BLACK_FLOOR_TILE_CORNER, "black_floor_tile_corner");
-        makePlayerFacingBlock(ModBlocks.ORIENTABLE_TEST, "orientable_test");
+
+        logBlock(((RotatedPillarBlock) ModBlocks.WHITE_DOT_TILE.get()));
+        blockItem(ModBlocks.WHITE_DOT_TILE);
+        makePlayerFacingBlock(ModBlocks.WHITE_DOT_TILE_CORNER, "white_dot_tile_corner");
+
+        logBlock(((RotatedPillarBlock) ModBlocks.CIRCLE_BLACK_TILE.get()));
+        blockItem(ModBlocks.CIRCLE_BLACK_TILE);
+        makePlayerFacingBlock(ModBlocks.CIRCLE_BLACK_TILE_CORNER, "circle_black_tile_corner");
+
+        logBlock(((RotatedPillarBlock) ModBlocks.CIRCLE_WHITE_TILE.get()));
+        blockItem(ModBlocks.CIRCLE_WHITE_TILE);
+        makePlayerFacingBlock(ModBlocks.CIRCLE_WHITE_TILE_CORNER, "circle_white_tile_corner");
+
+        logBlock(((RotatedPillarBlock) ModBlocks.DIAMOND_BLACK_TILE.get()));
+        blockItem(ModBlocks.DIAMOND_BLACK_TILE);
+        makePlayerFacingBlock(ModBlocks.DIAMOND_BLACK_TILE_CORNER, "diamond_black_tile_corner");
+
+        logBlock(((RotatedPillarBlock) ModBlocks.DIAMOND_WHITE_TILE.get()));
+        blockItem(ModBlocks.DIAMOND_WHITE_TILE);
+        makePlayerFacingBlock(ModBlocks.DIAMOND_WHITE_TILE_CORNER, "diamond_white_tile_corner");
+
+        logBlock(((RotatedPillarBlock) ModBlocks.DIAMOND_BLACK_AND_YELLOW_TILE.get()));
+        blockItem(ModBlocks.DIAMOND_BLACK_AND_YELLOW_TILE);
+        makePlayerFacingBlock(ModBlocks.DIAMOND_BLACK_AND_YELLOW_TILE_CORNER, "diamond_black_and_yellow_tile_corner");
+
+        logBlock(((RotatedPillarBlock) ModBlocks.DIAMOND_PINK_TILE.get()));
+        blockItem(ModBlocks.DIAMOND_PINK_TILE);
+        makePlayerFacingBlock(ModBlocks.DIAMOND_PINK_TILE_CORNER, "diamond_pink_tile_corner");
+
 
     }
 
@@ -370,6 +401,34 @@ public class ModBlockStateProvider extends BlockStateProvider {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((OnionCropBlock) block).getAgeProperty()),
                 new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((OnionCropBlock) block).getAgeProperty()))).renderType("cutout"));
+        return models;
+    }
+
+
+//  ASPARAGUS
+    public void makeAsparagusCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> asparagusStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] asparagusStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((AsparagusCropBlock) block).getAgeProperty()),
+                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((AsparagusCropBlock) block).getAgeProperty()))).renderType("cutout"));
+        return models;
+    }
+
+
+//  PARSNIP
+    public void makeParsnipCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> parsnipStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] parsnipStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((ParsnipCropBlock) block).getAgeProperty()),
+                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((ParsnipCropBlock) block).getAgeProperty()))).renderType("cutout"));
         return models;
     }
 
