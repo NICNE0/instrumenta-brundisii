@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_wall_side",
-  "textures": {
-    "wall": "instrumenta_brundisii:block/dark_blue_plaster_block"
-  }
-}

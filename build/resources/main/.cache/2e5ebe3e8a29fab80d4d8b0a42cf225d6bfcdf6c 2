@@ -1,6 +1,0 @@
-// 1.20.1	2024-04-28T15:25:19.6065701	Tags for minecraft:block mod id instrumenta_brundisii
-eb1b7dd9d4a8b07223f3822c35e5f6f7996dd9bd data/minecraft/tags/blocks/fences.json
-fd452b8d10beee4075c571fd9bb1e3e1892a0d59 data/minecraft/tags/blocks/fence_gates.json
-838af593b2ec53dc86a09c2d224b5301603c6087 data/minecraft/tags/blocks/mineable/pickaxe.json
-838af593b2ec53dc86a09c2d224b5301603c6087 data/minecraft/tags/blocks/needs_stone_tool.json
-712a161fa7e4b055929b8eedf1946a73aa24dcf5 data/minecraft/tags/blocks/walls.json
