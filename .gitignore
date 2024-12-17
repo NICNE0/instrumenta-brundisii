@@ -25,3 +25,6 @@ replay_pid*
 
 # virtual environments
 .venv
+
+# Mac
+**/.DS_Store

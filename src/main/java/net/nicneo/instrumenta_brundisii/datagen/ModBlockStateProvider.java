@@ -218,10 +218,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeLintelBlock(ModBlocks.LINTEL_YELLOW_PLASTER_BLOCK, "lintel_yellow_plaster_block");
         makeLintelBlock(ModBlocks.LINTEL_BRICKS, "lintel_bricks");
 
-//      CROPS:
+//      DOUBLE CROPS:
 //      ================================================================================================================
         makeCornCrop((CropBlock) ModBlocks.CORN_CROP.get(), "corn_stage_", "corn_stage_");
 
+        makeOpiumCrop((CropBlock) ModBlocks.OPIUM_CROP.get(), "opium_stage_", "opium_stage_");
+
+        makeTomatoCrop((CropBlock) ModBlocks.TOMATO_CROP.get(), "tomato_stage_", "tomato_stage_");
+
+        makeSweetPotatoCrop((CropBlock) ModBlocks.SWEET_POTATO_CROP.get(), "sweet_potato_stage_", "sweet_potato_stage_");
+
+//      SIMPLE CROPS:
+//      ================================================================================================================
         makeFlaxCrop((CropBlock) ModBlocks.FLAX_CROP.get(), "flax_stage", "flax_stage");
 
         makeBarleyCrop((CropBlock) ModBlocks.BARLEY_CROP.get(), "barley_stage", "barley_stage");
@@ -239,6 +247,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeAsparagusCrop((CropBlock) ModBlocks.ASPARAGUS_CROP.get(), "asparagus_stage", "asparagus_stage");
 
         makeParsnipCrop((CropBlock) ModBlocks.PARSNIP_CROP.get(), "parsnip_stage", "parsnip_stage");
+
+        makeCabbageCrop((CropBlock) ModBlocks.CABBAGE_CROP.get(), "cabbage_stage", "cabbage_stage");
 
 //      COLUMN BLOCKS:
 //      ================================================================================================================
@@ -310,6 +320,48 @@ public class ModBlockStateProvider extends BlockStateProvider {
         int age = state.getValue(CornCropBlock.AGE);
         ModelFile model = models().withExistingParent(modelName + age, mcLoc("block/cross"))
                 .texture("cross", modLoc("block/" + textureName + age));
+        return new ConfiguredModel[] { new ConfiguredModel(model, 0, 0, true) };
+    }
+
+//  OPIUM
+    public void makeOpiumCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> opiumStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] opiumStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        int age = state.getValue(OpiumCropBlock.AGE);
+        ModelFile model = models().withExistingParent(modelName + age, mcLoc("block/cross"))
+                .texture("cross", modLoc("block/" + textureName + age)).renderType("cutout");
+        return new ConfiguredModel[] { new ConfiguredModel(model, 0, 0, true) };
+    }
+
+//  TOMATO
+    public void makeTomatoCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> tomatoStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] tomatoStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        int age = state.getValue(TomatoCropBlock.AGE);
+        ModelFile model = models().withExistingParent(modelName + age, mcLoc("block/cross"))
+                .texture("cross", modLoc("block/" + textureName + age)).renderType("cutout");
+        return new ConfiguredModel[] { new ConfiguredModel(model, 0, 0, true) };
+    }
+
+//  SWEET POTATO
+    public void makeSweetPotatoCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> sweetPotatoStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] sweetPotatoStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        int age = state.getValue(SweetPotatoCropBlock.AGE);
+        ModelFile model = models().withExistingParent(modelName + age, mcLoc("block/cross"))
+                .texture("cross", modLoc("block/" + textureName + age)).renderType("cutout");
         return new ConfiguredModel[] { new ConfiguredModel(model, 0, 0, true) };
     }
 
@@ -429,6 +481,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((ParsnipCropBlock) block).getAgeProperty()),
                 new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((ParsnipCropBlock) block).getAgeProperty()))).renderType("cutout"));
+        return models;
+    }
+
+    //  CABBAGE
+    public void makeCabbageCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> cabbageStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] cabbageStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CabbageCropBlock) block).getAgeProperty()),
+                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((CabbageCropBlock) block).getAgeProperty()))).renderType("cutout"));
         return models;
     }
 

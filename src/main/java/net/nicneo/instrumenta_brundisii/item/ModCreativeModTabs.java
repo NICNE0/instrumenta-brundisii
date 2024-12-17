@@ -266,10 +266,25 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.ASPARAGUS.get());
                         pOutput.accept(ModItems.ASPARAGUS_SEEDS.get());
 
-
 //                      Parsnip:
                         pOutput.accept(ModItems.PARSNIP.get());
                         pOutput.accept(ModItems.PARSNIP_SEEDS.get());
+
+//                      Cabbage:
+                        pOutput.accept(ModItems.CABBAGE.get());
+                        pOutput.accept(ModItems.CABBAGE_SEEDS.get());
+
+//                      Opium:
+                        pOutput.accept(ModItems.OPIUM_BULB.get());
+                        pOutput.accept(ModItems.OPIUM_SEEDS.get());
+
+//                      Tomato:
+                        pOutput.accept(ModItems.TOMATO.get());
+                        pOutput.accept(ModItems.TOMATO_SEEDS.get());
+
+//                      Sweet potato:
+                        pOutput.accept(ModItems.SWEET_POTATO.get());
+                        pOutput.accept(ModItems.SWEET_POTATO_SEEDS.get());
 
                     })
                     .build());

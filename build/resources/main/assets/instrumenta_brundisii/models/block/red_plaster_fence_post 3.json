@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/fence_post",
-  "textures": {
-    "texture": "instrumenta_brundisii:block/red_plaster_block"
-  }
-}

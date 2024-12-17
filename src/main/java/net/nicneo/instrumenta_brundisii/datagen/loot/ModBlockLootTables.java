@@ -275,7 +275,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
 
 
-//      CROPS
+//      DOUBLE CROPS
 //      ================================================================================================================
 
 //      CORN CROP:
@@ -288,6 +288,35 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN_COB.get(),
                 ModItems.CORN_SEEDS.get(), lootitemcondition$builder2));
+
+//      OPIUM CROP:
+        LootItemCondition.Builder lootitemcondition$builder_opium = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.OPIUM_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(OpiumCropBlock.AGE, 8));
+
+        this.add(ModBlocks.OPIUM_CROP.get(), createCropDrops(ModBlocks.OPIUM_CROP.get(), ModItems.OPIUM_BULB.get(),
+                ModItems.OPIUM_SEEDS.get(), lootitemcondition$builder_opium));
+
+
+//      TOMATO CROP:
+        LootItemCondition.Builder lootitemcondition$builder_tomato = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.TOMATO_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(TomatoCropBlock.AGE, 8));
+
+        this.add(ModBlocks.TOMATO_CROP.get(), createCropDrops(ModBlocks.TOMATO_CROP.get(), ModItems.TOMATO.get(),
+                ModItems.TOMATO_SEEDS.get(), lootitemcondition$builder_tomato));
+
+
+//      SWEET POTATO CROP:
+        LootItemCondition.Builder lootitemcondition$builder_sweet_potato = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.SWEET_POTATO_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SweetPotatoCropBlock.AGE, 8));
+
+        this.add(ModBlocks.SWEET_POTATO_CROP.get(), createCropDrops(ModBlocks.SWEET_POTATO_CROP.get(), ModItems.SWEET_POTATO.get(),
+                ModItems.SWEET_POTATO_SEEDS.get(), lootitemcondition$builder_sweet_potato));
+
+//      SIMPLE CROPS
+//      ================================================================================================================
 
 //      FLAX CROP:
         LootItemCondition.Builder lootitemcondition$builder_flax = LootItemBlockStatePropertyCondition
@@ -361,6 +390,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.PARSNIP_CROP.get(), createCropDrops(ModBlocks.PARSNIP_CROP.get(), ModItems.PARSNIP.get(),
                 ModItems.PARSNIP_SEEDS.get(), lootitemcondition$builder_parsnip));
+
+//      CABBAGE CROP:
+        LootItemCondition.Builder lootitemcondition$builder_cabbage = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.CABBAGE_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CabbageCropBlock.AGE, 5));
+
+        this.add(ModBlocks.CABBAGE_CROP.get(), createCropDrops(ModBlocks.CABBAGE_CROP.get(), ModItems.CABBAGE.get(),
+                ModItems.CABBAGE_SEEDS.get(), lootitemcondition$builder_barley));
 
 
 

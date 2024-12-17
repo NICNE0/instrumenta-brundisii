@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/fence_inventory",
-  "textures": {
-    "texture": "instrumenta_brundisii:block/scarlet_plaster_block"
-  }
-}

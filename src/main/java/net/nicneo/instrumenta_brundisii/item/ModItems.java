@@ -78,10 +78,29 @@ public class ModItems{
     public static final RegistryObject<Item> ASPARAGUS = ITEMS.register("asparagus",
             () -> new Item(new Item.Properties().stacksTo(64)));
 
-
     public static final RegistryObject<Item> PARSNIP_SEEDS = ITEMS.register("parsnip_seeds",
             () -> new ItemNameBlockItem(ModBlocks.PARSNIP_CROP.get(), new Item.Properties()));
     public static final RegistryObject<Item> PARSNIP = ITEMS.register("parsnip",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> CABBAGE_SEEDS = ITEMS.register("cabbage_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.CABBAGE_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CABBAGE = ITEMS.register("cabbage",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> OPIUM_SEEDS = ITEMS.register("opium_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.OPIUM_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> OPIUM_BULB = ITEMS.register("opium_bulb",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.TOMATO_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> SWEET_POTATO_SEEDS = ITEMS.register("sweet_potato_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.SWEET_POTATO_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SWEET_POTATO = ITEMS.register("sweet_potato",
             () -> new Item(new Item.Properties().stacksTo(64)));
 
 

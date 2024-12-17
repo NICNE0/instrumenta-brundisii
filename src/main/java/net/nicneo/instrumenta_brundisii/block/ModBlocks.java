@@ -24,11 +24,22 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, instrumentaBrundisii.MOD_ID);
 
-//  CROPS:
+//  DOUBLE CROPS:
 //  ====================================================================================================================
     public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
             () -> new CornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
+    public static final RegistryObject<Block> OPIUM_CROP = BLOCKS.register("opium_crop",
+            () -> new OpiumCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> TOMATO_CROP = BLOCKS.register("tomato_crop",
+            () -> new TomatoCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> SWEET_POTATO_CROP = BLOCKS.register("sweet_potato_crop",
+            () -> new SweetPotatoCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+//  SIMPLE CROPS:
+//  ====================================================================================================================
     public static final RegistryObject<Block> FLAX_CROP = BLOCKS.register("flax_crop",
             () -> new FlaxCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
@@ -55,6 +66,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PARSNIP_CROP = BLOCKS.register("parsnip_crop",
             () -> new ParsnipCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> CABBAGE_CROP = BLOCKS.register("cabbage_crop",
+            () -> new CabbageCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     //  PLASTERS:
 //  ====================================================================================================================

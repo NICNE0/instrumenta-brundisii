@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/button_inventory",
-  "textures": {
-    "texture": "instrumenta_brundisii:block/red_plaster_block"
-  }
-}
