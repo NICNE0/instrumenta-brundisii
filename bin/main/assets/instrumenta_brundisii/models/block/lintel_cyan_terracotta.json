@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "bottom": "minecraft:block/oak_log",
-    "side": "instrumenta_brundisii:block/lintel_cyan_terracotta",
-    "top": "minecraft:block/cyan_terracotta"
-  }
-}

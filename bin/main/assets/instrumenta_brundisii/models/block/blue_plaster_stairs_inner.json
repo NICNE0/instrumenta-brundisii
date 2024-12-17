@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "instrumenta_brundisii:block/blue_plaster_block",
-    "side": "instrumenta_brundisii:block/blue_plaster_block",
-    "top": "instrumenta_brundisii:block/blue_plaster_block"
-  }
-}
