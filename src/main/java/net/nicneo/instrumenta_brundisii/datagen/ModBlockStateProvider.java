@@ -250,6 +250,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         makeCabbageCrop((CropBlock) ModBlocks.CABBAGE_CROP.get(), "cabbage_stage", "cabbage_stage");
 
+        makeTurnipCrop((CropBlock) ModBlocks.TURNIP_CROP.get(), "turnip_stage", "turnip_stage");
+
 //      COLUMN BLOCKS:
 //      ================================================================================================================
         logBlock(((RotatedPillarBlock) ModBlocks.PILLAR_TEST.get()));
@@ -497,7 +499,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         return models;
     }
 
+    //  TURNIP
+    public void makeTurnipCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> turnipStates(state, block, modelName, textureName);
 
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] turnipStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((TurnipCropBlock) block).getAgeProperty()),
+                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((TurnipCropBlock) block).getAgeProperty()))).renderType("cutout"));
+        return models;
+    }
 
     private void makePlayerFacingBlock(RegistryObject<Block> blockRegistryObject, String textureBase) {
         Block block = blockRegistryObject.get();

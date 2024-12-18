@@ -103,6 +103,11 @@ public class ModItems{
     public static final RegistryObject<Item> SWEET_POTATO = ITEMS.register("sweet_potato",
             () -> new Item(new Item.Properties().stacksTo(64)));
 
+    public static final RegistryObject<Item> TURNIP_SEEDS = ITEMS.register("turnip_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.TURNIP_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TURNIP = ITEMS.register("turnip",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
