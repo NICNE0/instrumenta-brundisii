@@ -16,23 +16,11 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "condition": "minecraft:any_of",
-                  "terms": [
-                    {
-                      "block": "instrumenta_brundisii:corn_crop",
-                      "condition": "minecraft:block_state_property",
-                      "properties": {
-                        "age": "3"
-                      }
-                    },
-                    {
-                      "block": "instrumenta_brundisii:corn_crop",
-                      "condition": "minecraft:block_state_property",
-                      "properties": {
-                        "age": "4"
-                      }
-                    }
-                  ]
+                  "block": "instrumenta_brundisii:corn_crop",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "age": "8"
+                  }
                 }
               ],
               "name": "instrumenta_brundisii:corn_cob"
@@ -50,23 +38,11 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "condition": "minecraft:any_of",
-          "terms": [
-            {
-              "block": "instrumenta_brundisii:corn_crop",
-              "condition": "minecraft:block_state_property",
-              "properties": {
-                "age": "3"
-              }
-            },
-            {
-              "block": "instrumenta_brundisii:corn_crop",
-              "condition": "minecraft:block_state_property",
-              "properties": {
-                "age": "4"
-              }
-            }
-          ]
+          "block": "instrumenta_brundisii:corn_crop",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "age": "8"
+          }
         }
       ],
       "entries": [

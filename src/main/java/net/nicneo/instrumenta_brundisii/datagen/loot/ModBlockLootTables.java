@@ -399,6 +399,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.CABBAGE_CROP.get(), createCropDrops(ModBlocks.CABBAGE_CROP.get(), ModItems.CABBAGE.get(),
                 ModItems.CABBAGE_SEEDS.get(), lootitemcondition$builder_barley));
 
+//      TURNIP CROP:
+        LootItemCondition.Builder lootitemcondition$builder_turnip = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.TURNIP_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(TurnipCropBlock.AGE, 5));
+
+        this.add(ModBlocks.TURNIP_CROP.get(), createCropDrops(ModBlocks.TURNIP_CROP.get(), ModItems.TURNIP.get(),
+                ModItems.TURNIP_SEEDS.get(), lootitemcondition$builder_barley));
+
 
 
 //      DEBUG:

@@ -69,6 +69,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SWEET_POTATO_SEEDS);
         simpleItem(ModItems.SWEET_POTATO);
 
+        simpleItem(ModItems.TURNIP_SEEDS);
+        simpleItem(ModItems.TURNIP);
+
 //      ========== FENCES ==========
         fenceItem(ModBlocks.PLASTER_FENCE, ModBlocks.PLASTER_BLOCK, false);
         fenceItem(ModBlocks.BLUE_PLASTER_FENCE, ModBlocks.BLUE_PLASTER_BLOCK, false);

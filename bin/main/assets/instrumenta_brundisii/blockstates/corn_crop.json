@@ -1,31 +1,40 @@
 {
   "variants": {
     "age=0": {
-      "model": "instrumenta_brundisii:block/corn_stage_0"
+      "model": "instrumenta_brundisii:block/corn_stage_0",
+      "uvlock": true
     },
     "age=1": {
-      "model": "instrumenta_brundisii:block/corn_stage_1"
+      "model": "instrumenta_brundisii:block/corn_stage_1",
+      "uvlock": true
     },
     "age=2": {
-      "model": "instrumenta_brundisii:block/corn_stage_2"
+      "model": "instrumenta_brundisii:block/corn_stage_2",
+      "uvlock": true
     },
     "age=3": {
-      "model": "instrumenta_brundisii:block/corn_stage_3"
+      "model": "instrumenta_brundisii:block/corn_stage_3",
+      "uvlock": true
     },
     "age=4": {
-      "model": "instrumenta_brundisii:block/corn_stage_4"
+      "model": "instrumenta_brundisii:block/corn_stage_4",
+      "uvlock": true
     },
     "age=5": {
-      "model": "instrumenta_brundisii:block/corn_stage_5"
+      "model": "instrumenta_brundisii:block/corn_stage_5",
+      "uvlock": true
     },
     "age=6": {
-      "model": "instrumenta_brundisii:block/corn_stage_6"
+      "model": "instrumenta_brundisii:block/corn_stage_6",
+      "uvlock": true
     },
     "age=7": {
-      "model": "instrumenta_brundisii:block/corn_stage_7"
+      "model": "instrumenta_brundisii:block/corn_stage_7",
+      "uvlock": true
     },
     "age=8": {
-      "model": "instrumenta_brundisii:block/corn_stage_8"
+      "model": "instrumenta_brundisii:block/corn_stage_8",
+      "uvlock": true
     }
   }
 }

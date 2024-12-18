@@ -70,6 +70,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> CABBAGE_CROP = BLOCKS.register("cabbage_crop",
             () -> new CabbageCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
+    public static final RegistryObject<Block> TURNIP_CROP = BLOCKS.register("turnip_crop",
+            () -> new TurnipCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
     //  PLASTERS:
 //  ====================================================================================================================
     public static final RegistryObject<Block> PLASTER_BLOCK = registerBlock("plaster_block",
