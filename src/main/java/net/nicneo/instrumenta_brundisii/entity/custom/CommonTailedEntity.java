@@ -6,7 +6,6 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -17,69 +16,57 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.nicneo.instrumenta_brundisii.entity.ModEntities;
-import net.nicneo.instrumenta_brundisii.item.ModItems;
+import net.nicneo.instrumenta_brundisii.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 public class CommonTailedEntity extends Animal {
-    public CommonTailedEntity(EntityType<? extends Animal> p_27557_, Level p_27558_) {
-        super(p_27557_, p_27558_);
+    public CommonTailedEntity(EntityType<? extends Animal> entityType, Level level) {
+        super(entityType, level);
     }
 
     @Override
-    protected void updateWalkAnimation(float pPartialTick) {
-        float f;
-        if(this.getPose() == Pose.STANDING) {
-            f = Math.min(pPartialTick * 6F, 1f);
-        } else {
-            f = 0f;
-        }
-
-        this.walkAnimation.update(f, 0.2f);
-    }
-
-    @Override
-    protected void registerGoals(){
-        this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new BreedGoal(this, 2.5D));
-        this.goalSelector.addGoal(2, new TemptGoal(this, 1.2D, Ingredient.of(ModItems.AS.get()), false));
-        this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 3f));
-        this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
+    protected void registerGoals() {
+        this.goalSelector.addGoal(0, new PanicGoal(this, 2.0D)); // Run faster when hurt
+        this.goalSelector.addGoal(1, new BreedGoal(this, 1.0D));
+        this.goalSelector.addGoal(2, new TemptGoal(this, 1.25D, Ingredient.of(Items.WHEAT_SEEDS), false));
+        this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1.0D));
+        this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 6.0F));
+        this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
     }
 
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 20D)
-                .add(Attributes.FOLLOW_RANGE, 24D)
-                .add(Attributes.MOVEMENT_SPEED, 25D)
-                .add(Attributes.ARMOR, 0.5f);
+                .add(Attributes.MAX_HEALTH, 10.0D)
+                .add(Attributes.FOLLOW_RANGE, 16.0D)
+                .add(Attributes.MOVEMENT_SPEED, 0.25D);
     }
 
     @Nullable
     @Override
-    public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
-        return ModEntities.COMMON_TAILED.get().create(pLevel);
+    public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob otherParent) {
+        return ModEntities.COMMON_TAILED.get().create(level);
     }
 
     @Override
-    public boolean isFood(ItemStack pStack) {
-        return pStack.is(Items.WHEAT_SEEDS);
+    public boolean isFood(ItemStack stack) {
+        return stack.is(Items.WHEAT_SEEDS);
     }
 
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.HOGLIN_AMBIENT;
+        return ModSounds.COMMON_TAILED_AMBIENT.get();
     }
 
     @Nullable
     @Override
-    protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return SoundEvents.RAVAGER_HURT;
+    protected SoundEvent getHurtSound(DamageSource damageSource) {
+        return ModSounds.COMMON_TAILED_HURT.get();
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.DOLPHIN_DEATH;
+        return ModSounds.COMMON_TAILED_DEATH.get();
     }
 }

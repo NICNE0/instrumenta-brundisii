@@ -278,11 +278,14 @@
   "block.instrumenta_brundisii.granite_sign": "Granite Sign",
   "block.instrumenta_brundisii.granite_hanging_sign": "Granite Hanging Sign",
 
+  "sounds.instrumenta.brundisii.common_tailed_ambient": "Common Tailed Ambient",
+  "sounds.instrumenta.brundisii.common_tailed_hurt": "Common Tailed Hurt",
+  "sounds.instrumenta.brundisii.common_tailed_death": "Common Tailed Death",
+
   "instrumenta.brundisii_tab":"Instrumenta Brundisii",
   "instrumenta.brundisii_coins_tab":"Instrumenta Brundisii Coins",
   "instrumenta.brundisii_de_re_coquinaria":"De Re Coquinaria",
 
   "instrumenta.brundisii.book.de_re_coquinaria": "De Re Coquinaria",
-  "instrumenta.brundisii.book.de_re_coquinaria.1": "This is a sample of the book \n  Custom Book \n Testing 2021"
-
+  "instrumenta.brundisii.book.de_re_coquinaria.1": "This is a sample of the book \n  Custom Book \n Testing 2021",
 }
