@@ -15,12 +15,22 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> MOD_SIGN =
             BLOCK_ENTITIES.register("mod_sign", () ->
                     BlockEntityType.Builder.of(ModSignBlockEntity::new,
-                            ModBlocks.QUARTZ_SIGN.get(), ModBlocks.QUARTZ_WALL_SIGN.get()).build(null));
+                            ModBlocks.QUARTZ_SIGN.get(), ModBlocks.QUARTZ_WALL_SIGN.get(),
+                            ModBlocks.ANDESITE_SIGN.get(), ModBlocks.ANDESITE_WALL_SIGN.get(),
+                            ModBlocks.DIORITE_SIGN.get(), ModBlocks.DIORITE_WALL_SIGN.get(),
+                            ModBlocks.GRANITE_SIGN.get(), ModBlocks.GRANITE_WALL_SIGN.get()
+                    ).build(null));
 
     public static final RegistryObject<BlockEntityType<ModHangingSignBlockEntity>> MOD_HANGING_SIGN =
             BLOCK_ENTITIES.register("mod_hanging_sign", () ->
                     BlockEntityType.Builder.of(ModHangingSignBlockEntity::new,
-                            ModBlocks.QUARTZ_HANGING_SIGN.get(), ModBlocks.QUARTZ_WALL_HANGING_SIGN.get()).build(null));
+                            ModBlocks.QUARTZ_HANGING_SIGN.get(), ModBlocks.QUARTZ_WALL_HANGING_SIGN.get(),
+                            ModBlocks.ANDESITE_HANGING_SIGN.get(), ModBlocks.ANDESITE_WALL_HANGING_SIGN.get(),
+                            ModBlocks.DIORITE_HANGING_SIGN.get(), ModBlocks.DIORITE_WALL_HANGING_SIGN.get(),
+                            ModBlocks.GRANITE_HANGING_SIGN.get(), ModBlocks.GRANITE_WALL_HANGING_SIGN.get()
+                    ).build(null));
+
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

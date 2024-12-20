@@ -269,6 +269,15 @@
   "block.instrumenta_brundisii.quartz_sign": "Quartz Sign",
   "block.instrumenta_brundisii.quartz_hanging_sign": "Quartz Hanging Sign",
 
+  "block.instrumenta_brundisii.andesite_sign": "Andesite Sign",
+  "block.instrumenta_brundisii.andesite_hanging_sign": "Andesite Hanging Sign",
+
+  "block.instrumenta_brundisii.diorite_sign": "Diorite Sign",
+  "block.instrumenta_brundisii.diorite_hanging_sign": "Diorite Hanging Sign",
+
+  "block.instrumenta_brundisii.granite_sign": "Granite Sign",
+  "block.instrumenta_brundisii.granite_hanging_sign": "Granite Hanging Sign",
+
   "instrumenta.brundisii_tab":"Instrumenta Brundisii",
   "instrumenta.brundisii_coins_tab":"Instrumenta Brundisii Coins",
   "instrumenta.brundisii_de_re_coquinaria":"De Re Coquinaria",

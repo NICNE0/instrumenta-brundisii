@@ -68,6 +68,9 @@ public class instrumentaBrundisii {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             Sheets.addWoodType(ModWoodTypes.QUARTZ);
+            Sheets.addWoodType(ModWoodTypes.ANDESITE);
+            Sheets.addWoodType(ModWoodTypes.DIORITE);
+            Sheets.addWoodType(ModWoodTypes.GRANITE);
             EntityRenderers.register(ModEntities.COMMON_TAILED.get(), CommonTailedRenderer::new);
         }
     }
