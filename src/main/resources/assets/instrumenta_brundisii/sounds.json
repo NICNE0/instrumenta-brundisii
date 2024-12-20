@@ -1,0 +1,17 @@
+{
+  "common_tailed_ambient": {
+    "sounds": [
+      "instrumenta_brundisii:common_tailed_ambient"
+    ]
+  },
+  "common_tailed_hurt": {
+    "sounds": [
+      "instrumenta_brundisii:common_tailed_hurt"
+    ]
+  },
+  "common_tailed_death": {
+    "sounds": [
+      "instrumenta_brundisii:common_tailed_death"
+    ]
+  }
+}

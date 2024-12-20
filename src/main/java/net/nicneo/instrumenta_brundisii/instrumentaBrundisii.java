@@ -20,6 +20,7 @@ import net.nicneo.instrumenta_brundisii.entity.ModEntities;
 import net.nicneo.instrumenta_brundisii.entity.client.CommonTailedRenderer;
 import net.nicneo.instrumenta_brundisii.item.ModCreativeModTabs;
 import net.nicneo.instrumenta_brundisii.item.ModItems;
+import net.nicneo.instrumenta_brundisii.sound.ModSounds;
 import net.nicneo.instrumenta_brundisii.util.ModWoodTypes;
 import org.slf4j.Logger;
 
@@ -38,6 +39,7 @@ public class instrumentaBrundisii {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModSounds.register(modEventBus);
         ModEntities.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
