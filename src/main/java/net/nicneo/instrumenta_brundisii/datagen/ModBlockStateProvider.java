@@ -291,7 +291,27 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.DIAMOND_PINK_TILE);
         makePlayerFacingBlock(ModBlocks.DIAMOND_PINK_TILE_CORNER, "diamond_pink_tile_corner");
 
+        signBlock(((StandingSignBlock) ModBlocks.QUARTZ_SIGN.get()), ((WallSignBlock) ModBlocks.QUARTZ_WALL_SIGN.get()),
+                blockTexture(ModBlocks.PLASTER_BLOCK.get()));
+        hangingSignBlock(ModBlocks.QUARTZ_HANGING_SIGN.get(), ModBlocks.QUARTZ_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.PLASTER_BLOCK.get()));
+    }
 
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
+        ModelFile sign = models().sign(name(signBlock), texture);
+        hangingSignBlock(signBlock, wallSignBlock, sign);
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ModelFile sign) {
+        simpleBlock(signBlock, sign);
+        simpleBlock(wallSignBlock, sign);
+    }
+
+    private String name(Block block) {
+        return key(block).getPath();
+    }
+
+    private ResourceLocation key(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block);
     }
 
 
@@ -603,10 +623,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(instrumentaBrundisii.MOD_ID +
                 ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
-
-
-
-
 
 //    This lets you pass the registry Object and creates a custom block and an item for it
     private void  blockWithItem(RegistryObject<Block> blockRegistryObject){

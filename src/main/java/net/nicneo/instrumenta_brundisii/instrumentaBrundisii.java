@@ -1,6 +1,7 @@
 package net.nicneo.instrumenta_brundisii;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -14,10 +15,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
+import net.nicneo.instrumenta_brundisii.block.entity.ModBlockEntities;
 import net.nicneo.instrumenta_brundisii.entity.ModEntities;
 import net.nicneo.instrumenta_brundisii.entity.client.CommonTailedRenderer;
 import net.nicneo.instrumenta_brundisii.item.ModCreativeModTabs;
 import net.nicneo.instrumenta_brundisii.item.ModItems;
+import net.nicneo.instrumenta_brundisii.util.ModWoodTypes;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -31,9 +34,13 @@ public class instrumentaBrundisii {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
         ModEntities.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(ClientSetup::onClientSetup);
@@ -60,6 +67,7 @@ public class instrumentaBrundisii {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            Sheets.addWoodType(ModWoodTypes.QUARTZ);
             EntityRenderers.register(ModEntities.COMMON_TAILED.get(), CommonTailedRenderer::new);
         }
     }

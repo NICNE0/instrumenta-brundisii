@@ -266,6 +266,9 @@
   "item.instrumenta_brundisii.turnip": "Turnip",
   "item.instrumenta_brundisii.turnip_seeds": "Turnip Seeds",
 
+  "block.instrumenta_brundisii.quartz_sign": "Quartz Sign",
+  "block.instrumenta_brundisii.quartz_hanging_sign": "Quartz Hanging Sign",
+
   "instrumenta.brundisii_tab":"Instrumenta Brundisii",
   "instrumenta.brundisii_coins_tab":"Instrumenta Brundisii Coins",
   "instrumenta.brundisii_de_re_coquinaria":"De Re Coquinaria",

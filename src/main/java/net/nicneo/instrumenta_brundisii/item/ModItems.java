@@ -1,11 +1,8 @@
 package net.nicneo.instrumenta_brundisii.item;
 
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.*;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -32,6 +29,11 @@ public class ModItems{
 
     public static final RegistryObject<Item> SEMI = ITEMS.register("semi",
             () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> QUARTZ_SIGN = ITEMS.register("quartz_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.QUARTZ_SIGN.get(), ModBlocks.QUARTZ_WALL_SIGN.get()));
+    public static final RegistryObject<Item> QUARTZ_HANGING_SIGN = ITEMS.register("quartz_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.QUARTZ_HANGING_SIGN.get(), ModBlocks.QUARTZ_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
 
     public static final RegistryObject<Item> CORN_COB = ITEMS.register("corn_cob",
             () -> new Item(new Item.Properties().food(ModFoods.CORN_COB)));

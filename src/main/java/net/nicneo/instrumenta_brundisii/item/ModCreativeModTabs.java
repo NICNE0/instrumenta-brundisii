@@ -22,6 +22,10 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("instrumenta.brundisii_tab"))
                     .displayItems((pParameters, pOutput) -> {
 
+//                      SIGNS:
+                        pOutput.accept((ModItems.QUARTZ_SIGN.get()));
+                        pOutput.accept((ModItems.QUARTZ_HANGING_SIGN.get()));
+
 //                      RETICULAS:
                         pOutput.accept(ModBlocks.RETICULA.get());
                         pOutput.accept(ModBlocks.LIGHT_RETICULA.get());

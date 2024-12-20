@@ -13,6 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.nicneo.instrumenta_brundisii.block.custom.*;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
 import net.nicneo.instrumenta_brundisii.item.ModItems;
+import net.nicneo.instrumenta_brundisii.util.ModWoodTypes;
 
 import java.util.function.Supplier;
 
@@ -23,6 +24,18 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, instrumentaBrundisii.MOD_ID);
+
+//  SIGNS:
+//  ====================================================================================================================
+    public static final RegistryObject<Block> QUARTZ_SIGN = BLOCKS.register("quartz_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.QUARTZ));
+    public static final RegistryObject<Block> QUARTZ_WALL_SIGN = BLOCKS.register("quartz_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.QUARTZ));
+
+    public static final RegistryObject<Block> QUARTZ_HANGING_SIGN = BLOCKS.register("quartz_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.QUARTZ));
+    public static final RegistryObject<Block> QUARTZ_WALL_HANGING_SIGN = BLOCKS.register("quartz_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.QUARTZ));
 
 //  DOUBLE CROPS:
 //  ====================================================================================================================
@@ -494,8 +507,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> DIAMOND_PINK_TILE_CORNER = registerBlock("diamond_pink_tile_corner",
             () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
 
-
-
     //  TUFF:
 //  ====================================================================================================================
     public static final RegistryObject<Block> TUFF_STAIRS = registerBlock("tuff_stairs",
@@ -514,8 +525,6 @@ public class ModBlocks {
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE), SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_DOOR_CLOSE));
     public static final RegistryObject<Block> TUFF_WALL = registerBlock("tuff_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-
-
 
 //  DEBUG:
 //  ====================================================================================================================
