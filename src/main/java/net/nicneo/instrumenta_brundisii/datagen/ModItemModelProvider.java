@@ -74,6 +74,15 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.QUARTZ_SIGN);
         simpleItem(ModItems.QUARTZ_HANGING_SIGN);
+
+        simpleItem(ModItems.ANDESITE_SIGN);
+        simpleItem(ModItems.ANDESITE_HANGING_SIGN);
+
+        simpleItem(ModItems.DIORITE_SIGN);
+        simpleItem(ModItems.DIORITE_HANGING_SIGN);
+
+        simpleItem(ModItems.GRANITE_SIGN);
+        simpleItem(ModItems.GRANITE_HANGING_SIGN);
 //      ========== FENCES ==========
         fenceItem(ModBlocks.PLASTER_FENCE, ModBlocks.PLASTER_BLOCK, false);
         fenceItem(ModBlocks.BLUE_PLASTER_FENCE, ModBlocks.BLUE_PLASTER_BLOCK, false);

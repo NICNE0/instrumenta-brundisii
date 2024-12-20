@@ -26,6 +26,15 @@ public class ModCreativeModTabs {
                         pOutput.accept((ModItems.QUARTZ_SIGN.get()));
                         pOutput.accept((ModItems.QUARTZ_HANGING_SIGN.get()));
 
+                        pOutput.accept((ModItems.ANDESITE_SIGN.get()));
+                        pOutput.accept((ModItems.ANDESITE_HANGING_SIGN.get()));
+
+                        pOutput.accept((ModItems.DIORITE_SIGN.get()));
+                        pOutput.accept((ModItems.DIORITE_HANGING_SIGN.get()));
+
+                        pOutput.accept((ModItems.GRANITE_SIGN.get()));
+                        pOutput.accept((ModItems.GRANITE_HANGING_SIGN.get()));
+
 //                      RETICULAS:
                         pOutput.accept(ModBlocks.RETICULA.get());
                         pOutput.accept(ModBlocks.LIGHT_RETICULA.get());

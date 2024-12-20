@@ -35,6 +35,21 @@ public class ModItems{
     public static final RegistryObject<Item> QUARTZ_HANGING_SIGN = ITEMS.register("quartz_hanging_sign",
             () -> new HangingSignItem(ModBlocks.QUARTZ_HANGING_SIGN.get(), ModBlocks.QUARTZ_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
 
+    public static final RegistryObject<Item> ANDESITE_SIGN = ITEMS.register("andesite_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.ANDESITE_SIGN.get(), ModBlocks.ANDESITE_WALL_SIGN.get()));
+    public static final RegistryObject<Item> ANDESITE_HANGING_SIGN = ITEMS.register("andesite_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.ANDESITE_HANGING_SIGN.get(), ModBlocks.ANDESITE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> DIORITE_SIGN = ITEMS.register("diorite_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.DIORITE_SIGN.get(), ModBlocks.DIORITE_WALL_SIGN.get()));
+    public static final RegistryObject<Item> DIORITE_HANGING_SIGN = ITEMS.register("diorite_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.DIORITE_HANGING_SIGN.get(), ModBlocks.DIORITE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> GRANITE_SIGN = ITEMS.register("granite_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.GRANITE_SIGN.get(), ModBlocks.GRANITE_WALL_SIGN.get()));
+    public static final RegistryObject<Item> GRANITE_HANGING_SIGN = ITEMS.register("granite_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.GRANITE_HANGING_SIGN.get(), ModBlocks.GRANITE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+
     public static final RegistryObject<Item> CORN_COB = ITEMS.register("corn_cob",
             () -> new Item(new Item.Properties().food(ModFoods.CORN_COB)));
     public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds",

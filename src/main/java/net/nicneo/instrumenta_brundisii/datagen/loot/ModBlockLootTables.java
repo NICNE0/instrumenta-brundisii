@@ -407,6 +407,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.TURNIP_CROP.get(), createCropDrops(ModBlocks.TURNIP_CROP.get(), ModItems.TURNIP.get(),
                 ModItems.TURNIP_SEEDS.get(), lootitemcondition$builder_turnip));
 
+//       SIGNS
         this.add(ModBlocks.QUARTZ_SIGN.get(), Block ->
                 createSingleItemTable(ModItems.QUARTZ_SIGN.get()));
         this.add(ModBlocks.QUARTZ_WALL_SIGN.get(), Block ->
@@ -416,6 +417,33 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.QUARTZ_WALL_HANGING_SIGN.get(), Block ->
                 createSingleItemTable(ModItems.QUARTZ_HANGING_SIGN.get()));
 
+        this.add(ModBlocks.ANDESITE_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.ANDESITE_SIGN.get()));
+        this.add(ModBlocks.ANDESITE_WALL_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.ANDESITE_SIGN.get()));
+        this.add(ModBlocks.ANDESITE_HANGING_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.ANDESITE_HANGING_SIGN.get()));
+        this.add(ModBlocks.ANDESITE_WALL_HANGING_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.ANDESITE_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.DIORITE_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.DIORITE_SIGN.get()));
+        this.add(ModBlocks.DIORITE_WALL_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.DIORITE_SIGN.get()));
+        this.add(ModBlocks.DIORITE_HANGING_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.DIORITE_HANGING_SIGN.get()));
+        this.add(ModBlocks.DIORITE_WALL_HANGING_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.DIORITE_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.GRANITE_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.GRANITE_SIGN.get()));
+        this.add(ModBlocks.GRANITE_WALL_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.GRANITE_SIGN.get()));
+        this.add(ModBlocks.GRANITE_HANGING_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.GRANITE_HANGING_SIGN.get()));
+        this.add(ModBlocks.GRANITE_WALL_HANGING_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.GRANITE_HANGING_SIGN.get()));
+
 //      DEBUG:
 //      ================================================================================================================
         this.dropSelf(ModBlocks.TEST_BLOCK_1.get());
@@ -423,7 +451,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ORIENTABLE_TEST.get());
 
     }
-
 
 
     @Override

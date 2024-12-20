@@ -31,11 +31,37 @@ public class ModBlocks {
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.QUARTZ));
     public static final RegistryObject<Block> QUARTZ_WALL_SIGN = BLOCKS.register("quartz_wall_sign",
             () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.QUARTZ));
-
     public static final RegistryObject<Block> QUARTZ_HANGING_SIGN = BLOCKS.register("quartz_hanging_sign",
             () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.QUARTZ));
     public static final RegistryObject<Block> QUARTZ_WALL_HANGING_SIGN = BLOCKS.register("quartz_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.QUARTZ));
+
+    public static final RegistryObject<Block> ANDESITE_SIGN = BLOCKS.register("andesite_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.ANDESITE));
+    public static final RegistryObject<Block> ANDESITE_WALL_SIGN = BLOCKS.register("andesite_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.ANDESITE));
+    public static final RegistryObject<Block> ANDESITE_HANGING_SIGN = BLOCKS.register("andesite_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.ANDESITE));
+    public static final RegistryObject<Block> ANDESITE_WALL_HANGING_SIGN = BLOCKS.register("andesite_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.ANDESITE));
+
+    public static final RegistryObject<Block> DIORITE_SIGN = BLOCKS.register("diorite_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.DIORITE));
+    public static final RegistryObject<Block> DIORITE_WALL_SIGN = BLOCKS.register("diorite_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.DIORITE));
+    public static final RegistryObject<Block> DIORITE_HANGING_SIGN = BLOCKS.register("diorite_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.DIORITE));
+    public static final RegistryObject<Block> DIORITE_WALL_HANGING_SIGN = BLOCKS.register("diorite_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.DIORITE));
+
+    public static final RegistryObject<Block> GRANITE_SIGN = BLOCKS.register("granite_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.GRANITE));
+    public static final RegistryObject<Block> GRANITE_WALL_SIGN = BLOCKS.register("granite_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.GRANITE));
+    public static final RegistryObject<Block> GRANITE_HANGING_SIGN = BLOCKS.register("granite_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.GRANITE));
+    public static final RegistryObject<Block> GRANITE_WALL_HANGING_SIGN = BLOCKS.register("granite_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.GRANITE));
 
 //  DOUBLE CROPS:
 //  ====================================================================================================================

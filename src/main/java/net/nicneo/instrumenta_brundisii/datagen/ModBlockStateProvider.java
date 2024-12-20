@@ -294,6 +294,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         signBlock(((StandingSignBlock) ModBlocks.QUARTZ_SIGN.get()), ((WallSignBlock) ModBlocks.QUARTZ_WALL_SIGN.get()),
                 blockTexture(ModBlocks.PLASTER_BLOCK.get()));
         hangingSignBlock(ModBlocks.QUARTZ_HANGING_SIGN.get(), ModBlocks.QUARTZ_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.PLASTER_BLOCK.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.ANDESITE_SIGN.get()), ((WallSignBlock) ModBlocks.ANDESITE_WALL_SIGN.get()),
+                blockTexture(ModBlocks.PLASTER_BLOCK.get()));
+        hangingSignBlock(ModBlocks.ANDESITE_HANGING_SIGN.get(), ModBlocks.ANDESITE_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.PLASTER_BLOCK.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.DIORITE_SIGN.get()), ((WallSignBlock) ModBlocks.DIORITE_WALL_SIGN.get()),
+                blockTexture(ModBlocks.PLASTER_BLOCK.get()));
+        hangingSignBlock(ModBlocks.DIORITE_HANGING_SIGN.get(), ModBlocks.DIORITE_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.PLASTER_BLOCK.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.GRANITE_SIGN.get()), ((WallSignBlock) ModBlocks.GRANITE_WALL_SIGN.get()),
+                blockTexture(ModBlocks.PLASTER_BLOCK.get()));
+        hangingSignBlock(ModBlocks.GRANITE_HANGING_SIGN.get(), ModBlocks.GRANITE_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.PLASTER_BLOCK.get()));
     }
 
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
