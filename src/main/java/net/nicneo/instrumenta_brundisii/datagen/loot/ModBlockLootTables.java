@@ -397,7 +397,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CabbageCropBlock.AGE, 5));
 
         this.add(ModBlocks.CABBAGE_CROP.get(), createCropDrops(ModBlocks.CABBAGE_CROP.get(), ModItems.CABBAGE.get(),
-                ModItems.CABBAGE_SEEDS.get(), lootitemcondition$builder_barley));
+                ModItems.CABBAGE_SEEDS.get(), lootitemcondition$builder_cabbage));
 
 //      TURNIP CROP:
         LootItemCondition.Builder lootitemcondition$builder_turnip = LootItemBlockStatePropertyCondition
@@ -405,9 +405,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(TurnipCropBlock.AGE, 5));
 
         this.add(ModBlocks.TURNIP_CROP.get(), createCropDrops(ModBlocks.TURNIP_CROP.get(), ModItems.TURNIP.get(),
-                ModItems.TURNIP_SEEDS.get(), lootitemcondition$builder_barley));
+                ModItems.TURNIP_SEEDS.get(), lootitemcondition$builder_turnip));
 
-
+        this.add(ModBlocks.QUARTZ_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.QUARTZ_SIGN.get()));
+        this.add(ModBlocks.QUARTZ_WALL_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.QUARTZ_SIGN.get()));
+        this.add(ModBlocks.QUARTZ_HANGING_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.QUARTZ_HANGING_SIGN.get()));
+        this.add(ModBlocks.QUARTZ_WALL_HANGING_SIGN.get(), Block ->
+                createSingleItemTable(ModItems.QUARTZ_HANGING_SIGN.get()));
 
 //      DEBUG:
 //      ================================================================================================================
