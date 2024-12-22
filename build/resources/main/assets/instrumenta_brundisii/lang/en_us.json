@@ -219,7 +219,21 @@
   "block.instrumenta_brundisii.black_terracotta_fence": "Black Terracotta Fence",
   "block.instrumenta_brundisii.black_terracotta_fence_door": "Black Terracotta Fence Door",
 
+  "block.instrumenta_brundisii.quartz_sign": "Quartz Sign",
+  "block.instrumenta_brundisii.quartz_hanging_sign": "Quartz Hanging Sign",
 
+  "block.instrumenta_brundisii.andesite_sign": "Andesite Sign",
+  "block.instrumenta_brundisii.andesite_hanging_sign": "Andesite Hanging Sign",
+
+  "block.instrumenta_brundisii.diorite_sign": "Diorite Sign",
+  "block.instrumenta_brundisii.diorite_hanging_sign": "Diorite Hanging Sign",
+
+  "block.instrumenta_brundisii.granite_sign": "Granite Sign",
+  "block.instrumenta_brundisii.granite_hanging_sign": "Granite Hanging Sign",
+
+  "sounds.instrumenta_brundisii.common_tailed_ambient": "Common Tailed Ambient",
+  "sounds.instrumenta_brundisii.common_tailed_hurt": "Common Tailed Hurt",
+  "sounds.instrumenta_brundisii.common_tailed_death": "Common Tailed Death",
 
   "item.instrumenta_brundisii.corn_cob": "Corn Cob",
   "item.instrumenta_brundisii.corn_seeds": "Corn Seeds",
@@ -266,26 +280,12 @@
   "item.instrumenta_brundisii.turnip": "Turnip",
   "item.instrumenta_brundisii.turnip_seeds": "Turnip Seeds",
 
-  "block.instrumenta_brundisii.quartz_sign": "Quartz Sign",
-  "block.instrumenta_brundisii.quartz_hanging_sign": "Quartz Hanging Sign",
-
-  "block.instrumenta_brundisii.andesite_sign": "Andesite Sign",
-  "block.instrumenta_brundisii.andesite_hanging_sign": "Andesite Hanging Sign",
-
-  "block.instrumenta_brundisii.diorite_sign": "Diorite Sign",
-  "block.instrumenta_brundisii.diorite_hanging_sign": "Diorite Hanging Sign",
-
-  "block.instrumenta_brundisii.granite_sign": "Granite Sign",
-  "block.instrumenta_brundisii.granite_hanging_sign": "Granite Hanging Sign",
-
-  "sounds.instrumenta.brundisii.common_tailed_ambient": "Common Tailed Ambient",
-  "sounds.instrumenta.brundisii.common_tailed_hurt": "Common Tailed Hurt",
-  "sounds.instrumenta.brundisii.common_tailed_death": "Common Tailed Death",
+  "item.instrumenta_brundisii.common_tailed_spawn_egg": "Common Tailed Spawn Egg",
 
   "instrumenta.brundisii_tab":"Instrumenta Brundisii",
   "instrumenta.brundisii_coins_tab":"Instrumenta Brundisii Coins",
   "instrumenta.brundisii_de_re_coquinaria":"De Re Coquinaria",
 
   "instrumenta.brundisii.book.de_re_coquinaria": "De Re Coquinaria",
-  "instrumenta.brundisii.book.de_re_coquinaria.1": "This is a sample of the book \n  Custom Book \n Testing 2021",
+  "instrumenta.brundisii.book.de_re_coquinaria.1": "This is a sample of the book \n  Custom Book \n Testing 2021"
 }

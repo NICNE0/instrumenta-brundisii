@@ -215,6 +215,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.LIGHT_GRAY_TERRACOTTA_FENCE_DOOR);
         evenSimplerBlockItem(ModBlocks.RED_TERRACOTTA_FENCE_DOOR);
         evenSimplerBlockItem(ModBlocks.BLACK_TERRACOTTA_FENCE_DOOR);
+
+        withExistingParent(ModItems.COMMON_TAILED_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     public void evenSimplerBlockItem(RegistryObject<Block> block) {

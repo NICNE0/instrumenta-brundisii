@@ -32,8 +32,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.TUFF_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.TUFF_SLAB.get()));
 
-
-
 //      PLASTER:
 //      ================================================================================================================
         this.dropSelf(ModBlocks.PLASTER_BLOCK.get());
@@ -245,8 +243,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BLACK_TERRACOTTA_FENCE_DOOR.get());
         this.dropSelf(ModBlocks.BLACK_TERRACOTTA_WALL.get());
 
-
-
 //      FLOOR TILES:
 //      ================================================================================================================
         this.dropSelf(ModBlocks.BLACK_FLOOR_TILE.get());
@@ -273,8 +269,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.DIAMOND_PINK_TILE.get());
         this.dropSelf(ModBlocks.DIAMOND_PINK_TILE_CORNER.get());
 
-
-
 //      DOUBLE CROPS
 //      ================================================================================================================
 
@@ -282,9 +276,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 8));
-//                .or(LootItemBlockStatePropertyCondition
-//                        .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
-//                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 4)));
 
         this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN_COB.get(),
                 ModItems.CORN_SEEDS.get(), lootitemcondition$builder2));
@@ -305,7 +296,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.TOMATO_CROP.get(), createCropDrops(ModBlocks.TOMATO_CROP.get(), ModItems.TOMATO.get(),
                 ModItems.TOMATO_SEEDS.get(), lootitemcondition$builder_tomato));
-
 
 //      SWEET POTATO CROP:
         LootItemCondition.Builder lootitemcondition$builder_sweet_potato = LootItemBlockStatePropertyCondition
@@ -452,10 +442,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     }
 
-
     @Override
     protected Iterable<Block> getKnownBlocks() {
         return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
-
 }

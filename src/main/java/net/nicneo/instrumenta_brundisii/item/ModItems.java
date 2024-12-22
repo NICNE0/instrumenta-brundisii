@@ -1,7 +1,9 @@
 package net.nicneo.instrumenta_brundisii.item;
 
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
+import net.nicneo.instrumenta_brundisii.entity.ModEntities;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -29,6 +31,10 @@ public class ModItems{
 
     public static final RegistryObject<Item> SEMI = ITEMS.register("semi",
             () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item>  COMMON_TAILED_SPAWN_EGG = ITEMS.register("common_tailed_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.COMMON_TAILED, 0x4f3d37, 0x015b69,
+                    new Item.Properties()));
 
     public static final RegistryObject<Item> QUARTZ_SIGN = ITEMS.register("quartz_sign",
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.QUARTZ_SIGN.get(), ModBlocks.QUARTZ_WALL_SIGN.get()));
