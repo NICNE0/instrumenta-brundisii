@@ -22,19 +22,6 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("instrumenta.brundisii_tab"))
                     .displayItems((pParameters, pOutput) -> {
 
-//                      SIGNS:
-                        pOutput.accept((ModItems.QUARTZ_SIGN.get()));
-                        pOutput.accept((ModItems.QUARTZ_HANGING_SIGN.get()));
-
-                        pOutput.accept((ModItems.ANDESITE_SIGN.get()));
-                        pOutput.accept((ModItems.ANDESITE_HANGING_SIGN.get()));
-
-                        pOutput.accept((ModItems.DIORITE_SIGN.get()));
-                        pOutput.accept((ModItems.DIORITE_HANGING_SIGN.get()));
-
-                        pOutput.accept((ModItems.GRANITE_SIGN.get()));
-                        pOutput.accept((ModItems.GRANITE_HANGING_SIGN.get()));
-
 //                      RETICULAS:
                         pOutput.accept(ModBlocks.RETICULA.get());
                         pOutput.accept(ModBlocks.LIGHT_RETICULA.get());
@@ -220,6 +207,22 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.DARK_GREEN_PLASTER_PRESSURE_PLATE.get());
                         pOutput.accept(ModBlocks.DARK_GREEN_PLASTER_BUTTON.get());
 
+//                      SIGNS:
+                        pOutput.accept((ModItems.QUARTZ_SIGN.get()));
+                        pOutput.accept((ModItems.QUARTZ_HANGING_SIGN.get()));
+
+                        pOutput.accept((ModItems.ANDESITE_SIGN.get()));
+                        pOutput.accept((ModItems.ANDESITE_HANGING_SIGN.get()));
+
+                        pOutput.accept((ModItems.DIORITE_SIGN.get()));
+                        pOutput.accept((ModItems.DIORITE_HANGING_SIGN.get()));
+
+                        pOutput.accept((ModItems.GRANITE_SIGN.get()));
+                        pOutput.accept((ModItems.GRANITE_HANGING_SIGN.get()));
+
+//                      MOBS:
+                        pOutput.accept(ModItems.COMMON_TAILED_SPAWN_EGG.get());
+
                     })
                     .build());
 
@@ -302,6 +305,7 @@ public class ModCreativeModTabs {
 //                      TURNIP:
                         pOutput.accept(ModItems.TURNIP.get());
                         pOutput.accept(ModItems.TURNIP_SEEDS.get());
+
 
                     })
                     .build());
