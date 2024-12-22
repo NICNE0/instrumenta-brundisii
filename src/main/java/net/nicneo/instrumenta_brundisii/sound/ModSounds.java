@@ -22,10 +22,6 @@ public class ModSounds {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(instrumentaBrundisii.MOD_ID, name)));
     }
 
-//    public static void register() {
-//        SOUND_EVENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
-//    }
-
     public static void register(IEventBus eventBus) {
         SOUND_EVENTS.register(eventBus);
     }

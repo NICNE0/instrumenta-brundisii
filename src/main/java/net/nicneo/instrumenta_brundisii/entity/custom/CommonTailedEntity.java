@@ -21,6 +21,13 @@ import net.nicneo.instrumenta_brundisii.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 public class CommonTailedEntity extends Animal {
+
+    // Ambient sound cooldown (for quacking less often)
+    private int ambientSoundCooldown = 0;
+
+    // Egg-laying timer
+    private int eggTime = this.random.nextInt(6000) + 6000; // Random time between 5 and 10 minutes
+
     public CommonTailedEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
@@ -53,10 +60,33 @@ public class CommonTailedEntity extends Animal {
         return stack.is(Items.WHEAT_SEEDS);
     }
 
+    @Override
+    public void aiStep() {
+        super.aiStep();
+
+        // Ambient sound cooldown logic
+        if (ambientSoundCooldown > 0) {
+            ambientSoundCooldown--;
+        }
+
+        // Egg-laying logic
+        if (!this.level().isClientSide && !this.isBaby() && --this.eggTime <= 0) {
+            this.playSound(SoundEvents.CHICKEN_EGG, 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
+            this.spawnAtLocation(ModItems.COMMON_TAILED_EGG.get());
+            this.eggTime = this.random.nextInt(6000) + 6000; // Reset egg timer
+        }
+    }
+
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return ModSounds.COMMON_TAILED_AMBIENT.get();
+        // Only play ambient sound if cooldown is 0
+        if (ambientSoundCooldown == 0) {
+            // Reset cooldown to a random value (similar to chickens)
+            ambientSoundCooldown = this.random.nextInt(400) + 200; // Between 10 and 30 seconds
+            return ModSounds.COMMON_TAILED_AMBIENT.get();
+        }
+        return null; // No sound if cooldown is active
     }
 
     @Nullable
@@ -70,17 +100,4 @@ public class CommonTailedEntity extends Animal {
     protected SoundEvent getDeathSound() {
         return ModSounds.COMMON_TAILED_DEATH.get();
     }
-
-    private int eggTime = this.random.nextInt(6000) + 6000; // Random time between 5 and 10 minutes
-
-    @Override
-    public void aiStep() {
-        super.aiStep();
-        if (!this.level().isClientSide && !this.isBaby() && --this.eggTime <= 0) {
-            this.playSound(SoundEvents.CHICKEN_EGG, 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
-            this.spawnAtLocation(ModItems.COMMON_TAILED_EGG.get());
-            this.eggTime = this.random.nextInt(6000) + 6000; // Reset timer
-        }
-    }
-
 }
