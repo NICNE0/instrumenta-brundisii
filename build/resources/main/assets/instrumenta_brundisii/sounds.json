@@ -1,7 +1,10 @@
 {
   "common_tailed_ambient": {
     "sounds": [
-      "instrumenta_brundisii:common_tailed_ambient"
+      {
+        "name": "instrumenta_brundisii:common_tailed_ambient",
+        "volume": 0.5
+      }
     ]
   },
   "common_tailed_hurt": {
