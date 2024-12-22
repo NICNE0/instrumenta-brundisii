@@ -35,6 +35,8 @@ public class ModItems{
     public static final RegistryObject<Item>  COMMON_TAILED_SPAWN_EGG = ITEMS.register("common_tailed_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.COMMON_TAILED, 0x4f3d37, 0x015b69,
                     new Item.Properties()));
+    public static final RegistryObject<Item> COMMON_TAILED_EGG = ITEMS.register("common_tailed_egg",
+            () -> new net.nicneo.instrumenta_brundisii.item.custom.CommonTailedEggItem(new Item.Properties().stacksTo(16)));
 
     public static final RegistryObject<Item> QUARTZ_SIGN = ITEMS.register("quartz_sign",
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.QUARTZ_SIGN.get(), ModBlocks.QUARTZ_WALL_SIGN.get()));

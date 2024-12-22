@@ -16,6 +16,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.nicneo.instrumenta_brundisii.entity.ModEntities;
+import net.nicneo.instrumenta_brundisii.item.ModItems;
 import net.nicneo.instrumenta_brundisii.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
@@ -69,4 +70,17 @@ public class CommonTailedEntity extends Animal {
     protected SoundEvent getDeathSound() {
         return ModSounds.COMMON_TAILED_DEATH.get();
     }
+
+    private int eggTime = this.random.nextInt(6000) + 6000; // Random time between 5 and 10 minutes
+
+    @Override
+    public void aiStep() {
+        super.aiStep();
+        if (!this.level().isClientSide && !this.isBaby() && --this.eggTime <= 0) {
+            this.playSound(SoundEvents.CHICKEN_EGG, 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
+            this.spawnAtLocation(ModItems.COMMON_TAILED_EGG.get());
+            this.eggTime = this.random.nextInt(6000) + 6000; // Reset timer
+        }
+    }
+
 }

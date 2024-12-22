@@ -23,13 +23,14 @@ import net.nicneo.instrumenta_brundisii.item.ModItems;
 import net.nicneo.instrumenta_brundisii.sound.ModSounds;
 import net.nicneo.instrumenta_brundisii.util.ModWoodTypes;
 import org.slf4j.Logger;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(instrumentaBrundisii.MOD_ID)
 public class instrumentaBrundisii {
     public static final String MOD_ID = "instrumenta_brundisii";
     private static final Logger LOGGER = LogUtils.getLogger();
-
 
     public instrumentaBrundisii() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -74,6 +75,7 @@ public class instrumentaBrundisii {
             Sheets.addWoodType(ModWoodTypes.DIORITE);
             Sheets.addWoodType(ModWoodTypes.GRANITE);
             EntityRenderers.register(ModEntities.COMMON_TAILED.get(), CommonTailedRenderer::new);
+            EntityRenderers.register(ModEntities.THROWN_COMMON_TAILED_EGG.get(), ThrownItemRenderer::new);
         }
     }
 }
