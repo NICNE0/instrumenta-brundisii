@@ -306,6 +306,9 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.TURNIP.get());
                         pOutput.accept(ModItems.TURNIP_SEEDS.get());
 
+//                      FROM MOBS:
+                        pOutput.accept(ModItems.COMMON_TAILED_EGG.get());
+
 
                     })
                     .build());
