@@ -1,5 +1,6 @@
 package net.nicneo.instrumenta_brundisii.entity;
 
+import net.nicneo.instrumenta_brundisii.entity.custom.ThrownCommonTailedEgg;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
 import net.nicneo.instrumenta_brundisii.entity.custom.CommonTailedEntity;
 import net.minecraft.world.entity.EntityType;
@@ -19,6 +20,13 @@ public class ModEntities {
             ENTITY_TYPES.register("common_tailed", () -> EntityType.Builder.of(CommonTailedEntity::new, MobCategory.CREATURE)
                     .sized(0.6f, 0.8f).build("common_tailed"));
 
+    public static final RegistryObject<EntityType<ThrownCommonTailedEgg>> THROWN_COMMON_TAILED_EGG =
+            ENTITY_TYPES.register("thrown_common_tailed_egg",
+                    () -> EntityType.Builder.<ThrownCommonTailedEgg>of(ThrownCommonTailedEgg::new, MobCategory.MISC)
+                            .sized(0.25F, 0.25F) // Size of the entity
+                            .clientTrackingRange(4)
+                            .updateInterval(10)
+                            .build("thrown_common_tailed_egg"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

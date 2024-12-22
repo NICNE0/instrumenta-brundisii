@@ -27,6 +27,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SEMI);
         simpleItem(ModItems.SESTERCI);
 
+        simpleItem(ModItems.COMMON_TAILED_EGG);
+
         simpleItem(ModItems.CORN_SEEDS);
         simpleItem(ModItems.CORN_COB);
 

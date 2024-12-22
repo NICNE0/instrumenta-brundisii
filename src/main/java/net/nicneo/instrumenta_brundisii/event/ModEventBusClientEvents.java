@@ -6,9 +6,11 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.nicneo.instrumenta_brundisii.block.entity.ModBlockEntities;
+import net.nicneo.instrumenta_brundisii.entity.ModEntities;
 import net.nicneo.instrumenta_brundisii.entity.client.CommonTailedModel;
 import net.nicneo.instrumenta_brundisii.entity.client.ModModelLayers;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.minecraftforge.fml.common.Mod;
 
@@ -17,6 +19,10 @@ public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayers.COMMON_TAILED_LAYER, CommonTailedModel::createBodyLayer);
+    }
+    @SubscribeEvent
+    public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(ModEntities.THROWN_COMMON_TAILED_EGG.get(), ThrownItemRenderer::new);
     }
 
     @SubscribeEvent
