@@ -16,6 +16,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.nicneo.instrumenta_brundisii.entity.ModEntities;
+import net.nicneo.instrumenta_brundisii.entity.ai.goal.BirdLookAtPlayerGoal;
 import net.nicneo.instrumenta_brundisii.item.ModItems;
 import net.nicneo.instrumenta_brundisii.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
@@ -38,9 +39,13 @@ public class CommonTailedEntity extends Animal {
         this.goalSelector.addGoal(1, new BreedGoal(this, 1.0D));
         this.goalSelector.addGoal(2, new TemptGoal(this, 1.25D, Ingredient.of(Items.WHEAT_SEEDS), false));
         this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1.0D));
-        this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 6.0F));
+
+        // Replace LookAtPlayerGoal with BirdLookAtPlayerGoal
+        this.goalSelector.addGoal(4, new BirdLookAtPlayerGoal(this, 10.0F, 60.0F)); // Look at the player with a 60-degree side view
+
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
     }
+
 
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createLivingAttributes()
