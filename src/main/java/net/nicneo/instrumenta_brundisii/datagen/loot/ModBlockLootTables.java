@@ -32,6 +32,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.TUFF_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.TUFF_SLAB.get()));
 
+//      SMOOTH SANDSTONE
+//      ================================================================================================================
+        this.dropSelf(ModBlocks.SMOOTH_SANDSTONE_WALL.get());
+        this.dropSelf(ModBlocks.SMOOTH_RED_SANDSTONE_WALL.get());
+
 //      PLASTER:
 //      ================================================================================================================
         this.dropSelf(ModBlocks.PLASTER_BLOCK.get());

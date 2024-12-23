@@ -53,7 +53,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.DIAMOND_PINK_TILE_CORNER.get());
 
 
-//                      TUFF PLASTER:
+//                      TUFF:
                         pOutput.accept(ModBlocks.TUFF_SLAB.get());
                         pOutput.accept(ModBlocks.TUFF_STAIRS.get());
                         pOutput.accept(ModBlocks.TUFF_WALL.get());
@@ -61,6 +61,10 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.TUFF_FENCE_DOOR.get());
                         pOutput.accept(ModBlocks.TUFF_PRESSURE_PLATE.get());
                         pOutput.accept(ModBlocks.TUFF_BUTTON.get());
+
+//                      SMOOTH SANDSTONE:
+                        pOutput.accept(ModBlocks.SMOOTH_SANDSTONE_WALL.get());
+                        pOutput.accept(ModBlocks.SMOOTH_RED_SANDSTONE_WALL.get());
 
 //                      LIMESTONE PLASTER:
                         pOutput.accept(ModBlocks.LIMESTONE_BRICKS.get());

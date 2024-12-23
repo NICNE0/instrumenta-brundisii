@@ -490,6 +490,13 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
 
+//  SMOOTH SANDSTONE
+    public static final RegistryObject<Block> SMOOTH_SANDSTONE_WALL = registerBlock("smooth_sandstone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_SANDSTONE)));
+
+    public static final RegistryObject<Block> SMOOTH_RED_SANDSTONE_WALL = registerBlock("smooth_red_sandstone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_RED_SANDSTONE)));
+
 
 //  FLOORS:
 //  ====================================================================================================================
@@ -533,7 +540,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> DIAMOND_PINK_TILE_CORNER = registerBlock("diamond_pink_tile_corner",
             () -> new PlayerFacingBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
 
-    //  TUFF:
+//  TUFF:
 //  ====================================================================================================================
     public static final RegistryObject<Block> TUFF_STAIRS = registerBlock("tuff_stairs",
             () -> new StairBlock(() -> Blocks.TUFF.defaultBlockState(),

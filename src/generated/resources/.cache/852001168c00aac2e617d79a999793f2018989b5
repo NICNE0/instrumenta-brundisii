@@ -1,4 +1,4 @@
-// 1.20.1	2024-12-22T16:12:54.72853	Item Models: instrumenta_brundisii
+// 1.20.1	2024-12-22T20:00:51.567585	Item Models: instrumenta_brundisii
 23a789e52beb81354ec7f4c9ffacee84f723d5db assets/instrumenta_brundisii/models/item/andesite_hanging_sign.json
 5e7682c1d11b0da3d103d6ad978082e1080441f9 assets/instrumenta_brundisii/models/item/andesite_sign.json
 2490a2da84308a70894966bc4caa24dab184f3c7 assets/instrumenta_brundisii/models/item/as.json
@@ -133,6 +133,8 @@ cc1d9dd7e0851920ceef063f2fad41a6cc17643a assets/instrumenta_brundisii/models/ite
 4a61a48c3aef1f4e7a8663d6b4a027a7146ca3c5 assets/instrumenta_brundisii/models/item/scarlet_plaster_wall.json
 8abe2fa146dfab06113d59c84cc0b1a057fab443 assets/instrumenta_brundisii/models/item/semi.json
 e540011635c08bc25533984c67998d32346d6602 assets/instrumenta_brundisii/models/item/sesterci.json
+263379795f30cf89a1c1431072c0a2469046390d assets/instrumenta_brundisii/models/item/smooth_red_sandstone_wall.json
+df81d9ec8462d16cf11d6964e56d98cc12c35310 assets/instrumenta_brundisii/models/item/smooth_sandstone_wall.json
 b7ab55736334362c8c4363381700dcb17385010b assets/instrumenta_brundisii/models/item/sweet_potato.json
 0c8279abcb4ad873004e1f5cb3f07c33649a2da1 assets/instrumenta_brundisii/models/item/sweet_potato_seeds.json
 3c2ab685075a8149077a4e6d38d35f00c052f067 assets/instrumenta_brundisii/models/item/terracotta_fence.json
