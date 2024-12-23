@@ -29,21 +29,42 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+//      ========================== WOOD SLABS ==========================
+        getVariantBuilder(ModBlocks.OAK_WOOD_SLAB.get()).forAllStates(state -> {
+            SlabType type = state.getValue(SlabBlock.TYPE);
+            Direction.Axis axis = state.getValue(OrientableSlabBlock.AXIS);
 
-        slabBlock(
-                (SlabBlock) ModBlocks.OAK_WOOD_SLAB.get(),
-                models().withExistingParent("oak_wood_slab", "minecraft:block/slab")
-                        .texture("bottom", "minecraft:block/oak_log")
-                        .texture("top", "minecraft:block/oak_log")
-                        .texture("side", "minecraft:block/oak_log"),
-                models().withExistingParent("oak_wood_slab_top", "minecraft:block/slab_top")
-                        .texture("bottom", "minecraft:block/oak_log")
-                        .texture("top", "minecraft:block/oak_log")
-                        .texture("side", "minecraft:block/oak_log"),
-                models().withExistingParent("oak_wood_double_slab", "minecraft:block/cube_column")
-                        .texture("end", "minecraft:block/oak_log")
-                        .texture("side", "minecraft:block/oak_log")
-        );
+            String typeName = type.getSerializedName(); // "bottom", "top", "double"
+            String axisName = axis.getName(); // "x", "y", "z"
+
+            if (type == SlabType.DOUBLE) {
+                // Double slab uses cube_column model with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("oak_wood_double_slab_" + axisName, "minecraft:block/cube_column")
+                                .texture("end", "minecraft:block/oak_log")
+                                .texture("side", "instrumenta_brundisii:block/oak_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else if (type == SlabType.TOP) {
+                // Top slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("oak_wood_slab_top_" + axisName, "minecraft:block/slab_top")
+                                .texture("bottom", "minecraft:block/oak_log")
+                                .texture("top", "minecraft:block/oak_log")
+                                .texture("side", "instrumenta_brundisii:block/oak_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else {
+                // Bottom slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("oak_wood_slab_bottom_" + axisName, "minecraft:block/slab")
+                                .texture("bottom", "minecraft:block/oak_log")
+                                .texture("top", "minecraft:block/oak_log")
+                                .texture("side", "instrumenta_brundisii:block/oak_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            }
+        });
 
 //      ========================== PLASTER ==========================
         blockWithItem(ModBlocks.PLASTER_BLOCK);
@@ -646,6 +667,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
 //    This lets you pass the registry Object and creates a custom block and an item for it
     private void  blockWithItem(RegistryObject<Block> blockRegistryObject){
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    // Helper method to determine rotation based on axis for wood slabs
+    private int getRotationForAxis(Direction.Axis axis) {
+        return switch (axis) {
+            case X -> 90; // Rotate 90 degrees for X-axis
+            case Z -> 0;  // No rotation for Z-axis
+            default -> 0; // Default (Y-axis)
+        };
     }
 
 }

@@ -2,7 +2,7 @@
   "parent": "minecraft:block/slab",
   "textures": {
     "bottom": "minecraft:block/oak_log",
-    "side": "minecraft:block/oak_log",
+    "side": "instrumenta_brundisii:block/oak_log_slab_side",
     "top": "minecraft:block/oak_log"
   }
 }

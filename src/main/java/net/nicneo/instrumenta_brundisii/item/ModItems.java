@@ -133,7 +133,6 @@ public class ModItems{
     public static final RegistryObject<Item> TURNIP = ITEMS.register("turnip",
             () -> new Item(new Item.Properties().stacksTo(64)));
 
-
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

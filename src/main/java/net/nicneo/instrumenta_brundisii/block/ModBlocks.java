@@ -26,7 +26,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, instrumentaBrundisii.MOD_ID);
 
     public static final RegistryObject<Block> OAK_WOOD_SLAB = registerBlock("oak_wood_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+            () -> new OrientableSlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
 
     //  SIGNS:
 //  ====================================================================================================================
