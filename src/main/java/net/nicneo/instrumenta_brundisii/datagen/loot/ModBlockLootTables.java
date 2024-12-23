@@ -21,6 +21,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+
+        this.add(ModBlocks.OAK_WOOD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.OAK_WOOD_SLAB.get()));
+
 //      TUFF:
 //      ================================================================================================================
         this.dropSelf(ModBlocks.TUFF_STAIRS.get());

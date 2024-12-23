@@ -1,4 +1,4 @@
-// 1.20.1	2024-12-22T19:56:36.942874	Loot Tables
+// 1.20.1	2024-12-22T21:30:33.999606	Loot Tables
 b0a83d4355265124cb4251954169faa6d9b0c0a9 data/instrumenta_brundisii/loot_tables/blocks/andesite_hanging_sign.json
 d3c2db9ffae99ce86b0784db132502832035a60b data/instrumenta_brundisii/loot_tables/blocks/andesite_sign.json
 15b9c1b251d8614738712f5d5e10b8ef1fc9fc6f data/instrumenta_brundisii/loot_tables/blocks/andesite_wall_hanging_sign.json
@@ -134,6 +134,7 @@ cf3b7285459bf53bea408b2f345359dd7a2cf24a data/instrumenta_brundisii/loot_tables/
 f9631e8eb6ab0be630bb1145ee9ae828f2650d9b data/instrumenta_brundisii/loot_tables/blocks/lintel_yellow_plaster_block.json
 c86c9f3e35200b2ec3f927052a3fa50abc2f574d data/instrumenta_brundisii/loot_tables/blocks/lintel_yellow_terracotta.json
 9e2206788c60e1d8b11467a748af439e93d23ce3 data/instrumenta_brundisii/loot_tables/blocks/mixed_reticula.json
+7087268769984f2033bba8620acfd99bb5afe09a data/instrumenta_brundisii/loot_tables/blocks/oak_wood_slab.json
 e6c02638580e3e7b57a5b8bfd50940e4fa0a8404 data/instrumenta_brundisii/loot_tables/blocks/oat_crop.json
 bed236566cec3e838f13a02a66f4d936af418b23 data/instrumenta_brundisii/loot_tables/blocks/onion_crop.json
 94c8d586aff8d5685133e9c6a823a5f0d96fb8b6 data/instrumenta_brundisii/loot_tables/blocks/opium_crop.json
