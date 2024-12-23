@@ -1,11 +1,13 @@
 package net.nicneo.instrumenta_brundisii.datagen;
 
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -27,6 +29,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+
+        slabBlock(
+                (SlabBlock) ModBlocks.OAK_WOOD_SLAB.get(),
+                models().withExistingParent("oak_wood_slab", "minecraft:block/slab")
+                        .texture("bottom", "minecraft:block/oak_log")
+                        .texture("top", "minecraft:block/oak_log")
+                        .texture("side", "minecraft:block/oak_log"),
+                models().withExistingParent("oak_wood_slab_top", "minecraft:block/slab_top")
+                        .texture("bottom", "minecraft:block/oak_log")
+                        .texture("top", "minecraft:block/oak_log")
+                        .texture("side", "minecraft:block/oak_log"),
+                models().withExistingParent("oak_wood_double_slab", "minecraft:block/cube_column")
+                        .texture("end", "minecraft:block/oak_log")
+                        .texture("side", "minecraft:block/oak_log")
+        );
+
 //      ========================== PLASTER ==========================
         blockWithItem(ModBlocks.PLASTER_BLOCK);
         stairsBlock(((StairBlock) ModBlocks.PLASTER_STAIRS.get()), blockTexture(ModBlocks.PLASTER_BLOCK.get()));

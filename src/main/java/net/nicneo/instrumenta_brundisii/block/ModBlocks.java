@@ -25,7 +25,10 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, instrumentaBrundisii.MOD_ID);
 
-//  SIGNS:
+    public static final RegistryObject<Block> OAK_WOOD_SLAB = registerBlock("oak_wood_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+
+    //  SIGNS:
 //  ====================================================================================================================
     public static final RegistryObject<Block> QUARTZ_SIGN = BLOCKS.register("quartz_sign",
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.QUARTZ));
