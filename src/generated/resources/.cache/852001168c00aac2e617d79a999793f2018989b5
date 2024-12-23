@@ -1,4 +1,4 @@
-// 1.20.1	2024-12-22T20:00:51.567585	Item Models: instrumenta_brundisii
+// 1.20.1	2024-12-23T06:06:36.703842	Item Models: instrumenta_brundisii
 23a789e52beb81354ec7f4c9ffacee84f723d5db assets/instrumenta_brundisii/models/item/andesite_hanging_sign.json
 5e7682c1d11b0da3d103d6ad978082e1080441f9 assets/instrumenta_brundisii/models/item/andesite_sign.json
 2490a2da84308a70894966bc4caa24dab184f3c7 assets/instrumenta_brundisii/models/item/as.json
@@ -88,6 +88,7 @@ eaf180170883aa28da35340f535ce869eec5af13 assets/instrumenta_brundisii/models/ite
 83be15e7d41da396cbd0098653f63e2d8ddf1b2b assets/instrumenta_brundisii/models/item/limestone_slab.json
 c3115c38f6c3f7f5e59863491e967c8aebc426f5 assets/instrumenta_brundisii/models/item/limestone_stairs.json
 1144826f2a8b2f1c1b4d6d2a3ca9266d4c484881 assets/instrumenta_brundisii/models/item/limestone_wall.json
+3a1e841590b5de5dddca291bf86812ac78729b5f assets/instrumenta_brundisii/models/item/oak_wood_slab.json
 f624214a283b52917ac95ed9e65eeec3a02bb743 assets/instrumenta_brundisii/models/item/oat_seeds.json
 36c4aa5cfdac9f8b2eac49efcbb501ffa1e9a6f4 assets/instrumenta_brundisii/models/item/oats.json
 a66bcc9667281a62d4939aeb6bd6d78f38c2909f assets/instrumenta_brundisii/models/item/onion.json

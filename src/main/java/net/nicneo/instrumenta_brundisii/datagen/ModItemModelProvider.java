@@ -29,7 +29,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SEMI);
         simpleItem(ModItems.SESTERCI);
 
+//      ========== ANIMAL STUFF ==========
         simpleItem(ModItems.COMMON_TAILED_EGG);
+
+
+//      ========== LOG SLABS ==========
+        withExistingParent("oak_wood_slab", modLoc("block/oak_wood_slab_bottom_y"));
 
         simpleItem(ModItems.CORN_SEEDS);
         simpleItem(ModItems.CORN_COB);
