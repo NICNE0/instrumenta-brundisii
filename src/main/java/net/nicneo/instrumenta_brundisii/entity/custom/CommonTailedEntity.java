@@ -27,7 +27,7 @@ public class CommonTailedEntity extends Animal {
     private int ambientSoundCooldown = 0;
 
     // Egg-laying timer
-    private int eggTime = this.random.nextInt(6000) + 6000; // Random time between 5 and 10 minutes
+    private int eggTime = this.random.nextInt(6000) + 4000; // Random time between 5 and 10 minutes
 
     public CommonTailedEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
@@ -39,10 +39,7 @@ public class CommonTailedEntity extends Animal {
         this.goalSelector.addGoal(1, new BreedGoal(this, 1.0D));
         this.goalSelector.addGoal(2, new TemptGoal(this, 1.25D, Ingredient.of(Items.WHEAT_SEEDS), false));
         this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1.0D));
-
-        // Replace LookAtPlayerGoal with BirdLookAtPlayerGoal
         this.goalSelector.addGoal(4, new BirdLookAtPlayerGoal(this, 10.0F, 60.0F)); // Look at the player with a 60-degree side view
-
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
     }
 
@@ -78,7 +75,7 @@ public class CommonTailedEntity extends Animal {
         if (!this.level().isClientSide && !this.isBaby() && --this.eggTime <= 0) {
             this.playSound(SoundEvents.CHICKEN_EGG, 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
             this.spawnAtLocation(ModItems.COMMON_TAILED_EGG.get());
-            this.eggTime = this.random.nextInt(6000) + 6000; // Reset egg timer
+            this.eggTime = this.random.nextInt(6000) + 3000; // Reset egg timer
         }
     }
 

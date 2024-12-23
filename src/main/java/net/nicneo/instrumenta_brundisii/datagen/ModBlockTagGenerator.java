@@ -116,6 +116,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.LIGHT_YELLOW_PLASTER_WALL.get(),
                         ModBlocks.LIMESTONE_WALL.get(),
                         ModBlocks.TUFF_WALL.get(),
+                        ModBlocks.SMOOTH_SANDSTONE_WALL.get(),
+                        ModBlocks.SMOOTH_RED_SANDSTONE_WALL.get(),
 
                         ModBlocks.TERRACOTTA_WALL.get(),
                         ModBlocks.WHITE_TERRACOTTA_WALL.get(),

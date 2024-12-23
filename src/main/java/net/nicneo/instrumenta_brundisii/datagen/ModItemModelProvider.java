@@ -14,6 +14,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.nicneo.instrumenta_brundisii.item.ModItems;
 
+import javax.annotation.Nullable;
+
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, instrumentaBrundisii.MOD_ID, existingFileHelper);
@@ -121,25 +123,27 @@ public class ModItemModelProvider extends ItemModelProvider {
         buttonItem(ModBlocks.TUFF_BUTTON, Blocks.TUFF, true);
 
 //      ========== WALLS ==========
-        wallItem(ModBlocks.PLASTER_WALL, ModBlocks.PLASTER_BLOCK, false);
-        wallItem(ModBlocks.BLUE_PLASTER_WALL, ModBlocks.BLUE_PLASTER_BLOCK, false);
-        wallItem(ModBlocks.DARK_BLUE_PLASTER_WALL, ModBlocks.DARK_BLUE_PLASTER_BLOCK, false);
-        wallItem(ModBlocks.LIGHT_BLUE_PLASTER_WALL, ModBlocks.LIGHT_BLUE_PLASTER_BLOCK, false);
-        wallItem(ModBlocks.GREEN_PLASTER_WALL, ModBlocks.GREEN_PLASTER_BLOCK, false);
-        wallItem(ModBlocks.DARK_GREEN_PLASTER_WALL, ModBlocks.DARK_GREEN_PLASTER_BLOCK, false);
-        wallItem(ModBlocks.RED_PLASTER_WALL, ModBlocks.RED_PLASTER_BLOCK, false);
-        wallItem(ModBlocks.SCARLET_PLASTER_WALL, ModBlocks.SCARLET_PLASTER_BLOCK, false);
-        wallItem(ModBlocks.YELLOW_PLASTER_WALL, ModBlocks.YELLOW_PLASTER_BLOCK, false);
-        wallItem(ModBlocks.LIGHT_YELLOW_PLASTER_WALL, ModBlocks.LIGHT_YELLOW_PLASTER_BLOCK, false);
-        wallItem(ModBlocks.LIMESTONE_WALL, ModBlocks.LIMESTONE_BRICKS, false);
-        wallItem(ModBlocks.TUFF_WALL, Blocks.TUFF, true);
-        wallItem(ModBlocks.TERRACOTTA_WALL, Blocks.TERRACOTTA, true);
-        wallItem(ModBlocks.WHITE_TERRACOTTA_WALL, Blocks.WHITE_TERRACOTTA, true);
-        wallItem(ModBlocks.ORANGE_TERRACOTTA_WALL, Blocks.ORANGE_TERRACOTTA, true);
-        wallItem(ModBlocks.LIGHT_BLUE_TERRACOTTA_WALL, Blocks.LIGHT_BLUE_TERRACOTTA, true);
-        wallItem(ModBlocks.LIGHT_GRAY_TERRACOTTA_WALL, Blocks.LIGHT_GRAY_TERRACOTTA, true);
-        wallItem(ModBlocks.RED_TERRACOTTA_WALL, Blocks.RED_TERRACOTTA, true);
-        wallItem(ModBlocks.BLACK_TERRACOTTA_WALL, Blocks.BLACK_TERRACOTTA, true);
+        wallItem(ModBlocks.PLASTER_WALL, ModBlocks.PLASTER_BLOCK, false, null);
+        wallItem(ModBlocks.BLUE_PLASTER_WALL, ModBlocks.BLUE_PLASTER_BLOCK, false, null);
+        wallItem(ModBlocks.DARK_BLUE_PLASTER_WALL, ModBlocks.DARK_BLUE_PLASTER_BLOCK, false, null);
+        wallItem(ModBlocks.LIGHT_BLUE_PLASTER_WALL, ModBlocks.LIGHT_BLUE_PLASTER_BLOCK, false, null);
+        wallItem(ModBlocks.GREEN_PLASTER_WALL, ModBlocks.GREEN_PLASTER_BLOCK, false, null);
+        wallItem(ModBlocks.DARK_GREEN_PLASTER_WALL, ModBlocks.DARK_GREEN_PLASTER_BLOCK, false, null);
+        wallItem(ModBlocks.RED_PLASTER_WALL, ModBlocks.RED_PLASTER_BLOCK, false, null);
+        wallItem(ModBlocks.SCARLET_PLASTER_WALL, ModBlocks.SCARLET_PLASTER_BLOCK, false, null);
+        wallItem(ModBlocks.YELLOW_PLASTER_WALL, ModBlocks.YELLOW_PLASTER_BLOCK, false, null);
+        wallItem(ModBlocks.LIGHT_YELLOW_PLASTER_WALL, ModBlocks.LIGHT_YELLOW_PLASTER_BLOCK, false, null);
+        wallItem(ModBlocks.LIMESTONE_WALL, ModBlocks.LIMESTONE_BRICKS, false, null);
+        wallItem(ModBlocks.TUFF_WALL, Blocks.TUFF, true, null);
+        wallItem(ModBlocks.TERRACOTTA_WALL, Blocks.TERRACOTTA, true, null);
+        wallItem(ModBlocks.WHITE_TERRACOTTA_WALL, Blocks.WHITE_TERRACOTTA, true, null);
+        wallItem(ModBlocks.ORANGE_TERRACOTTA_WALL, Blocks.ORANGE_TERRACOTTA, true, null);
+        wallItem(ModBlocks.LIGHT_BLUE_TERRACOTTA_WALL, Blocks.LIGHT_BLUE_TERRACOTTA, true, null);
+        wallItem(ModBlocks.LIGHT_GRAY_TERRACOTTA_WALL, Blocks.LIGHT_GRAY_TERRACOTTA, true, null);
+        wallItem(ModBlocks.RED_TERRACOTTA_WALL, Blocks.RED_TERRACOTTA, true, null);
+        wallItem(ModBlocks.BLACK_TERRACOTTA_WALL, Blocks.BLACK_TERRACOTTA, true, null);
+        wallItem(ModBlocks.SMOOTH_SANDSTONE_WALL, Blocks.SANDSTONE, true, "sandstone_top");
+        wallItem(ModBlocks.SMOOTH_RED_SANDSTONE_WALL, Blocks.RED_SANDSTONE, true, "red_sandstone_top");
 
 //      ========== STAIRS ==========
         evenSimplerBlockItem(ModBlocks.PLASTER_STAIRS);
@@ -268,16 +272,21 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .texture("texture", textureLocation);
     }
 
-    public void wallItem(RegistryObject<Block> block, Object baseBlock, boolean vanilla) {
+    public void wallItem(RegistryObject<Block> block, Object baseBlock, boolean vanilla, @Nullable String overrideTexture) {
         ResourceLocation textureLocation;
 
-        if (vanilla) {
+        if (overrideTexture != null) {
+            // Use the override texture if provided
+            textureLocation = new ResourceLocation("minecraft", "block/" + overrideTexture);
+        } else if (vanilla) {
+            // Handle vanilla block case
             if (baseBlock instanceof Block) {
                 textureLocation = new ResourceLocation("minecraft", "block/" + ForgeRegistries.BLOCKS.getKey((Block) baseBlock).getPath());
             } else {
                 throw new IllegalArgumentException("Expected a Block for baseBlock when vanilla is true.");
             }
         } else {
+            // Handle custom mod block case
             if (baseBlock instanceof RegistryObject) {
                 textureLocation = new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(((RegistryObject<Block>) baseBlock).get()).getPath());
             } else {
@@ -288,6 +297,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
                 .texture("wall", textureLocation);
     }
+
 
 //    public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
 //        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))

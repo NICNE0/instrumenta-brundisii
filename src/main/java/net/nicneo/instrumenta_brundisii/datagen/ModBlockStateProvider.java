@@ -10,6 +10,7 @@ import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -125,6 +126,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceBlock(((FenceBlock) ModBlocks.TUFF_FENCE.get()), blockTexture(Blocks.TUFF));
         fenceGateBlock(((FenceGateBlock) ModBlocks.TUFF_FENCE_DOOR.get()), blockTexture(Blocks.TUFF));
         wallBlock(((WallBlock) ModBlocks.TUFF_WALL.get()), blockTexture(Blocks.TUFF));
+
+//      ============================= SMOOTH SANDSTONE =============================
+        wallBlock(((WallBlock) ModBlocks.SMOOTH_SANDSTONE_WALL.get()), new ResourceLocation("minecraft", "block/sandstone_top"));
+        wallBlock(((WallBlock) ModBlocks.SMOOTH_RED_SANDSTONE_WALL.get()), new ResourceLocation("minecraft", "block/red_sandstone_top"));
+
 
 //      ========================== LIMESTONE ==========================
         blockWithItem(ModBlocks.LIMESTONE_BRICKS);
@@ -326,23 +332,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         return ForgeRegistries.BLOCKS.getKey(block);
     }
 
-
-
-//    CORN
-
-//    public void makeCornCrop(CropBlock block, String modelName, String textureName) {
-//        Function<BlockState, ConfiguredModel[]> function = state -> cornStates(state, block, modelName, textureName);
-//
-//        getVariantBuilder(block).forAllStates(function);
-//    }
-//
-//    private ConfiguredModel[] cornStates(BlockState state, CropBlock block, String modelName, String textureName) {
-//        ConfiguredModel[] models = new ConfiguredModel[1];
-//        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CornCropBlock) block).getAgeProperty()),
-//                new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((CornCropBlock) block).getAgeProperty()))).renderType("cutout"));
-//
-//        return models;
-//    }
 
     public void makeCornCrop(CropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> cornStates(state, block, modelName, textureName);
