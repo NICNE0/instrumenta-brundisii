@@ -25,10 +25,33 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, instrumentaBrundisii.MOD_ID);
 
+//  CUSTOM WOOD SLABS:
+//  ====================================================================================================================
     public static final RegistryObject<Block> OAK_WOOD_SLAB = registerBlock("oak_wood_slab",
             () -> new OrientableSlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
 
-    //  SIGNS:
+    public static final RegistryObject<Block> ACACIA_WOOD_SLAB = registerBlock("acacia_wood_slab",
+            () -> new OrientableSlabBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_WOOD)));
+
+    public static final RegistryObject<Block> BIRCH_WOOD_SLAB = registerBlock("birch_wood_slab",
+            () -> new OrientableSlabBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_WOOD)));
+
+    public static final RegistryObject<Block> CHERRY_WOOD_SLAB = registerBlock("cherry_wood_slab",
+            () -> new OrientableSlabBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_WOOD)));
+
+    public static final RegistryObject<Block> DARK_OAK_WOOD_SLAB = registerBlock("dark_oak_wood_slab",
+            () -> new OrientableSlabBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD)));
+
+    public static final RegistryObject<Block> JUNGLE_WOOD_SLAB = registerBlock("jungle_wood_slab",
+            () -> new OrientableSlabBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_WOOD)));
+
+    public static final RegistryObject<Block> MANGROVE_WOOD_SLAB = registerBlock("mangrove_wood_slab",
+            () -> new OrientableSlabBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_WOOD)));
+
+    public static final RegistryObject<Block> SPRUCE_WOOD_SLAB = registerBlock("spruce_wood_slab",
+            () -> new OrientableSlabBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD)));
+
+//  SIGNS:
 //  ====================================================================================================================
     public static final RegistryObject<Block> QUARTZ_SIGN = BLOCKS.register("quartz_sign",
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.QUARTZ));

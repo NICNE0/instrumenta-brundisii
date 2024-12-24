@@ -22,8 +22,24 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
 
+//      WOOD SLABS:
+//      ================================================================================================================
         this.add(ModBlocks.OAK_WOOD_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.OAK_WOOD_SLAB.get()));
+        this.add(ModBlocks.ACACIA_WOOD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ACACIA_WOOD_SLAB.get()));
+        this.add(ModBlocks.BIRCH_WOOD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BIRCH_WOOD_SLAB.get()));
+        this.add(ModBlocks.CHERRY_WOOD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CHERRY_WOOD_SLAB.get()));
+        this.add(ModBlocks.DARK_OAK_WOOD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.DARK_OAK_WOOD_SLAB.get()));
+        this.add(ModBlocks.JUNGLE_WOOD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.JUNGLE_WOOD_SLAB.get()));
+        this.add(ModBlocks.MANGROVE_WOOD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.MANGROVE_WOOD_SLAB.get()));
+        this.add(ModBlocks.SPRUCE_WOOD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.SPRUCE_WOOD_SLAB.get()));
 
 //      TUFF:
 //      ================================================================================================================
@@ -198,8 +214,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LINTEL_SCARLET_PLASTER_BLOCK.get());
         this.dropSelf(ModBlocks.LINTEL_YELLOW_PLASTER_BLOCK.get());
         this.dropSelf(ModBlocks.LINTEL_BRICKS.get());
-
-
 
 //      TERRACOTTA:
 //      ================================================================================================================

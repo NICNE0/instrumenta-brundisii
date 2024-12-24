@@ -29,43 +29,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-//      ========================== WOOD SLABS ==========================
-        getVariantBuilder(ModBlocks.OAK_WOOD_SLAB.get()).forAllStates(state -> {
-            SlabType type = state.getValue(SlabBlock.TYPE);
-            Direction.Axis axis = state.getValue(OrientableSlabBlock.AXIS);
-
-            String typeName = type.getSerializedName(); // "bottom", "top", "double"
-            String axisName = axis.getName(); // "x", "y", "z"
-
-            if (type == SlabType.DOUBLE) {
-                // Double slab uses cube_column model with custom side texture
-                return ConfiguredModel.builder()
-                        .modelFile(models().withExistingParent("oak_wood_double_slab_" + axisName, "minecraft:block/cube_column")
-                                .texture("end", "minecraft:block/oak_log")
-                                .texture("side", "instrumenta_brundisii:block/oak_log_slab_side")) // Replace side texture
-                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
-                        .build();
-            } else if (type == SlabType.TOP) {
-                // Top slab with custom side texture
-                return ConfiguredModel.builder()
-                        .modelFile(models().withExistingParent("oak_wood_slab_top_" + axisName, "minecraft:block/slab_top")
-                                .texture("bottom", "minecraft:block/oak_log")
-                                .texture("top", "minecraft:block/oak_log")
-                                .texture("side", "instrumenta_brundisii:block/oak_log_slab_side")) // Replace side texture
-                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
-                        .build();
-            } else {
-                // Bottom slab with custom side texture
-                return ConfiguredModel.builder()
-                        .modelFile(models().withExistingParent("oak_wood_slab_bottom_" + axisName, "minecraft:block/slab")
-                                .texture("bottom", "minecraft:block/oak_log")
-                                .texture("top", "minecraft:block/oak_log")
-                                .texture("side", "instrumenta_brundisii:block/oak_log_slab_side")) // Replace side texture
-                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
-                        .build();
-            }
-        });
-
 //      ========================== PLASTER ==========================
         blockWithItem(ModBlocks.PLASTER_BLOCK);
         stairsBlock(((StairBlock) ModBlocks.PLASTER_STAIRS.get()), blockTexture(ModBlocks.PLASTER_BLOCK.get()));
@@ -351,6 +314,282 @@ public class ModBlockStateProvider extends BlockStateProvider {
         signBlock(((StandingSignBlock) ModBlocks.GRANITE_SIGN.get()), ((WallSignBlock) ModBlocks.GRANITE_WALL_SIGN.get()),
                 blockTexture(ModBlocks.PLASTER_BLOCK.get()));
         hangingSignBlock(ModBlocks.GRANITE_HANGING_SIGN.get(), ModBlocks.GRANITE_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.PLASTER_BLOCK.get()));
+
+//      ========================== WOOD SLABS ==========================
+        getVariantBuilder(ModBlocks.OAK_WOOD_SLAB.get()).forAllStates(state -> {
+            SlabType type = state.getValue(SlabBlock.TYPE);
+            Direction.Axis axis = state.getValue(OrientableSlabBlock.AXIS);
+            String typeName = type.getSerializedName(); // "bottom", "top", "double"
+            String axisName = axis.getName(); // "x", "y", "z"
+            if (type == SlabType.DOUBLE) {
+                // Double slab uses cube_column model with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("oak_wood_double_slab_" + axisName, "minecraft:block/cube_column")
+                                .texture("end", "minecraft:block/oak_log")
+                                .texture("side", "instrumenta_brundisii:block/oak_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else if (type == SlabType.TOP) {
+                // Top slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("oak_wood_slab_top_" + axisName, "minecraft:block/slab_top")
+                                .texture("bottom", "minecraft:block/oak_log")
+                                .texture("top", "minecraft:block/oak_log")
+                                .texture("side", "instrumenta_brundisii:block/oak_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else {
+                // Bottom slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("oak_wood_slab_bottom_" + axisName, "minecraft:block/slab")
+                                .texture("bottom", "minecraft:block/oak_log")
+                                .texture("top", "minecraft:block/oak_log")
+                                .texture("side", "instrumenta_brundisii:block/oak_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            }
+        });
+        getVariantBuilder(ModBlocks.ACACIA_WOOD_SLAB.get()).forAllStates(state -> {
+            SlabType type = state.getValue(SlabBlock.TYPE);
+            Direction.Axis axis = state.getValue(OrientableSlabBlock.AXIS);
+            String typeName = type.getSerializedName(); // "bottom", "top", "double"
+            String axisName = axis.getName(); // "x", "y", "z"
+            if (type == SlabType.DOUBLE) {
+                // Double slab uses cube_column model with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("acacia_wood_double_slab_" + axisName, "minecraft:block/cube_column")
+                                .texture("end", "minecraft:block/acacia_log")
+                                .texture("side", "instrumenta_brundisii:block/acacia_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else if (type == SlabType.TOP) {
+                // Top slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("acacia_wood_slab_top_" + axisName, "minecraft:block/slab_top")
+                                .texture("bottom", "minecraft:block/acacia_log")
+                                .texture("top", "minecraft:block/acacia_log")
+                                .texture("side", "instrumenta_brundisii:block/acacia_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else {
+                // Bottom slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("acacia_wood_slab_bottom_" + axisName, "minecraft:block/slab")
+                                .texture("bottom", "minecraft:block/acacia_log")
+                                .texture("top", "minecraft:block/acacia_log")
+                                .texture("side", "instrumenta_brundisii:block/acacia_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            }
+        });
+
+
+        getVariantBuilder(ModBlocks.BIRCH_WOOD_SLAB.get()).forAllStates(state -> {
+            SlabType type = state.getValue(SlabBlock.TYPE);
+            Direction.Axis axis = state.getValue(OrientableSlabBlock.AXIS);
+            String typeName = type.getSerializedName(); // "bottom", "top", "double"
+            String axisName = axis.getName(); // "x", "y", "z"
+            if (type == SlabType.DOUBLE) {
+                // Double slab uses cube_column model with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("birch_wood_double_slab_" + axisName, "minecraft:block/cube_column")
+                                .texture("end", "minecraft:block/birch_log")
+                                .texture("side", "instrumenta_brundisii:block/birch_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else if (type == SlabType.TOP) {
+                // Top slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("birch_wood_slab_top_" + axisName, "minecraft:block/slab_top")
+                                .texture("bottom", "minecraft:block/birch_log")
+                                .texture("top", "minecraft:block/birch_log")
+                                .texture("side", "instrumenta_brundisii:block/birch_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else {
+                // Bottom slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("birch_wood_slab_bottom_" + axisName, "minecraft:block/slab")
+                                .texture("bottom", "minecraft:block/birch_log")
+                                .texture("top", "minecraft:block/birch_log")
+                                .texture("side", "instrumenta_brundisii:block/birch_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            }
+        });
+
+
+        getVariantBuilder(ModBlocks.CHERRY_WOOD_SLAB.get()).forAllStates(state -> {
+            SlabType type = state.getValue(SlabBlock.TYPE);
+            Direction.Axis axis = state.getValue(OrientableSlabBlock.AXIS);
+            String typeName = type.getSerializedName(); // "bottom", "top", "double"
+            String axisName = axis.getName(); // "x", "y", "z"
+            if (type == SlabType.DOUBLE) {
+                // Double slab uses cube_column model with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("cherry_wood_double_slab_" + axisName, "minecraft:block/cube_column")
+                                .texture("end", "minecraft:block/cherry_log")
+                                .texture("side", "instrumenta_brundisii:block/cherry_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else if (type == SlabType.TOP) {
+                // Top slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("cherry_wood_slab_top_" + axisName, "minecraft:block/slab_top")
+                                .texture("bottom", "minecraft:block/cherry_log")
+                                .texture("top", "minecraft:block/cherry_log")
+                                .texture("side", "instrumenta_brundisii:block/cherry_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else {
+                // Bottom slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("cherry_wood_slab_bottom_" + axisName, "minecraft:block/slab")
+                                .texture("bottom", "minecraft:block/cherry_log")
+                                .texture("top", "minecraft:block/cherry_log")
+                                .texture("side", "instrumenta_brundisii:block/cherry_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            }
+        });
+
+        getVariantBuilder(ModBlocks.JUNGLE_WOOD_SLAB.get()).forAllStates(state -> {
+            SlabType type = state.getValue(SlabBlock.TYPE);
+            Direction.Axis axis = state.getValue(OrientableSlabBlock.AXIS);
+            String typeName = type.getSerializedName(); // "bottom", "top", "double"
+            String axisName = axis.getName(); // "x", "y", "z"
+            if (type == SlabType.DOUBLE) {
+                // Double slab uses cube_column model with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("jungle_wood_double_slab_" + axisName, "minecraft:block/cube_column")
+                                .texture("end", "minecraft:block/jungle_log")
+                                .texture("side", "instrumenta_brundisii:block/jungle_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else if (type == SlabType.TOP) {
+                // Top slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("jungle_wood_slab_top_" + axisName, "minecraft:block/slab_top")
+                                .texture("bottom", "minecraft:block/jungle_log")
+                                .texture("top", "minecraft:block/jungle_log")
+                                .texture("side", "instrumenta_brundisii:block/jungle_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else {
+                // Bottom slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("jungle_wood_slab_bottom_" + axisName, "minecraft:block/slab")
+                                .texture("bottom", "minecraft:block/jungle_log")
+                                .texture("top", "minecraft:block/jungle_log")
+                                .texture("side", "instrumenta_brundisii:block/jungle_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            }
+        });
+
+
+        getVariantBuilder(ModBlocks.MANGROVE_WOOD_SLAB.get()).forAllStates(state -> {
+            SlabType type = state.getValue(SlabBlock.TYPE);
+            Direction.Axis axis = state.getValue(OrientableSlabBlock.AXIS);
+            String typeName = type.getSerializedName(); // "bottom", "top", "double"
+            String axisName = axis.getName(); // "x", "y", "z"
+            if (type == SlabType.DOUBLE) {
+                // Double slab uses cube_column model with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("mangrove_wood_double_slab_" + axisName, "minecraft:block/cube_column")
+                                .texture("end", "minecraft:block/mangrove_log")
+                                .texture("side", "instrumenta_brundisii:block/mangrove_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else if (type == SlabType.TOP) {
+                // Top slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("mangrove_wood_slab_top_" + axisName, "minecraft:block/slab_top")
+                                .texture("bottom", "minecraft:block/mangrove_log")
+                                .texture("top", "minecraft:block/mangrove_log")
+                                .texture("side", "instrumenta_brundisii:block/mangrove_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else {
+                // Bottom slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("mangrove_wood_slab_bottom_" + axisName, "minecraft:block/slab")
+                                .texture("bottom", "minecraft:block/mangrove_log")
+                                .texture("top", "minecraft:block/mangrove_log")
+                                .texture("side", "instrumenta_brundisii:block/mangrove_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            }
+        });
+
+        getVariantBuilder(ModBlocks.DARK_OAK_WOOD_SLAB.get()).forAllStates(state -> {
+            SlabType type = state.getValue(SlabBlock.TYPE);
+            Direction.Axis axis = state.getValue(OrientableSlabBlock.AXIS);
+            String typeName = type.getSerializedName(); // "bottom", "top", "double"
+            String axisName = axis.getName(); // "x", "y", "z"
+            if (type == SlabType.DOUBLE) {
+                // Double slab uses cube_column model with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("dark_oak_wood_double_slab_" + axisName, "minecraft:block/cube_column")
+                                .texture("end", "minecraft:block/dark_oak_log")
+                                .texture("side", "instrumenta_brundisii:block/dark_oak_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else if (type == SlabType.TOP) {
+                // Top slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("dark_oak_wood_slab_top_" + axisName, "minecraft:block/slab_top")
+                                .texture("bottom", "minecraft:block/dark_oak_log")
+                                .texture("top", "minecraft:block/dark_oak_log")
+                                .texture("side", "instrumenta_brundisii:block/dark_oak_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else {
+                // Bottom slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("dark_oak_wood_slab_bottom_" + axisName, "minecraft:block/slab")
+                                .texture("bottom", "minecraft:block/dark_oak_log")
+                                .texture("top", "minecraft:block/dark_oak_log")
+                                .texture("side", "instrumenta_brundisii:block/dark_oak_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            }
+        });
+
+
+        getVariantBuilder(ModBlocks.SPRUCE_WOOD_SLAB.get()).forAllStates(state -> {
+            SlabType type = state.getValue(SlabBlock.TYPE);
+            Direction.Axis axis = state.getValue(OrientableSlabBlock.AXIS);
+            String typeName = type.getSerializedName(); // "bottom", "top", "double"
+            String axisName = axis.getName(); // "x", "y", "z"
+            if (type == SlabType.DOUBLE) {
+                // Double slab uses cube_column model with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("spruce_wood_double_slab_" + axisName, "minecraft:block/cube_column")
+                                .texture("end", "minecraft:block/spruce_log")
+                                .texture("side", "instrumenta_brundisii:block/spruce_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else if (type == SlabType.TOP) {
+                // Top slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("spruce_wood_slab_top_" + axisName, "minecraft:block/slab_top")
+                                .texture("bottom", "minecraft:block/spruce_log")
+                                .texture("top", "minecraft:block/spruce_log")
+                                .texture("side", "instrumenta_brundisii:block/spruce_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            } else {
+                // Bottom slab with custom side texture
+                return ConfiguredModel.builder()
+                        .modelFile(models().withExistingParent("spruce_wood_slab_bottom_" + axisName, "minecraft:block/slab")
+                                .texture("bottom", "minecraft:block/spruce_log")
+                                .texture("top", "minecraft:block/spruce_log")
+                                .texture("side", "instrumenta_brundisii:block/spruce_log_slab_side")) // Replace side texture
+                        .rotationY(getRotationForAxis(axis)) // Adjust rotation for side textures
+                        .build();
+            }
+        });
     }
 
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {

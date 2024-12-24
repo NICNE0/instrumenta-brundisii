@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "minecraft:block/jungle_log",
+    "side": "instrumenta_brundisii:block/jungle_log_slab_side"
+  }
+}
