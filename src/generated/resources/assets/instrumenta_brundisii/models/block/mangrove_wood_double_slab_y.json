@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "minecraft:block/mangrove_log",
+    "side": "instrumenta_brundisii:block/mangrove_log_slab_side"
+  }
+}

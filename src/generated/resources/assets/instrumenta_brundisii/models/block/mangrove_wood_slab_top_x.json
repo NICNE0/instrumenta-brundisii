@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "minecraft:block/mangrove_log",
+    "side": "instrumenta_brundisii:block/mangrove_log_slab_side",
+    "top": "minecraft:block/mangrove_log"
+  }
+}

@@ -210,20 +210,24 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.DARK_GREEN_PLASTER_FENCE_DOOR.get());
                         pOutput.accept(ModBlocks.DARK_GREEN_PLASTER_PRESSURE_PLATE.get());
                         pOutput.accept(ModBlocks.DARK_GREEN_PLASTER_BUTTON.get());
-
+//                      WOOD SLABS:
+                        pOutput.accept(ModBlocks.OAK_WOOD_SLAB.get());
+                        pOutput.accept(ModBlocks.ACACIA_WOOD_SLAB.get());
+                        pOutput.accept(ModBlocks.BIRCH_WOOD_SLAB.get());
+                        pOutput.accept(ModBlocks.CHERRY_WOOD_SLAB.get());
+                        pOutput.accept(ModBlocks.DARK_OAK_WOOD_SLAB.get());
+                        pOutput.accept(ModBlocks.JUNGLE_WOOD_SLAB.get());
+                        pOutput.accept(ModBlocks.MANGROVE_WOOD_SLAB.get());
+                        pOutput.accept(ModBlocks.SPRUCE_WOOD_SLAB.get());
 //                      SIGNS:
                         pOutput.accept((ModItems.QUARTZ_SIGN.get()));
                         pOutput.accept((ModItems.QUARTZ_HANGING_SIGN.get()));
-
                         pOutput.accept((ModItems.ANDESITE_SIGN.get()));
                         pOutput.accept((ModItems.ANDESITE_HANGING_SIGN.get()));
-
                         pOutput.accept((ModItems.DIORITE_SIGN.get()));
                         pOutput.accept((ModItems.DIORITE_HANGING_SIGN.get()));
-
                         pOutput.accept((ModItems.GRANITE_SIGN.get()));
                         pOutput.accept((ModItems.GRANITE_HANGING_SIGN.get()));
-
 //                      MOBS:
                         pOutput.accept(ModItems.COMMON_TAILED_SPAWN_EGG.get());
 

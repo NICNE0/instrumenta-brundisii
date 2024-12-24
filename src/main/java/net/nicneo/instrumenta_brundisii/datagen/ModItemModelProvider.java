@@ -35,6 +35,15 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 //      ========== LOG SLABS ==========
         withExistingParent("oak_wood_slab", modLoc("block/oak_wood_slab_bottom_y"));
+        withExistingParent("acacia_wood_slab", modLoc("block/acacia_wood_slab_bottom_y"));
+        withExistingParent("birch_wood_slab", modLoc("block/birch_wood_slab_bottom_y"));
+        withExistingParent("cherry_wood_slab", modLoc("block/cherry_wood_slab_bottom_y"));
+        withExistingParent("dark_oak_wood_slab", modLoc("block/dark_oak_wood_slab_bottom_y"));
+        withExistingParent("jungle_wood_slab", modLoc("block/jungle_wood_slab_bottom_y"));
+        withExistingParent("mangrove_wood_slab", modLoc("block/mangrove_wood_slab_bottom_y"));
+        withExistingParent("spruce_wood_slab", modLoc("block/spruce_wood_slab_bottom_y"));
+
+//      ========== CROPS ==========
 
         simpleItem(ModItems.CORN_SEEDS);
         simpleItem(ModItems.CORN_COB);
