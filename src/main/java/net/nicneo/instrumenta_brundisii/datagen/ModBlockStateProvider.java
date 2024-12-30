@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -20,6 +21,7 @@ import net.nicneo.instrumenta_brundisii.block.ModBlocks;
 import net.nicneo.instrumenta_brundisii.block.custom.*;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
 
+import java.util.Objects;
 import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -30,7 +32,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
+//        registerMultifaceBlock(ModBlocks.BOUGAINVILLEA.get(), modLoc("block/bougainvillea"));
         makeLichenLikeBlock(ModBlocks.BOUGAINVILLEA, "bougainvillea");
+
 
 //      ========================== PLASTER ==========================
         blockWithItem(ModBlocks.PLASTER_BLOCK);
@@ -920,25 +924,99 @@ public class ModBlockStateProvider extends BlockStateProvider {
         };
     }
 
+    private void registerMultifaceBlock(Block block, ResourceLocation texture) {
+        // Generate a blockstate for a multiface block
+        getMultipartBuilder(block)
+                .part().modelFile(multifaceModel(block, texture)).addModel().condition(BlockStateProperties.NORTH, true).end()
+                .part().modelFile(multifaceModel(block, texture)).addModel().condition(BlockStateProperties.SOUTH, true).end()
+                .part().modelFile(multifaceModel(block, texture)).addModel().condition(BlockStateProperties.EAST, true).end()
+                .part().modelFile(multifaceModel(block, texture)).addModel().condition(BlockStateProperties.WEST, true).end()
+                .part().modelFile(multifaceModel(block, texture)).addModel().condition(BlockStateProperties.UP, true).end()
+                .part().modelFile(multifaceModel(block, texture)).addModel().condition(BlockStateProperties.DOWN, true).end();
+    }
+
+    private ModelFile multifaceModel(Block block, ResourceLocation texture) {
+        String blockName = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
+        return models().withExistingParent(blockName, mcLoc("block/block"))
+                .texture("particle", texture)
+                .texture("up", texture)
+                .texture("down", texture)
+                .texture("north", texture)
+                .texture("south", texture)
+                .texture("east", texture)
+                .texture("west", texture);
+    }
+
+    /**
+     * Generates a blockstate and model for a lichen-like block.
+     */
     private void makeLichenLikeBlock(RegistryObject<Block> blockRegistryObject, String textureName) {
         // Get block and resource name
         Block block = blockRegistryObject.get();
         ResourceLocation blockName = blockRegistryObject.getId();
 
-        // Define the model
+        // Define the block model (for in-world appearance)
         ModelFile blockModel = models().withExistingParent(blockName.getPath(), "minecraft:block/block")
                 .texture("particle", modLoc("block/" + textureName))
                 .texture("bougainvillea", modLoc("block/" + textureName))
                 .element()
-                .from(0, 0, 0.1f) // Very thin element like glow_lichen
+                .from(0, 0, 0.1f) // Very thin geometry like glow_lichen
                 .to(16, 16, 0.1f)
                 .face(Direction.NORTH).uvs(16, 0, 0, 16).texture("#bougainvillea").end()
                 .face(Direction.SOUTH).uvs(0, 0, 16, 16).texture("#bougainvillea").end()
                 .end();
 
-        // Register the block state
-        simpleBlock(block, blockModel);
+        // Generate the blockstate JSON with rotation logic
+        getVariantBuilder(block).forAllStates(state -> {
+            ConfiguredModel.Builder<?> modelBuilder = ConfiguredModel.builder()
+                    .modelFile(blockModel);
+
+            // Check all possible faces for which face is active
+            for (Direction direction : Direction.values()) {
+                BooleanProperty property = MultifaceBlock.getFaceProperty(direction);
+                if (state.getValue(property)) {
+                    modelBuilder.rotationX(calculateXRotation(direction))
+                            .rotationY(calculateYRotation(direction));
+                    break; // Stop after finding the first active face
+                }
+            }
+
+            return modelBuilder.build();
+        });
+
+        // Define the item model (for inventory representation)
+        itemModels().getBuilder(blockName.getPath())
+                .parent(models().getExistingFile(mcLoc("item/generated")))
+                .texture("layer0", modLoc("block/" + textureName));
     }
 
+    /**
+     * Calculates the X rotation based on the block's direction.
+     *
+     * @param direction The direction of the block face.
+     * @return The X-axis rotation value.
+     */
+    private int calculateXRotation(Direction direction) {
+        return switch (direction) {
+            case UP -> -90;  // Rotated upwards
+            case DOWN -> 90; // Rotated downwards
+            default -> 0;    // No X-axis rotation for horizontal faces
+        };
+    }
+
+    /**
+     * Calculates the Y rotation based on the block's direction.
+     *
+     * @param direction The direction of the block face.
+     * @return The Y-axis rotation value.
+     */
+    private int calculateYRotation(Direction direction) {
+        return switch (direction) {
+            case SOUTH -> 180;  // Rotated towards the south
+            case WEST -> 270;   // Rotated towards the west
+            case EAST -> 90;    // Rotated towards the east
+            default -> 0;       // Default is north-facing
+        };
+    }
 
 }

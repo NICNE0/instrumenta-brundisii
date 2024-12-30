@@ -1,35 +1,21 @@
 {
   "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "instrumenta_brundisii:block/bougainvillea",
+    "bougainvillea": "instrumenta_brundisii:block/bougainvillea"
+  },
   "elements": [
     {
+      "from": [0, 0, 0.1],
+      "to": [16, 16, 0.1],
       "faces": {
-        "north": {
-          "texture": "#bougainvillea",
-          "uv": [
-            16.0,
-            0.0,
-            0.0,
-            16.0
-          ]
-        },
-        "south": {
-          "texture": "#bougainvillea"
-        }
-      },
-      "from": [
-        0,
-        0,
-        0.1
-      ],
-      "to": [
-        16,
-        16,
-        0.1
-      ]
+        "north": { "texture": "#bougainvillea", "cullface": "north" },
+        "south": { "texture": "#bougainvillea", "cullface": "south" },
+        "east": { "texture": "#bougainvillea", "cullface": "east" },
+        "west": { "texture": "#bougainvillea", "cullface": "west" },
+        "up": { "texture": "#bougainvillea", "cullface": "up" },
+        "down": { "texture": "#bougainvillea", "cullface": "down" }
+      }
     }
-  ],
-  "textures": {
-    "bougainvillea": "instrumenta_brundisii:block/bougainvillea",
-    "particle": "instrumenta_brundisii:block/bougainvillea"
-  }
+  ]
 }
