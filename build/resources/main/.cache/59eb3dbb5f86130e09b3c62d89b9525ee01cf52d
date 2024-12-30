@@ -1,4 +1,4 @@
-// 1.20.1	2024-12-23T19:56:24.559327	Loot Tables
+// 1.20.1	2024-12-29T18:54:00.669428	Loot Tables
 51c74e580581bf3fe7b813c70b8843bd62fb65c5 data/instrumenta_brundisii/loot_tables/blocks/acacia_wood_slab.json
 b0a83d4355265124cb4251954169faa6d9b0c0a9 data/instrumenta_brundisii/loot_tables/blocks/andesite_hanging_sign.json
 d3c2db9ffae99ce86b0784db132502832035a60b data/instrumenta_brundisii/loot_tables/blocks/andesite_sign.json
@@ -22,6 +22,7 @@ be00ce69281b32aa42dae460d540f82817598c2b data/instrumenta_brundisii/loot_tables/
 3710d01f7f3b2073295066140356e60dac71865c data/instrumenta_brundisii/loot_tables/blocks/blue_plaster_slab.json
 ebeccf53fe7914996ce90e838f02dce1873e6a92 data/instrumenta_brundisii/loot_tables/blocks/blue_plaster_stairs.json
 757cebf7e2d1b8f86b4c8187a02d810037d6aaff data/instrumenta_brundisii/loot_tables/blocks/blue_plaster_wall.json
+1b80a3f7ff33eb7c546c76c7b1831f0fa196b4da data/instrumenta_brundisii/loot_tables/blocks/bougainvillea.json
 81185b534c326c25426962e9fd8e4c8dbcc1ad5f data/instrumenta_brundisii/loot_tables/blocks/cabbage_crop.json
 c3a9ffce0f44304c3ed4684eaa4c389832b2a435 data/instrumenta_brundisii/loot_tables/blocks/cherry_wood_slab.json
 4410e4312df1d6d2dc6d6c6b2107897dc3542755 data/instrumenta_brundisii/loot_tables/blocks/circle_black_tile.json

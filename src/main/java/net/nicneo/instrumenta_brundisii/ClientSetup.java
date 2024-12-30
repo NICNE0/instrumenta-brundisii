@@ -15,6 +15,7 @@ public class ClientSetup {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         setRenderLayer(ModBlocks.CORN_CROP.get(), RenderType.cutout());
+        setRenderLayer(ModBlocks.BOUGAINVILLEA.get(), RenderType.cutout());
     }
 
     private static void setRenderLayer(Block block, RenderType type) {

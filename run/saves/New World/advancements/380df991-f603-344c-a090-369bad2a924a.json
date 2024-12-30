@@ -1601,5 +1601,17 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/pink_dye_from_pink_tulip": {
+    "criteria": {
+      "has_pink_tulip": "2024-12-29 19:31:43 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/red_dye_from_tulip": {
+    "criteria": {
+      "has_red_flower": "2024-12-29 19:32:16 -0500"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

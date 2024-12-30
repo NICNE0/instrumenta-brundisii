@@ -25,6 +25,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
 
+//        this.tag(BlockTags.LEAVES)
+//                .add(
+//                        ModBlocks.BOUGAINVILLEA.get()
+//                );
+
+
+
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(

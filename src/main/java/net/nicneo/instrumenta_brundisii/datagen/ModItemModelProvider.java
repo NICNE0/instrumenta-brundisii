@@ -23,6 +23,13 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+
+//        withExistingParent(ModBlocks.BOUGAINVILLEA.getId().getPath(), modLoc("block/bougainvillea"))
+//                .texture("bougainvillea", modLoc("block/bougainvillea"));
+
+
+
+
         simpleItem(ModItems.AS);
         simpleItem(ModItems.AURI);
         simpleItem(ModItems.DENARI);

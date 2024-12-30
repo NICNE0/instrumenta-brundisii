@@ -22,6 +22,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
 
+        this.dropSelf(ModBlocks.BOUGAINVILLEA.get());
+
 //      WOOD SLABS:
 //      ================================================================================================================
         this.add(ModBlocks.OAK_WOOD_SLAB.get(),

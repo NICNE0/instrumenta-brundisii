@@ -29,6 +29,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+
+        makeLichenLikeBlock(ModBlocks.BOUGAINVILLEA, "bougainvillea");
+
 //      ========================== PLASTER ==========================
         blockWithItem(ModBlocks.PLASTER_BLOCK);
         stairsBlock(((StairBlock) ModBlocks.PLASTER_STAIRS.get()), blockTexture(ModBlocks.PLASTER_BLOCK.get()));
@@ -916,5 +919,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
             default -> 0; // Default (Y-axis)
         };
     }
+
+    private void makeLichenLikeBlock(RegistryObject<Block> blockRegistryObject, String textureName) {
+        // Get block and resource name
+        Block block = blockRegistryObject.get();
+        ResourceLocation blockName = blockRegistryObject.getId();
+
+        // Define the model
+        ModelFile blockModel = models().withExistingParent(blockName.getPath(), "minecraft:block/block")
+                .texture("particle", modLoc("block/" + textureName))
+                .texture("bougainvillea", modLoc("block/" + textureName))
+                .element()
+                .from(0, 0, 0.1f) // Very thin element like glow_lichen
+                .to(16, 16, 0.1f)
+                .face(Direction.NORTH).uvs(16, 0, 0, 16).texture("#bougainvillea").end()
+                .face(Direction.SOUTH).uvs(0, 0, 16, 16).texture("#bougainvillea").end()
+                .end();
+
+        // Register the block state
+        simpleBlock(block, blockModel);
+    }
+
 
 }

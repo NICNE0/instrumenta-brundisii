@@ -17,6 +17,8 @@ import net.nicneo.instrumenta_brundisii.util.ModWoodTypes;
 
 import java.util.function.Supplier;
 
+import static net.nicneo.instrumenta_brundisii.item.ModItems.ITEMS;
+
 
 //  This Section defines the new block, in this case it is copying the properties of another block, cobblestone,
 //    just as in other cases, the name is defined first as a method using upper case and then it's internal
@@ -25,7 +27,10 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, instrumentaBrundisii.MOD_ID);
 
-//  CUSTOM WOOD SLABS:
+    public static final RegistryObject<Block> BOUGAINVILLEA = registerLichenLike("bougainvillea",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN)));
+
+    //  CUSTOM WOOD SLABS:
 //  ====================================================================================================================
     public static final RegistryObject<Block> OAK_WOOD_SLAB = registerBlock("oak_wood_slab",
             () -> new OrientableSlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
@@ -603,8 +608,20 @@ public class ModBlocks {
         return toReturn;
     }
 
+    private static <T extends Block> RegistryObject<T> registerLichenLike(String name, Supplier<T> block) {
+        // Register the lichen-like block
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+
+        // Automatically register the associated block item
+        ITEMS.register(name, () -> new BlockItem(toReturn.get(), new Item.Properties()));
+
+        // Return the block reference
+        return toReturn;
+    }
+
+
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block){
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        return ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {
