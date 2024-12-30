@@ -24,6 +24,10 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
 
+//      ========== FLOWERS ==========
+        simpleItem(ModItems.PINK_BOUGAINVILLEA_BUNCH);
+
+//      ========== COINS ==========
         simpleItem(ModItems.AS);
         simpleItem(ModItems.AURI);
         simpleItem(ModItems.DENARI);

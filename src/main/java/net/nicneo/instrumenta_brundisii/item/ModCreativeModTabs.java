@@ -24,6 +24,7 @@ public class ModCreativeModTabs {
 
                         pOutput.accept((ModBlocks.BOUGAINVILLEA_LEAVES.get()));
                         pOutput.accept((ModBlocks.PINK_BOUGAINVILLEA.get()));
+                        pOutput.accept(ModItems.PINK_BOUGAINVILLEA_BUNCH.get());
 
 //                      RETICULAS:
                         pOutput.accept(ModBlocks.RETICULA.get());
