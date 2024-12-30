@@ -49,6 +49,14 @@ public class BougainvilleaInteractionHandler {
                     ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_2.get()
             );
 
+            registerColor("WHITE",
+                    ModBlocks.WHITE_BOUGAINVILLEA.get(),
+                    ModBlocks.WHITE_BLOOMING_BOUGAINVILLEA_1.get(),
+                    ModBlocks.WHITE_BLOOMING_BOUGAINVILLEA_2.get(),
+                    ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_1.get(),
+                    ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_2.get()
+            );
+
             // Add more colors here if needed
         });
     }

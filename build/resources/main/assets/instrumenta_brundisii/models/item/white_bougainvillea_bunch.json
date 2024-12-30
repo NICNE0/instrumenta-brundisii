@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "instrumenta_brundisii:item/white_bougainvillea_bunch"
+  }
+}
