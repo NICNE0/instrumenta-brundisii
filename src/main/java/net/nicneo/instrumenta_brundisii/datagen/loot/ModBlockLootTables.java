@@ -22,7 +22,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
 
-        this.dropSelf(ModBlocks.BOUGAINVILLEA.get());
+        this.dropSelf(ModBlocks.BOUGAINVILLEA_LEAVES.get());
+        this.dropSelf(ModBlocks.PINK_BOUGAINVILLEA.get());
+        this.dropSelf(ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_1.get());
+        this.dropSelf(ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_2.get());
+        this.dropSelf(ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_1.get());
+        this.dropSelf(ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_2.get());
+
 
 //      WOOD SLABS:
 //      ================================================================================================================

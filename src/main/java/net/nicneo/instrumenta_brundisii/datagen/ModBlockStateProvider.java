@@ -32,9 +32,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-//        registerMultifaceBlock(ModBlocks.BOUGAINVILLEA.get(), modLoc("block/bougainvillea"));
-        makeLichenLikeBlock(ModBlocks.BOUGAINVILLEA, "bougainvillea");
-
+//      ===================== LICHEN LIKE BLOCKS ====================
+        makeLichenLikeBlock(ModBlocks.BOUGAINVILLEA_LEAVES, "bougainvillea_leaves");
+        makeLichenLikeBlock(ModBlocks.PINK_BOUGAINVILLEA, "pink_bougainvillea");
+        makeLichenLikeBlock(ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_1, "pink_blooming_bougainvillea_1");
+        makeLichenLikeBlock(ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_2, "pink_blooming_bougainvillea_2");
+        makeLichenLikeBlock(ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_1, "pink_flowering_bougainvillea_1");
+        makeLichenLikeBlock(ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_2, "pink_flowering_bougainvillea_2");
 
 //      ========================== PLASTER ==========================
         blockWithItem(ModBlocks.PLASTER_BLOCK);

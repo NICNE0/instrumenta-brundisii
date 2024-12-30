@@ -22,7 +22,8 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("instrumenta.brundisii_tab"))
                     .displayItems((pParameters, pOutput) -> {
 
-                        pOutput.accept((ModBlocks.BOUGAINVILLEA.get()));
+                        pOutput.accept((ModBlocks.BOUGAINVILLEA_LEAVES.get()));
+                        pOutput.accept((ModBlocks.PINK_BOUGAINVILLEA.get()));
 
 //                      RETICULAS:
                         pOutput.accept(ModBlocks.RETICULA.get());

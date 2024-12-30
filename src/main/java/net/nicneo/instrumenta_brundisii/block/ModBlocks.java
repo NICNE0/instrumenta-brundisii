@@ -27,10 +27,27 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, instrumentaBrundisii.MOD_ID);
 
-    public static final RegistryObject<Block> BOUGAINVILLEA = registerLichenLike("bougainvillea",
+//  LICHEN LIKE BLOCKS:
+//  ====================================================================================================================
+    public static final RegistryObject<Block> BOUGAINVILLEA_LEAVES = registerLichenLike("bougainvillea_leaves",
             () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
 
-    //  CUSTOM WOOD SLABS:
+    public static final RegistryObject<Block> PINK_BOUGAINVILLEA = registerLichenLike("pink_bougainvillea",
+            () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
+
+    public static final RegistryObject<Block> PINK_BLOOMING_BOUGAINVILLEA_1 = registerLichenLike("pink_blooming_bougainvillea_1",
+            () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
+
+    public static final RegistryObject<Block> PINK_BLOOMING_BOUGAINVILLEA_2 = registerLichenLike("pink_blooming_bougainvillea_2",
+            () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
+
+    public static final RegistryObject<Block> PINK_FLOWERING_BOUGAINVILLEA_1 = registerLichenLike("pink_flowering_bougainvillea_1",
+            () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
+
+    public static final RegistryObject<Block> PINK_FLOWERING_BOUGAINVILLEA_2 = registerLichenLike("pink_flowering_bougainvillea_2",
+            () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
+
+//  CUSTOM WOOD SLABS:
 //  ====================================================================================================================
     public static final RegistryObject<Block> OAK_WOOD_SLAB = registerBlock("oak_wood_slab",
             () -> new OrientableSlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
