@@ -28,7 +28,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, instrumentaBrundisii.MOD_ID);
 
     public static final RegistryObject<Block> BOUGAINVILLEA = registerLichenLike("bougainvillea",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN)));
+            () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
 
     //  CUSTOM WOOD SLABS:
 //  ====================================================================================================================
