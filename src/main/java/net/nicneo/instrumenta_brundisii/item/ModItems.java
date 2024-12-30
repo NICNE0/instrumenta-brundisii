@@ -16,8 +16,9 @@ public class ModItems{
 
     public static final RegistryObject<Item> PINK_BOUGAINVILLEA_BUNCH = ITEMS.register("pink_bougainvillea_bunch",
             () -> new Item(new Item.Properties().stacksTo(64)));
-
     public static final RegistryObject<Item> ORANGE_BOUGAINVILLEA_BUNCH = ITEMS.register("orange_bougainvillea_bunch",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+    public static final RegistryObject<Item> WHITE_BOUGAINVILLEA_BUNCH = ITEMS.register("white_bougainvillea_bunch",
             () -> new Item(new Item.Properties().stacksTo(64)));
 
     public static final RegistryObject<Item> AURI = ITEMS.register("auri",

@@ -22,14 +22,6 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("instrumenta.brundisii_tab"))
                     .displayItems((pParameters, pOutput) -> {
 
-                        pOutput.accept((ModBlocks.BOUGAINVILLEA_LEAVES.get()));
-
-                        pOutput.accept((ModBlocks.PINK_BOUGAINVILLEA.get()));
-                        pOutput.accept(ModItems.PINK_BOUGAINVILLEA_BUNCH.get());
-
-                        pOutput.accept((ModBlocks.ORANGE_BOUGAINVILLEA.get()));
-                        pOutput.accept(ModItems.ORANGE_BOUGAINVILLEA_BUNCH.get());
-
 //                      RETICULAS:
                         pOutput.accept(ModBlocks.RETICULA.get());
                         pOutput.accept(ModBlocks.LIGHT_RETICULA.get());
@@ -236,6 +228,18 @@ public class ModCreativeModTabs {
                         pOutput.accept((ModItems.DIORITE_HANGING_SIGN.get()));
                         pOutput.accept((ModItems.GRANITE_SIGN.get()));
                         pOutput.accept((ModItems.GRANITE_HANGING_SIGN.get()));
+
+//                      PLANTS:
+                        pOutput.accept((ModBlocks.BOUGAINVILLEA_LEAVES.get()));
+
+                        pOutput.accept((ModBlocks.PINK_BOUGAINVILLEA.get()));
+                        pOutput.accept((ModBlocks.ORANGE_BOUGAINVILLEA.get()));
+                        pOutput.accept((ModBlocks.WHITE_BOUGAINVILLEA.get()));
+
+                        pOutput.accept(ModItems.ORANGE_BOUGAINVILLEA_BUNCH.get());
+                        pOutput.accept(ModItems.PINK_BOUGAINVILLEA_BUNCH.get());
+                        pOutput.accept(ModItems.WHITE_BOUGAINVILLEA_BUNCH.get());
+
 //                      MOBS:
                         pOutput.accept(ModItems.COMMON_TAILED_SPAWN_EGG.get());
 

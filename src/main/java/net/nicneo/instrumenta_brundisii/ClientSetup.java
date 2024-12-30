@@ -29,6 +29,12 @@ public class ClientSetup {
         setRenderLayer(ModBlocks.ORANGE_BLOOMING_BOUGAINVILLEA_2.get(), RenderType.cutout());
         setRenderLayer(ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_1.get(), RenderType.cutout());
         setRenderLayer(ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_2.get(), RenderType.cutout());
+
+        setRenderLayer(ModBlocks.WHITE_BOUGAINVILLEA.get(), RenderType.cutout());
+        setRenderLayer(ModBlocks.WHITE_BLOOMING_BOUGAINVILLEA_1.get(), RenderType.cutout());
+        setRenderLayer(ModBlocks.WHITE_BLOOMING_BOUGAINVILLEA_2.get(), RenderType.cutout());
+        setRenderLayer(ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_1.get(), RenderType.cutout());
+        setRenderLayer(ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_2.get(), RenderType.cutout());
     }
 
     private static void setRenderLayer(Block block, RenderType type) {
