@@ -34,11 +34,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 //      ===================== LICHEN LIKE BLOCKS ====================
         makeLichenLikeBlock(ModBlocks.BOUGAINVILLEA_LEAVES, "bougainvillea_leaves");
+
         makeLichenLikeBlock(ModBlocks.PINK_BOUGAINVILLEA, "pink_bougainvillea");
         makeLichenLikeBlock(ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_1, "pink_blooming_bougainvillea_1");
         makeLichenLikeBlock(ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_2, "pink_blooming_bougainvillea_2");
         makeLichenLikeBlock(ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_1, "pink_flowering_bougainvillea_1");
         makeLichenLikeBlock(ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_2, "pink_flowering_bougainvillea_2");
+
+        makeLichenLikeBlock(ModBlocks.ORANGE_BOUGAINVILLEA, "orange_bougainvillea");
+        makeLichenLikeBlock(ModBlocks.ORANGE_BLOOMING_BOUGAINVILLEA_1, "orange_blooming_bougainvillea_1");
+        makeLichenLikeBlock(ModBlocks.ORANGE_BLOOMING_BOUGAINVILLEA_2, "orange_blooming_bougainvillea_2");
+        makeLichenLikeBlock(ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_1, "orange_flowering_bougainvillea_1");
+        makeLichenLikeBlock(ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_2, "orange_flowering_bougainvillea_2");
 
 //      ========================== PLASTER ==========================
         blockWithItem(ModBlocks.PLASTER_BLOCK);

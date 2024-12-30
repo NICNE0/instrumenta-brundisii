@@ -26,6 +26,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 //      ========== FLOWERS ==========
         simpleItem(ModItems.PINK_BOUGAINVILLEA_BUNCH);
+        simpleItem(ModItems.ORANGE_BOUGAINVILLEA_BUNCH);
 
 //      ========== COINS ==========
         simpleItem(ModItems.AS);
