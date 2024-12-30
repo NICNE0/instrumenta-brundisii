@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:block/block",
+  "elements": [
+    {
+      "faces": {
+        "north": {
+          "texture": "#bougainvillea",
+          "uv": [
+            16.0,
+            0.0,
+            0.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#bougainvillea"
+        }
+      },
+      "from": [
+        0,
+        0,
+        0.1
+      ],
+      "to": [
+        16,
+        16,
+        0.1
+      ]
+    }
+  ],
+  "textures": {
+    "bougainvillea": "instrumenta_brundisii:block/orange_bougainvillea",
+    "particle": "instrumenta_brundisii:block/orange_bougainvillea"
+  }
+}

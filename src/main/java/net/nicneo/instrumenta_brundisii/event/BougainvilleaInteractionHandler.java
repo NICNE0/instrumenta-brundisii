@@ -15,11 +15,43 @@ import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
 import net.nicneo.instrumenta_brundisii.item.ModItems;
 
-@Mod.EventBusSubscriber
+import java.util.HashMap;
+import java.util.Map;
+
+@Mod.EventBusSubscriber(modid = "instrumenta_brundisii")
 public class BougainvilleaInteractionHandler {
+
+    // Store Bougainvillea block variants by color
+    private static final Map<String, BougainvilleaVariants> VARIANT_MAP = new HashMap<>();
+
+    /**
+     * Register the variants during the common setup phase to ensure all blocks are initialized.
+     */
+    public static void registerVariants(FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            registerColor("PINK",
+                    ModBlocks.PINK_BOUGAINVILLEA.get(),
+                    ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_1.get(),
+                    ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_2.get(),
+                    ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_1.get(),
+                    ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_2.get()
+            );
+
+            registerColor("ORANGE",
+                    ModBlocks.ORANGE_BOUGAINVILLEA.get(),
+                    ModBlocks.ORANGE_BLOOMING_BOUGAINVILLEA_1.get(),
+                    ModBlocks.ORANGE_BLOOMING_BOUGAINVILLEA_2.get(),
+                    ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_1.get(),
+                    ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_2.get()
+            );
+
+            // Add more colors here if needed
+        });
+    }
 
     @SubscribeEvent
     public static void onBlockRightClick(PlayerInteractEvent.RightClickBlock event) {
@@ -31,31 +63,36 @@ public class BougainvilleaInteractionHandler {
         BlockState state = level.getBlockState(pos);
         ItemStack heldItem = player.getItemInHand(event.getHand());
 
+        // Determine the color of the block
+        String color = getColorFromBlock(state.getBlock());
+        if (color == null) return; // If the block is not a Bougainvillea variant, do nothing
+
         // Handle bonemeal interaction
         if (heldItem.is(Items.BONE_MEAL)) {
-            handleBonemealInteraction((ServerLevel) level, state, pos, player, event.getHand(), event);
+            handleBonemealInteraction(color, (ServerLevel) level, state, pos, player, event.getHand(), event);
         }
 
         // Handle stick interaction
         if (heldItem.is(Items.STICK)) {
-            handleStickInteraction((ServerLevel) level, state, pos, player, event);
+            handleStickInteraction(color, (ServerLevel) level, state, pos, player, event);
         }
     }
 
-    private static void handleBonemealInteraction(ServerLevel level, BlockState state, BlockPos pos, Player player, InteractionHand hand, PlayerInteractEvent.RightClickBlock event) {
+    private static void handleBonemealInteraction(String color, ServerLevel level, BlockState state, BlockPos pos, Player player, InteractionHand hand, PlayerInteractEvent.RightClickBlock event) {
         RandomSource random = level.random;
+        BougainvilleaVariants variants = VARIANT_MAP.get(color);
         Block currentBlock = state.getBlock();
 
         // Upgrade logic using bonemeal
-        if (currentBlock == ModBlocks.PINK_BOUGAINVILLEA.get()) {
+        if (currentBlock == variants.base) {
             BlockState newState = random.nextBoolean()
-                    ? ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_1.get().defaultBlockState()
-                    : ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_2.get().defaultBlockState();
+                    ? variants.blooming1.defaultBlockState()
+                    : variants.blooming2.defaultBlockState();
             level.setBlock(pos, copyProperties(state, newState), Block.UPDATE_ALL);
-        } else if (currentBlock == ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_1.get() || currentBlock == ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_2.get()) {
+        } else if (currentBlock == variants.blooming1 || currentBlock == variants.blooming2) {
             BlockState newState = random.nextBoolean()
-                    ? ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_1.get().defaultBlockState()
-                    : ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_2.get().defaultBlockState();
+                    ? variants.flowering1.defaultBlockState()
+                    : variants.flowering2.defaultBlockState();
             level.setBlock(pos, copyProperties(state, newState), Block.UPDATE_ALL);
         }
 
@@ -69,23 +106,24 @@ public class BougainvilleaInteractionHandler {
         event.setCanceled(true);
     }
 
-    private static void handleStickInteraction(ServerLevel level, BlockState state, BlockPos pos, Player player, PlayerInteractEvent.RightClickBlock event) {
+    private static void handleStickInteraction(String color, ServerLevel level, BlockState state, BlockPos pos, Player player, PlayerInteractEvent.RightClickBlock event) {
         RandomSource random = level.random;
+        BougainvilleaVariants variants = VARIANT_MAP.get(color);
         Block currentBlock = state.getBlock();
 
         // Downgrade logic using stick
-        if (currentBlock == ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_1.get() || currentBlock == ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_2.get()) {
+        if (currentBlock == variants.flowering1 || currentBlock == variants.flowering2) {
             BlockState newState = random.nextBoolean()
-                    ? ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_1.get().defaultBlockState()
-                    : ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_2.get().defaultBlockState();
+                    ? variants.blooming1.defaultBlockState()
+                    : variants.blooming2.defaultBlockState();
             level.setBlock(pos, copyProperties(state, newState), Block.UPDATE_ALL);
-        } else if (currentBlock == ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_1.get() || currentBlock == ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_2.get()) {
-            BlockState newState = ModBlocks.PINK_BOUGAINVILLEA.get().defaultBlockState();
+        } else if (currentBlock == variants.blooming1 || currentBlock == variants.blooming2) {
+            BlockState newState = variants.base.defaultBlockState();
             level.setBlock(pos, copyProperties(state, newState), Block.UPDATE_ALL);
         }
 
-        // Give the player one PINK_BOUGAINVILLEA_BUNCH item
-        ItemStack drop = new ItemStack(ModItems.PINK_BOUGAINVILLEA_BUNCH.get());
+        // Give the player one Bougainvillea bunch item
+        ItemStack drop = new ItemStack(ModItems.PINK_BOUGAINVILLEA_BUNCH.get()); // Use a single type of bunch for now
         player.addItem(drop);
 
         event.setCancellationResult(InteractionResult.SUCCESS);
@@ -105,4 +143,33 @@ public class BougainvilleaInteractionHandler {
         return newState.setValue(property, oldState.getValue(property));
     }
 
+    private static void registerColor(String color, Block base, Block blooming1, Block blooming2, Block flowering1, Block flowering2) {
+        VARIANT_MAP.put(color, new BougainvilleaVariants(base, blooming1, blooming2, flowering1, flowering2));
+    }
+
+    private static String getColorFromBlock(Block block) {
+        for (Map.Entry<String, BougainvilleaVariants> entry : VARIANT_MAP.entrySet()) {
+            BougainvilleaVariants variants = entry.getValue();
+            if (block == variants.base || block == variants.blooming1 || block == variants.blooming2 || block == variants.flowering1 || block == variants.flowering2) {
+                return entry.getKey();
+            }
+        }
+        return null; // Block is not a Bougainvillea variant
+    }
+
+    private static class BougainvilleaVariants {
+        final Block base;
+        final Block blooming1;
+        final Block blooming2;
+        final Block flowering1;
+        final Block flowering2;
+
+        BougainvilleaVariants(Block base, Block blooming1, Block blooming2, Block flowering1, Block flowering2) {
+            this.base = base;
+            this.blooming1 = blooming1;
+            this.blooming2 = blooming2;
+            this.flowering1 = flowering1;
+            this.flowering2 = flowering2;
+        }
+    }
 }

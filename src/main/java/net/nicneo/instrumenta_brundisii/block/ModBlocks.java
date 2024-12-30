@@ -34,17 +34,24 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PINK_BOUGAINVILLEA = registerLichenLike("pink_bougainvillea",
             () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
-
     public static final RegistryObject<Block> PINK_BLOOMING_BOUGAINVILLEA_1 = registerLichenLike("pink_blooming_bougainvillea_1",
             () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
-
     public static final RegistryObject<Block> PINK_BLOOMING_BOUGAINVILLEA_2 = registerLichenLike("pink_blooming_bougainvillea_2",
             () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
-
     public static final RegistryObject<Block> PINK_FLOWERING_BOUGAINVILLEA_1 = registerLichenLike("pink_flowering_bougainvillea_1",
             () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
-
     public static final RegistryObject<Block> PINK_FLOWERING_BOUGAINVILLEA_2 = registerLichenLike("pink_flowering_bougainvillea_2",
+            () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
+
+    public static final RegistryObject<Block> ORANGE_BOUGAINVILLEA = registerLichenLike("orange_bougainvillea",
+            () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
+    public static final RegistryObject<Block> ORANGE_BLOOMING_BOUGAINVILLEA_1 = registerLichenLike("orange_blooming_bougainvillea_1",
+            () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
+    public static final RegistryObject<Block> ORANGE_BLOOMING_BOUGAINVILLEA_2 = registerLichenLike("orange_blooming_bougainvillea_2",
+            () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
+    public static final RegistryObject<Block> ORANGE_FLOWERING_BOUGAINVILLEA_1 = registerLichenLike("orange_flowering_bougainvillea_1",
+            () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
+    public static final RegistryObject<Block> ORANGE_FLOWERING_BOUGAINVILLEA_2 = registerLichenLike("orange_flowering_bougainvillea_2",
             () -> new BougainvilleaBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).noCollission().lightLevel(state -> 7)));
 
 //  CUSTOM WOOD SLABS:

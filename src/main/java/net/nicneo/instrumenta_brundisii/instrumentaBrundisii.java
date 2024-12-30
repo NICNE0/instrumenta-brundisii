@@ -18,6 +18,7 @@ import net.nicneo.instrumenta_brundisii.block.ModBlocks;
 import net.nicneo.instrumenta_brundisii.block.entity.ModBlockEntities;
 import net.nicneo.instrumenta_brundisii.entity.ModEntities;
 import net.nicneo.instrumenta_brundisii.entity.client.CommonTailedRenderer;
+import net.nicneo.instrumenta_brundisii.event.BougainvilleaInteractionHandler;
 import net.nicneo.instrumenta_brundisii.item.ModCreativeModTabs;
 import net.nicneo.instrumenta_brundisii.item.ModItems;
 import net.nicneo.instrumenta_brundisii.sound.ModSounds;
@@ -44,6 +45,8 @@ public class instrumentaBrundisii {
         ModEntities.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
+
+        modEventBus.addListener(BougainvilleaInteractionHandler::registerVariants);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(ClientSetup::onClientSetup);
