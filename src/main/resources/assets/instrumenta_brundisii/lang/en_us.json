@@ -1,5 +1,10 @@
 {
-  "block.instrumenta_brundisii.bougainvillea": "Bougainvillea",
+  "block.instrumenta_brundisii.bougainvillea_leaves": "Bougainvillea Leaves",
+  "block.instrumenta_brundisii.pink_bougainvillea": "Pink Bougainvillea",
+  "block.instrumenta_brundisii.pink_blooming_bougainvillea_1": "Pink Blooming Bougainvillea 1",
+  "block.instrumenta_brundisii.pink_blooming_bougainvillea_2": "Pink Blooming Bougainvillea 2",
+  "block.instrumenta_brundisii.pink_flowering_bougainvillea_1": "Pink Flowering Bougainvillea 1",
+  "block.instrumenta_brundisii.pink_flowering_bougainvillea_2": "Pink Flowering Bougainvillea 2",
 
   "item.instrumenta_brundisii.auri": "Auri",
   "item.instrumenta_brundisii.denari": "Denari",

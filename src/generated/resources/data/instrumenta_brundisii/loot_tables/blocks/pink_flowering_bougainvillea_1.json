@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "instrumenta_brundisii:bougainvillea"
+          "name": "instrumenta_brundisii:pink_flowering_bougainvillea_1"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "instrumenta_brundisii:blocks/bougainvillea"
+  "random_sequence": "instrumenta_brundisii:blocks/pink_flowering_bougainvillea_1"
 }
