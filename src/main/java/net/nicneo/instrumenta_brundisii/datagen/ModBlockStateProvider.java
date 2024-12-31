@@ -31,6 +31,27 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        blockWithItemCustom(ModBlocks.BOUGAINVILLEA_BLOCK, "bougainvillea_leaves");
+
+        blockWithItemCustom(ModBlocks.PINK_BOUGAINVILLEA_BLOCK, "pink_bougainvillea");
+
+
+        blockWithItemCustom(ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_BLOCK_1, "pink_blooming_bougainvillea_1");
+        blockWithItemCustom(ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_BLOCK_2, "pink_blooming_bougainvillea_2");
+        blockWithItemCustom(ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_BLOCK_1, "pink_flowering_bougainvillea_1");
+        blockWithItemCustom(ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_BLOCK_2, "pink_flowering_bougainvillea_2");
+
+        blockWithItemCustom(ModBlocks.ORANGE_BOUGAINVILLEA_BLOCK, "orange_bougainvillea");
+        blockWithItemCustom(ModBlocks.ORANGE_BLOOMING_BOUGAINVILLEA_BLOCK_1, "orange_blooming_bougainvillea_1");
+        blockWithItemCustom(ModBlocks.ORANGE_BLOOMING_BOUGAINVILLEA_BLOCK_2, "orange_blooming_bougainvillea_2");
+        blockWithItemCustom(ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_BLOCK_1, "orange_flowering_bougainvillea_1");
+        blockWithItemCustom(ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_BLOCK_2, "orange_flowering_bougainvillea_2");
+
+        blockWithItemCustom(ModBlocks.WHITE_BOUGAINVILLEA_BLOCK, "white_bougainvillea");
+        blockWithItemCustom(ModBlocks.WHITE_BLOOMING_BOUGAINVILLEA_BLOCK_1, "white_blooming_bougainvillea_1");
+        blockWithItemCustom(ModBlocks.WHITE_BLOOMING_BOUGAINVILLEA_BLOCK_2, "white_blooming_bougainvillea_2");
+        blockWithItemCustom(ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_BLOCK_1, "white_flowering_bougainvillea_1");
+        blockWithItemCustom(ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_BLOCK_2, "white_flowering_bougainvillea_2");
 
 //      ===================== LICHEN LIKE BLOCKS ====================
         makeLichenLikeBlock(ModBlocks.BOUGAINVILLEA_LEAVES, "bougainvillea_leaves");
@@ -930,6 +951,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
 //    This lets you pass the registry Object and creates a custom block and an item for it
     private void  blockWithItem(RegistryObject<Block> blockRegistryObject){
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    private void blockWithItemCustom(RegistryObject<Block> blockRegistryObject, String textureName) {
+        simpleBlockWithItem(
+                blockRegistryObject.get(),
+                models().cubeAll(blockRegistryObject.getId().getPath(), modLoc("block/" + textureName))
+        );
     }
 
     // Helper method to determine rotation based on axis for wood slabs

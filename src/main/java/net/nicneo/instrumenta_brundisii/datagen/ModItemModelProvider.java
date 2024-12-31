@@ -23,7 +23,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-
 //      ========== FLOWERS ==========
         simpleItem(ModItems.PINK_BOUGAINVILLEA_BUNCH);
         simpleItem(ModItems.ORANGE_BOUGAINVILLEA_BUNCH);

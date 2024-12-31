@@ -230,6 +230,11 @@ public class ModCreativeModTabs {
                         pOutput.accept((ModItems.GRANITE_HANGING_SIGN.get()));
 
 //                      PLANTS:
+                        pOutput.accept((ModBlocks.BOUGAINVILLEA_BLOCK.get()));
+                        pOutput.accept((ModBlocks.PINK_BOUGAINVILLEA_BLOCK.get()));
+                        pOutput.accept((ModBlocks.ORANGE_BOUGAINVILLEA_BLOCK.get()));
+                        pOutput.accept((ModBlocks.WHITE_BOUGAINVILLEA_BLOCK.get()));
+
                         pOutput.accept((ModBlocks.BOUGAINVILLEA_LEAVES.get()));
 
                         pOutput.accept((ModBlocks.PINK_BOUGAINVILLEA.get()));
