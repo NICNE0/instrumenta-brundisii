@@ -3,7 +3,7 @@ Specification-Title: instrumenta_brundisii
 Specification-Vendor: YourNameHere, OtherNameHere
 Specification-Version: 1
 Implementation-Title: instrumenta-brundisii
-Implementation-Version: 0.3.0-1.20
+Implementation-Version: 0.4.0-1.20
 Implementation-Vendor: YourNameHere, OtherNameHere
-Implementation-Timestamp: 2024-11-23T17:05:40-0500
+Implementation-Timestamp: 2024-12-31T11:41:17-0500
 
