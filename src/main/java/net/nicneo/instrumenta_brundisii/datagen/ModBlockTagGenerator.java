@@ -30,9 +30,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 //                        ModBlocks.PINK_BOUGAINVILLEA_BLOCK.get()
 //                );
 
-
-
-
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(
                         ModBlocks.PLASTER_BLOCK.get(),
