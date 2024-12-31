@@ -221,7 +221,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LIGHT_RETICULA.get());
         this.dropSelf(ModBlocks.MIXED_RETICULA.get());
 
-
+        this.dropSelf(ModBlocks.LARGE_DARK_STONE_RETICULA.get());
+        this.dropSelf(ModBlocks.LARGE_LIGHT_DEEPSLATE_RETICULA.get());
+        this.dropSelf(ModBlocks.LARGE_LIGHT_STONE_RETICULA.get());
+        this.dropSelf(ModBlocks.SMALL_DARK_STONE_RETICULA.get());
+        this.dropSelf(ModBlocks.SMALL_LIGHT_DEEPSLATE_RETICULA.get());
+        this.dropSelf(ModBlocks.SMALL_LIGHT_STONE_RETICULA.get());
 
 //      LINTELS:
 //      ================================================================================================================

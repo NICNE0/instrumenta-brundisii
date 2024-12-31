@@ -34,8 +34,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItemCustom(ModBlocks.BOUGAINVILLEA_BLOCK, "bougainvillea_leaves");
 
         blockWithItemCustom(ModBlocks.PINK_BOUGAINVILLEA_BLOCK, "pink_bougainvillea");
-
-
         blockWithItemCustom(ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_BLOCK_1, "pink_blooming_bougainvillea_1");
         blockWithItemCustom(ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_BLOCK_2, "pink_blooming_bougainvillea_2");
         blockWithItemCustom(ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_BLOCK_1, "pink_flowering_bougainvillea_1");
@@ -232,12 +230,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock(((FenceGateBlock) ModBlocks.BLACK_TERRACOTTA_FENCE_DOOR.get()), blockTexture(Blocks.BLACK_TERRACOTTA));
         wallBlock(((WallBlock) ModBlocks.BLACK_TERRACOTTA_WALL.get()), blockTexture(Blocks.BLACK_TERRACOTTA));
 
-
-//      ========================== OTHERS ==========================
+//      ========================== RETICULAS ==========================
         blockWithItem(ModBlocks.RETICULA);
         blockWithItem(ModBlocks.LIGHT_RETICULA);
         blockWithItem(ModBlocks.MIXED_RETICULA);
 
+        blockWithItem(ModBlocks.LARGE_DARK_STONE_RETICULA);
+        blockWithItem(ModBlocks.LARGE_LIGHT_DEEPSLATE_RETICULA);
+        blockWithItem(ModBlocks.LARGE_LIGHT_STONE_RETICULA);
+        blockWithItem(ModBlocks.SMALL_DARK_STONE_RETICULA);
+        blockWithItem(ModBlocks.SMALL_LIGHT_DEEPSLATE_RETICULA);
+        blockWithItem(ModBlocks.SMALL_LIGHT_STONE_RETICULA);
+
+//      ========================== OTHERS ==========================
         blockWithItem(ModBlocks.TEST_BLOCK_1);
 
         makeMultiFacedBlock(ModBlocks.LIME_BRICK_MIX, "lime_brick_mix");

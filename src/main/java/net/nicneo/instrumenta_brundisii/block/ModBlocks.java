@@ -505,7 +505,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> MIXED_RETICULA = registerBlock("mixed_reticula",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
 
-
+    public static final RegistryObject<Block> LARGE_DARK_STONE_RETICULA = registerBlock("large_dark_stone_reticula",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> LARGE_LIGHT_DEEPSLATE_RETICULA = registerBlock("large_light_deepslate_reticula",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> LARGE_LIGHT_STONE_RETICULA = registerBlock("large_light_stone_reticula",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> SMALL_DARK_STONE_RETICULA = registerBlock("small_dark_stone_reticula",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> SMALL_LIGHT_DEEPSLATE_RETICULA = registerBlock("small_light_deepslate_reticula",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> SMALL_LIGHT_STONE_RETICULA = registerBlock("small_light_stone_reticula",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
 
 //  TERRACOTTA:
 //  ====================================================================================================================

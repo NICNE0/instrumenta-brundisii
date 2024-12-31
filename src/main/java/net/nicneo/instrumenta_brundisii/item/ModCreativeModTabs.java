@@ -27,6 +27,13 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.LIGHT_RETICULA.get());
                         pOutput.accept(ModBlocks.MIXED_RETICULA.get());
 
+                        pOutput.accept(ModBlocks.LARGE_DARK_STONE_RETICULA.get());
+                        pOutput.accept(ModBlocks.LARGE_LIGHT_DEEPSLATE_RETICULA.get());
+                        pOutput.accept(ModBlocks.LARGE_LIGHT_STONE_RETICULA.get());
+                        pOutput.accept(ModBlocks.SMALL_DARK_STONE_RETICULA.get());
+                        pOutput.accept(ModBlocks.SMALL_LIGHT_DEEPSLATE_RETICULA.get());
+                        pOutput.accept(ModBlocks.SMALL_LIGHT_STONE_RETICULA.get());
+
 //                      FLOORS:
                         pOutput.accept(ModBlocks.BLACK_FLOOR_TILE.get());
                         pOutput.accept(ModBlocks.BLACK_FLOOR_TILE_CORNER.get());
@@ -230,10 +237,25 @@ public class ModCreativeModTabs {
                         pOutput.accept((ModItems.GRANITE_HANGING_SIGN.get()));
 
 //                      PLANTS:
-                        pOutput.accept((ModBlocks.BOUGAINVILLEA_BLOCK.get()));
-                        pOutput.accept((ModBlocks.PINK_BOUGAINVILLEA_BLOCK.get()));
-                        pOutput.accept((ModBlocks.ORANGE_BOUGAINVILLEA_BLOCK.get()));
-                        pOutput.accept((ModBlocks.WHITE_BOUGAINVILLEA_BLOCK.get()));
+                        pOutput.accept(ModBlocks.BOUGAINVILLEA_BLOCK.get());
+
+                        pOutput.accept(ModBlocks.PINK_BOUGAINVILLEA_BLOCK.get());
+                        pOutput.accept(ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_BLOCK_1.get());
+                        pOutput.accept(ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_BLOCK_2.get());
+                        pOutput.accept(ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_BLOCK_1.get());
+                        pOutput.accept(ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_BLOCK_2.get());
+
+                        pOutput.accept(ModBlocks.ORANGE_BOUGAINVILLEA_BLOCK.get());
+                        pOutput.accept(ModBlocks.ORANGE_BLOOMING_BOUGAINVILLEA_BLOCK_1.get());
+                        pOutput.accept(ModBlocks.ORANGE_BLOOMING_BOUGAINVILLEA_BLOCK_2.get());
+                        pOutput.accept(ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_BLOCK_1.get());
+                        pOutput.accept(ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_BLOCK_2.get());
+
+                        pOutput.accept(ModBlocks.WHITE_BOUGAINVILLEA_BLOCK.get());
+                        pOutput.accept(ModBlocks.WHITE_BLOOMING_BOUGAINVILLEA_BLOCK_1.get());
+                        pOutput.accept(ModBlocks.WHITE_BLOOMING_BOUGAINVILLEA_BLOCK_2.get());
+                        pOutput.accept(ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_BLOCK_1.get());
+                        pOutput.accept(ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_BLOCK_2.get());
 
                         pOutput.accept((ModBlocks.BOUGAINVILLEA_LEAVES.get()));
 
