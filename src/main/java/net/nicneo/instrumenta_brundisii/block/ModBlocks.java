@@ -27,6 +27,44 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, instrumentaBrundisii.MOD_ID);
 
+//  LEAVE BLOCKS:
+//  ====================================================================================================================
+    public static final RegistryObject<Block> BOUGAINVILLEA_BLOCK = registerBlock("bougainvillea_block",
+        () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
+    public static final RegistryObject<Block> PINK_BOUGAINVILLEA_BLOCK = registerBlock("pink_bougainvillea_block",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> PINK_BLOOMING_BOUGAINVILLEA_BLOCK_1 = registerBlock("pink_blooming_bougainvillea_block_1",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> PINK_BLOOMING_BOUGAINVILLEA_BLOCK_2 = registerBlock("pink_blooming_bougainvillea_block_2",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> PINK_FLOWERING_BOUGAINVILLEA_BLOCK_1 = registerBlock("pink_flowering_bougainvillea_block_1",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> PINK_FLOWERING_BOUGAINVILLEA_BLOCK_2 = registerBlock("pink_flowering_bougainvillea_block_2",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
+    public static final RegistryObject<Block> ORANGE_BOUGAINVILLEA_BLOCK = registerBlock("orange_bougainvillea_block",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> ORANGE_BLOOMING_BOUGAINVILLEA_BLOCK_1 = registerBlock("orange_blooming_bougainvillea_block_1",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> ORANGE_BLOOMING_BOUGAINVILLEA_BLOCK_2 = registerBlock("orange_blooming_bougainvillea_block_2",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> ORANGE_FLOWERING_BOUGAINVILLEA_BLOCK_1 = registerBlock("orange_flowering_bougainvillea_block_1",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> ORANGE_FLOWERING_BOUGAINVILLEA_BLOCK_2 = registerBlock("orange_flowering_bougainvillea_block_2",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
+    public static final RegistryObject<Block> WHITE_BOUGAINVILLEA_BLOCK = registerBlock("white_bougainvillea_block",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> WHITE_BLOOMING_BOUGAINVILLEA_BLOCK_1 = registerBlock("white_blooming_bougainvillea_block_1",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> WHITE_BLOOMING_BOUGAINVILLEA_BLOCK_2 = registerBlock("white_blooming_bougainvillea_block_2",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> WHITE_FLOWERING_BOUGAINVILLEA_BLOCK_1 = registerBlock("white_flowering_bougainvillea_block_1",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> WHITE_FLOWERING_BOUGAINVILLEA_BLOCK_2 = registerBlock("white_flowering_bougainvillea_block_2",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
 //  LICHEN LIKE BLOCKS:
 //  ====================================================================================================================
     public static final RegistryObject<Block> BOUGAINVILLEA_LEAVES = registerLichenLike("bougainvillea_leaves",

@@ -29,6 +29,7 @@
     }
   ],
   "textures": {
+    "all": "instrumenta_brundisii:block/pink_flowering_bougainvillea_2",
     "bougainvillea": "instrumenta_brundisii:block/pink_flowering_bougainvillea_2",
     "particle": "instrumenta_brundisii:block/pink_flowering_bougainvillea_2"
   }

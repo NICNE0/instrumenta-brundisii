@@ -21,6 +21,25 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        this.dropSelf(ModBlocks.BOUGAINVILLEA_BLOCK.get());
+
+        this.dropSelf(ModBlocks.PINK_BOUGAINVILLEA_BLOCK.get());
+        this.dropSelf(ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_BLOCK_1.get());
+        this.dropSelf(ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_BLOCK_2.get());
+        this.dropSelf(ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_BLOCK_1.get());
+        this.dropSelf(ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_BLOCK_2.get());
+
+        this.dropSelf(ModBlocks.ORANGE_BOUGAINVILLEA_BLOCK.get());
+        this.dropSelf(ModBlocks.ORANGE_BLOOMING_BOUGAINVILLEA_BLOCK_1.get());
+        this.dropSelf(ModBlocks.ORANGE_BLOOMING_BOUGAINVILLEA_BLOCK_2.get());
+        this.dropSelf(ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_BLOCK_1.get());
+        this.dropSelf(ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_BLOCK_2.get());
+
+        this.dropSelf(ModBlocks.WHITE_BOUGAINVILLEA_BLOCK.get());
+        this.dropSelf(ModBlocks.WHITE_BLOOMING_BOUGAINVILLEA_BLOCK_1.get());
+        this.dropSelf(ModBlocks.WHITE_BLOOMING_BOUGAINVILLEA_BLOCK_2.get());
+        this.dropSelf(ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_BLOCK_1.get());
+        this.dropSelf(ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_BLOCK_2.get());
 
         this.dropSelf(ModBlocks.BOUGAINVILLEA_LEAVES.get());
 

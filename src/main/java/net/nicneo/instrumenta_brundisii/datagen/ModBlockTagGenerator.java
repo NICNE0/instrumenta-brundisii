@@ -27,7 +27,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
 //        this.tag(BlockTags.LEAVES)
 //                .add(
-//                        ModBlocks.BOUGAINVILLEA.get()
+//                        ModBlocks.PINK_BOUGAINVILLEA_BLOCK.get()
 //                );
 
 
