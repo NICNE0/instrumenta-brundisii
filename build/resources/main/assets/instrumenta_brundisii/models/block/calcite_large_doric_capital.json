@@ -1,0 +1,10 @@
+
+{
+"parent": "instrumenta_brundisii:block/large_doric_capital",
+"textures": {
+    "bottom": "minecraft:block/calcite",
+    "side": "minecraft:block/calcite",
+    "top": "minecraft:block/calcite"
+}
+}
+        

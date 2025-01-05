@@ -101,6 +101,58 @@ public class ModBlockStateProvider extends BlockStateProvider {
             return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/diorite_large_doric_base")))
                     .rotationY((int) facing.toYRot()).build();});
 
+        getVariantBuilder(ModBlocks.POLISHED_GRANITE_LARGE_DORIC_COLUMN.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargePolishedGraniteColumnBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/polished_granite_large_doric_column")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.POLISHED_GRANITE_LARGE_DORIC_CAPITAL.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargePolishedGraniteCapitalBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/polished_granite_large_doric_capital")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.POLISHED_GRANITE_LARGE_DORIC_BASE.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargePolishedGraniteBaseBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/polished_granite_large_doric_base")))
+                    .rotationY((int) facing.toYRot()).build();});
+
+        getVariantBuilder(ModBlocks.POLISHED_ANDESITE_LARGE_DORIC_COLUMN.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargePolishedAndesiteColumnBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/polished_andesite_large_doric_column")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.POLISHED_ANDESITE_LARGE_DORIC_CAPITAL.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargePolishedAndesiteCapitalBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/polished_andesite_large_doric_capital")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.POLISHED_ANDESITE_LARGE_DORIC_BASE.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargePolishedAndesiteBaseBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/polished_andesite_large_doric_base")))
+                    .rotationY((int) facing.toYRot()).build();});
+
+        getVariantBuilder(ModBlocks.POLISHED_DIORITE_LARGE_DORIC_COLUMN.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargePolishedDioriteColumnBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/polished_diorite_large_doric_column")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.POLISHED_DIORITE_LARGE_DORIC_CAPITAL.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargePolishedDioriteCapitalBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/polished_diorite_large_doric_capital")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.POLISHED_DIORITE_LARGE_DORIC_BASE.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargePolishedDioriteBaseBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/polished_diorite_large_doric_base")))
+                    .rotationY((int) facing.toYRot()).build();});
+
+        getVariantBuilder(ModBlocks.CALCITE_LARGE_DORIC_COLUMN.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeCalciteColumnBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/calcite_large_doric_column")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.CALCITE_LARGE_DORIC_CAPITAL.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeCalciteCapitalBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/calcite_large_doric_capital")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.CALCITE_LARGE_DORIC_BASE.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeCalciteBaseBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/calcite_large_doric_base")))
+                    .rotationY((int) facing.toYRot()).build();});
+
 //      LEAVES LIKE BLOCKS
 //      ================================================================================================================
         blockWithItemCustom(ModBlocks.BOUGAINVILLEA_BLOCK, "bougainvillea_leaves");
