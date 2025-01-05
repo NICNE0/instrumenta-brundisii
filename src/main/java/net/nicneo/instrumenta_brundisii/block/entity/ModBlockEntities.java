@@ -30,6 +30,11 @@ public class ModBlockEntities {
                             ModBlocks.GRANITE_HANGING_SIGN.get(), ModBlocks.GRANITE_WALL_HANGING_SIGN.get()
                     ).build(null));
 
+    public static final RegistryObject<BlockEntityType<BigDoricColumnBlockEntity>> BIG_DORIC_COLUMN =
+            BLOCK_ENTITIES.register("big_doric_column", () ->
+                    BlockEntityType.Builder.of(BigDoricColumnBlockEntity::new,
+                            ModBlocks.BIG_DORIC_COLUMN.get()).build(null));
+
 
 
     public static void register(IEventBus eventBus) {

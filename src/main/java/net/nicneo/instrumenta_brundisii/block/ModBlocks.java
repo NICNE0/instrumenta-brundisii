@@ -5,6 +5,8 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -12,7 +14,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nicneo.instrumenta_brundisii.block.custom.*;
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
-import net.nicneo.instrumenta_brundisii.item.ModItems;
 import net.nicneo.instrumenta_brundisii.util.ModWoodTypes;
 
 import java.util.function.Supplier;
@@ -27,7 +28,20 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, instrumentaBrundisii.MOD_ID);
 
-//  LEAVE BLOCKS:
+//    public static final RegistryObject<Block> BIG_DORIC_COLUMN = registerBlock("big_doric_column",
+//            () -> new BigDoricColumn(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> BIG_DORIC_COLUMN = registerBlock("big_doric_column",
+            () -> new BigDoricColumn(BlockBehaviour.Properties.copy(Blocks.STONE)) {
+                @Override
+                protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+                    builder.add(BigDoricColumn.FACING); // Add the FACING property to the block's state
+                }
+            });
+
+
+
+    //  LEAVE BLOCKS:
 //  ====================================================================================================================
     public static final RegistryObject<Block> BOUGAINVILLEA_BLOCK = registerBlock("bougainvillea_block",
         () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
