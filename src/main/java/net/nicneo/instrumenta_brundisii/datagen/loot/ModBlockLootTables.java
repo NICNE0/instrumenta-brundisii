@@ -21,6 +21,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        this.dropSelf(ModBlocks.BIG_DORIC_COLUMN.get());
+
         this.dropSelf(ModBlocks.BOUGAINVILLEA_BLOCK.get());
 
         this.dropSelf(ModBlocks.PINK_BOUGAINVILLEA_BLOCK.get());

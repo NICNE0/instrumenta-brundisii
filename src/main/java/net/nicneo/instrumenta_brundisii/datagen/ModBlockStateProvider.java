@@ -31,6 +31,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+
+        simpleBlock(ModBlocks.BIG_DORIC_COLUMN.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/big_doric_column")));
+
         blockWithItemCustom(ModBlocks.BOUGAINVILLEA_BLOCK, "bougainvillea_leaves");
 
         blockWithItemCustom(ModBlocks.PINK_BOUGAINVILLEA_BLOCK, "pink_bougainvillea");

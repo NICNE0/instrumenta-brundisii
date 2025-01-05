@@ -1,0 +1,14 @@
+{
+  "parent": "instrumenta_brundisii:block/four_blocks_round_column",
+  "textures": {
+    "bottom": "minecraft:block/stone",
+    "side": "minecraft:block/stone",
+    "top": "minecraft:block/stone"
+  },
+  "variants": {
+    "facing=north": { "model": "instrumenta_brundisii:block/big_doric_column" },
+    "facing=south": { "model": "instrumenta_brundisii:block/big_doric_column", "y": 180 },
+    "facing=west": { "model": "instrumenta_brundisii:block/big_doric_column", "y": 270 },
+    "facing=east": { "model": "instrumenta_brundisii:block/big_doric_column", "y": 90 }
+  }
+}
