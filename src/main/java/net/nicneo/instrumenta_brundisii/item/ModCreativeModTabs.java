@@ -22,7 +22,7 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("instrumenta.brundisii_tab"))
                     .displayItems((pParameters, pOutput) -> {
 
-                        pOutput.accept(ModBlocks.BIG_DORIC_COLUMN.get());
+                        pOutput.accept(ModBlocks.SIMPLE_LARGE_QUARTZ_COLUMN.get());
 
 //                      RETICULAS:
                         pOutput.accept(ModBlocks.RETICULA.get());

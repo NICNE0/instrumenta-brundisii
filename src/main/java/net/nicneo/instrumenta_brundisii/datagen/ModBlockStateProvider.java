@@ -32,11 +32,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-        getVariantBuilder(ModBlocks.BIG_DORIC_COLUMN.get())
+        getVariantBuilder(ModBlocks.SIMPLE_LARGE_QUARTZ_COLUMN.get())
                 .forAllStates(state -> {
                     Direction facing = state.getValue(BigDoricColumn.FACING);
                     return ConfiguredModel.builder()
-                            .modelFile(models().getExistingFile(modLoc("block/big_doric_column")))
+                            .modelFile(models().getExistingFile(modLoc("block/simple_large_quartz_column")))
                             .rotationY((int) facing.toYRot()) // Rotate based on the facing direction
                             .build();
                 });
