@@ -15,7 +15,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.nicneo.instrumenta_brundisii.block.entity.BigDoricColumnBlockEntity;
+import net.nicneo.instrumenta_brundisii.block.entity.SimpleLargeQuartzColumnBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
 public class BigDoricColumn extends BaseEntityBlock {
@@ -73,7 +73,7 @@ public class BigDoricColumn extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new BigDoricColumnBlockEntity(pos, state);
+        return new SimpleLargeQuartzColumnBlockEntity(pos, state);
     }
 
     // Add the FACING property to the block's state container

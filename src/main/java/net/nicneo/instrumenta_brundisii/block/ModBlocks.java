@@ -31,7 +31,7 @@ public class ModBlocks {
 //    public static final RegistryObject<Block> BIG_DORIC_COLUMN = registerBlock("big_doric_column",
 //            () -> new BigDoricColumn(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
-    public static final RegistryObject<Block> BIG_DORIC_COLUMN = registerBlock("big_doric_column",
+    public static final RegistryObject<Block> SIMPLE_LARGE_QUARTZ_COLUMN = registerBlock("simple_large_quartz_column",
             () -> new BigDoricColumn(BlockBehaviour.Properties.copy(Blocks.STONE)) {
                 @Override
                 protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {

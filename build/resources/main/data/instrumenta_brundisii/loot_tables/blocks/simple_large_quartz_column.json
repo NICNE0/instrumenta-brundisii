@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "instrumenta_brundisii:big_doric_column"
+          "name": "instrumenta_brundisii:simple_large_quartz_column"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "instrumenta_brundisii:blocks/big_doric_column"
+  "random_sequence": "instrumenta_brundisii:blocks/simple_large_quartz_column"
 }
