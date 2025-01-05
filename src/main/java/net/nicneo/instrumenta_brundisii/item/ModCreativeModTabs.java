@@ -23,6 +23,25 @@ public class ModCreativeModTabs {
                     .displayItems((pParameters, pOutput) -> {
 
                         pOutput.accept(ModBlocks.SIMPLE_LARGE_QUARTZ_COLUMN.get());
+                        pOutput.accept(ModBlocks.QUARTZ_LARGE_DORIC_COLUMN.get());
+                        pOutput.accept(ModBlocks.QUARTZ_LARGE_DORIC_CAPITAL.get());
+                        pOutput.accept(ModBlocks.QUARTZ_LARGE_DORIC_BASE.get());
+
+                        pOutput.accept(ModBlocks.TUFF_LARGE_DORIC_COLUMN.get());
+                        pOutput.accept(ModBlocks.TUFF_LARGE_DORIC_CAPITAL.get());
+                        pOutput.accept(ModBlocks.TUFF_LARGE_DORIC_BASE.get());
+
+                        pOutput.accept(ModBlocks.GRANITE_LARGE_DORIC_COLUMN.get());
+                        pOutput.accept(ModBlocks.GRANITE_LARGE_DORIC_CAPITAL.get());
+                        pOutput.accept(ModBlocks.GRANITE_LARGE_DORIC_BASE.get());
+
+                        pOutput.accept(ModBlocks.ANDESITE_LARGE_DORIC_COLUMN.get());
+                        pOutput.accept(ModBlocks.ANDESITE_LARGE_DORIC_CAPITAL.get());
+                        pOutput.accept(ModBlocks.ANDESITE_LARGE_DORIC_BASE.get());
+
+                        pOutput.accept(ModBlocks.DIORITE_LARGE_DORIC_COLUMN.get());
+                        pOutput.accept(ModBlocks.DIORITE_LARGE_DORIC_CAPITAL.get());
+                        pOutput.accept(ModBlocks.DIORITE_LARGE_DORIC_BASE.get());
 
 //                      RETICULAS:
                         pOutput.accept(ModBlocks.RETICULA.get());

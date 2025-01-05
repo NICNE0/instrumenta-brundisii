@@ -23,6 +23,26 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(ModBlocks.SIMPLE_LARGE_QUARTZ_COLUMN.get());
 
+        this.dropSelf(ModBlocks.QUARTZ_LARGE_DORIC_COLUMN.get());
+        this.dropSelf(ModBlocks.QUARTZ_LARGE_DORIC_CAPITAL.get());
+        this.dropSelf(ModBlocks.QUARTZ_LARGE_DORIC_BASE.get());
+
+        this.dropSelf(ModBlocks.TUFF_LARGE_DORIC_COLUMN.get());
+        this.dropSelf(ModBlocks.TUFF_LARGE_DORIC_CAPITAL.get());
+        this.dropSelf(ModBlocks.TUFF_LARGE_DORIC_BASE.get());
+
+        this.dropSelf(ModBlocks.GRANITE_LARGE_DORIC_COLUMN.get());
+        this.dropSelf(ModBlocks.GRANITE_LARGE_DORIC_CAPITAL.get());
+        this.dropSelf(ModBlocks.GRANITE_LARGE_DORIC_BASE.get());
+
+        this.dropSelf(ModBlocks.ANDESITE_LARGE_DORIC_COLUMN.get());
+        this.dropSelf(ModBlocks.ANDESITE_LARGE_DORIC_CAPITAL.get());
+        this.dropSelf(ModBlocks.ANDESITE_LARGE_DORIC_BASE.get());
+
+        this.dropSelf(ModBlocks.DIORITE_LARGE_DORIC_COLUMN.get());
+        this.dropSelf(ModBlocks.DIORITE_LARGE_DORIC_CAPITAL.get());
+        this.dropSelf(ModBlocks.DIORITE_LARGE_DORIC_BASE.get());
+
         this.dropSelf(ModBlocks.BOUGAINVILLEA_BLOCK.get());
 
         this.dropSelf(ModBlocks.PINK_BOUGAINVILLEA_BLOCK.get());

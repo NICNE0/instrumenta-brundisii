@@ -6,7 +6,7 @@ Description: Unexpected error
 
 java.lang.IllegalArgumentException: Cannot set property DirectionProperty{name=facing, clazz=class net.minecraft.core.Direction, values=[north, south, west, east]} as it does not exist in Block{instrumenta_brundisii:big_doric_column}
 	at net.minecraft.world.level.block.state.StateHolder.setValue(StateHolder.java:122) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1.jar:?] {re:classloading}
-	at net.nicneo.instrumenta_brundisii.block.custom.BigDoricColumn.getStateForPlacement(BigDoricColumn.java:65) ~[main/:?] {re:classloading}
+	at net.nicneo.instrumenta_brundisii.block.custom.BigSimpleColumnBlock.getStateForPlacement(BigDoricColumn.java:65) ~[main/:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.getPlacementState(BlockItem.java:119) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1.jar:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.place(BlockItem.java:65) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1.jar:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.useOn(BlockItem.java:46) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1.jar:?] {re:classloading}
@@ -48,7 +48,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 Thread: Render thread
 Stacktrace:
 	at net.minecraft.world.level.block.state.StateHolder.setValue(StateHolder.java:122) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1.jar%23191!/:?] {re:classloading}
-	at net.nicneo.instrumenta_brundisii.block.custom.BigDoricColumn.getStateForPlacement(BigDoricColumn.java:65) ~[%23196!/:?] {re:classloading}
+	at net.nicneo.instrumenta_brundisii.block.custom.BigSimpleColumnBlock.getStateForPlacement(BigDoricColumn.java:65) ~[%23196!/:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.getPlacementState(BlockItem.java:119) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1.jar%23191!/:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.place(BlockItem.java:65) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1.jar%23191!/:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.useOn(BlockItem.java:46) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1.jar%23191!/:?] {re:classloading}

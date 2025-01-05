@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "instrumenta_brundisii:block/andesite_large_doric_base",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "instrumenta_brundisii:block/andesite_large_doric_base",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "instrumenta_brundisii:block/andesite_large_doric_base"
+    },
+    "facing=west": {
+      "model": "instrumenta_brundisii:block/andesite_large_doric_base",
+      "y": 90
+    }
+  }
+}
