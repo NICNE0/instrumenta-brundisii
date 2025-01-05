@@ -32,8 +32,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-        simpleBlock(ModBlocks.BIG_DORIC_COLUMN.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/big_doric_column")));
+        getVariantBuilder(ModBlocks.BIG_DORIC_COLUMN.get())
+                .forAllStates(state -> {
+                    Direction facing = state.getValue(BigDoricColumn.FACING);
+                    return ConfiguredModel.builder()
+                            .modelFile(models().getExistingFile(modLoc("block/big_doric_column")))
+                            .rotationY((int) facing.toYRot()) // Rotate based on the facing direction
+                            .build();
+                });
 
         blockWithItemCustom(ModBlocks.BOUGAINVILLEA_BLOCK, "bougainvillea_leaves");
 
