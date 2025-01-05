@@ -43,6 +43,22 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.DIORITE_LARGE_DORIC_CAPITAL.get());
         this.dropSelf(ModBlocks.DIORITE_LARGE_DORIC_BASE.get());
 
+        this.dropSelf(ModBlocks.POLISHED_GRANITE_LARGE_DORIC_COLUMN.get());
+        this.dropSelf(ModBlocks.POLISHED_GRANITE_LARGE_DORIC_CAPITAL.get());
+        this.dropSelf(ModBlocks.POLISHED_GRANITE_LARGE_DORIC_BASE.get());
+
+        this.dropSelf(ModBlocks.POLISHED_ANDESITE_LARGE_DORIC_COLUMN.get());
+        this.dropSelf(ModBlocks.POLISHED_ANDESITE_LARGE_DORIC_CAPITAL.get());
+        this.dropSelf(ModBlocks.POLISHED_ANDESITE_LARGE_DORIC_BASE.get());
+
+        this.dropSelf(ModBlocks.POLISHED_DIORITE_LARGE_DORIC_COLUMN.get());
+        this.dropSelf(ModBlocks.POLISHED_DIORITE_LARGE_DORIC_CAPITAL.get());
+        this.dropSelf(ModBlocks.POLISHED_DIORITE_LARGE_DORIC_BASE.get());
+
+        this.dropSelf(ModBlocks.CALCITE_LARGE_DORIC_COLUMN.get());
+        this.dropSelf(ModBlocks.CALCITE_LARGE_DORIC_CAPITAL.get());
+        this.dropSelf(ModBlocks.CALCITE_LARGE_DORIC_BASE.get());
+
         this.dropSelf(ModBlocks.BOUGAINVILLEA_BLOCK.get());
 
         this.dropSelf(ModBlocks.PINK_BOUGAINVILLEA_BLOCK.get());

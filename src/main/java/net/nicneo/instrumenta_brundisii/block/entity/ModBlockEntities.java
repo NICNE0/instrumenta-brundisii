@@ -116,6 +116,70 @@ public class ModBlockEntities {
                             ModBlocks.DIORITE_LARGE_DORIC_BASE.get()
                     ).build(null));
 
+    public static final RegistryObject<BlockEntityType<PolishedGraniteLargeDoricColumnBlockEntity>> POLISHED_GRANITE_LARGE_DORIC_COLUMN =
+            BLOCK_ENTITIES.register("polished_granite_large_doric_column", () ->
+                    BlockEntityType.Builder.of(PolishedGraniteLargeDoricColumnBlockEntity::new,
+                            ModBlocks.POLISHED_GRANITE_LARGE_DORIC_COLUMN.get()
+                    ).build(null));
+    public static final RegistryObject<BlockEntityType<PolishedGraniteLargeDoricCapitalBlockEntity>> POLISHED_GRANITE_LARGE_DORIC_CAPITAL =
+            BLOCK_ENTITIES.register("polished_granite_large_doric_capital", () ->
+                    BlockEntityType.Builder.of(PolishedGraniteLargeDoricCapitalBlockEntity::new,
+                            ModBlocks.POLISHED_GRANITE_LARGE_DORIC_CAPITAL.get()
+                    ).build(null));
+    public static final RegistryObject<BlockEntityType<PolishedGraniteLargeDoricBaseBlockEntity>> POLISHED_GRANITE_LARGE_DORIC_BASE =
+            BLOCK_ENTITIES.register("polished_granite_large_doric_base", () ->
+                    BlockEntityType.Builder.of(PolishedGraniteLargeDoricBaseBlockEntity::new,
+                            ModBlocks.POLISHED_GRANITE_LARGE_DORIC_BASE.get()
+                    ).build(null));
+
+    public static final RegistryObject<BlockEntityType<PolishedAndesiteLargeDoricColumnBlockEntity>> POLISHED_ANDESITE_LARGE_DORIC_COLUMN =
+            BLOCK_ENTITIES.register("polished_andesite_large_doric_column", () ->
+                    BlockEntityType.Builder.of(PolishedAndesiteLargeDoricColumnBlockEntity::new,
+                            ModBlocks.POLISHED_ANDESITE_LARGE_DORIC_COLUMN.get()
+                    ).build(null));
+    public static final RegistryObject<BlockEntityType<PolishedAndesiteLargeDoricCapitalBlockEntity>> POLISHED_ANDESITE_LARGE_DORIC_CAPITAL =
+            BLOCK_ENTITIES.register("polished_andesite_large_doric_capital", () ->
+                    BlockEntityType.Builder.of(PolishedAndesiteLargeDoricCapitalBlockEntity::new,
+                            ModBlocks.POLISHED_ANDESITE_LARGE_DORIC_CAPITAL.get()
+                    ).build(null));
+    public static final RegistryObject<BlockEntityType<PolishedAndesiteLargeDoricBaseBlockEntity>> POLISHED_ANDESITE_LARGE_DORIC_BASE =
+            BLOCK_ENTITIES.register("polished_andesite_large_doric_base", () ->
+                    BlockEntityType.Builder.of(PolishedAndesiteLargeDoricBaseBlockEntity::new,
+                            ModBlocks.POLISHED_ANDESITE_LARGE_DORIC_BASE.get()
+                    ).build(null));
+
+    public static final RegistryObject<BlockEntityType<PolishedDioriteLargeDoricColumnBlockEntity>> POLISHED_DIORITE_LARGE_DORIC_COLUMN =
+            BLOCK_ENTITIES.register("polished_diorite_large_doric_column", () ->
+                    BlockEntityType.Builder.of(PolishedDioriteLargeDoricColumnBlockEntity::new,
+                            ModBlocks.POLISHED_DIORITE_LARGE_DORIC_COLUMN.get()
+                    ).build(null));
+    public static final RegistryObject<BlockEntityType<PolishedDioriteLargeDoricCapitalBlockEntity>> POLISHED_DIORITE_LARGE_DORIC_CAPITAL =
+            BLOCK_ENTITIES.register("polished_diorite_large_doric_capital", () ->
+                    BlockEntityType.Builder.of(PolishedDioriteLargeDoricCapitalBlockEntity::new,
+                            ModBlocks.POLISHED_DIORITE_LARGE_DORIC_CAPITAL.get()
+                    ).build(null));
+    public static final RegistryObject<BlockEntityType<PolishedDioriteLargeDoricBaseBlockEntity>> POLISHED_DIORITE_LARGE_DORIC_BASE =
+            BLOCK_ENTITIES.register("polished_diorite_large_doric_base", () ->
+                    BlockEntityType.Builder.of(PolishedDioriteLargeDoricBaseBlockEntity::new,
+                            ModBlocks.POLISHED_DIORITE_LARGE_DORIC_BASE.get()
+                    ).build(null));
+
+    public static final RegistryObject<BlockEntityType<CalciteLargeDoricColumnBlockEntity>> CALCITE_LARGE_DORIC_COLUMN =
+            BLOCK_ENTITIES.register("calcite_large_doric_column", () ->
+                    BlockEntityType.Builder.of(CalciteLargeDoricColumnBlockEntity::new,
+                            ModBlocks.CALCITE_LARGE_DORIC_COLUMN.get()
+                    ).build(null));
+    public static final RegistryObject<BlockEntityType<CalciteLargeDoricCapitalBlockEntity>> CALCITE_LARGE_DORIC_CAPITAL =
+            BLOCK_ENTITIES.register("calcite_large_doric_capital", () ->
+                    BlockEntityType.Builder.of(CalciteLargeDoricCapitalBlockEntity::new,
+                            ModBlocks.CALCITE_LARGE_DORIC_CAPITAL.get()
+                    ).build(null));
+    public static final RegistryObject<BlockEntityType<CalciteLargeDoricBaseBlockEntity>> CALCITE_LARGE_DORIC_BASE =
+            BLOCK_ENTITIES.register("calcite_large_doric_base", () ->
+                    BlockEntityType.Builder.of(CalciteLargeDoricBaseBlockEntity::new,
+                            ModBlocks.CALCITE_LARGE_DORIC_BASE.get()
+                    ).build(null));
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

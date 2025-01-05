@@ -1,0 +1,10 @@
+
+{
+"parent": "instrumenta_brundisii:block/large_doric_capital",
+"textures": {
+    "bottom": "minecraft:block/polished_andesite",
+    "side": "minecraft:block/polished_andesite",
+    "top": "minecraft:block/polished_andesite"
+}
+}
+        

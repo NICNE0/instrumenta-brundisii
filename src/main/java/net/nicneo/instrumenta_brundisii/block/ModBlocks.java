@@ -84,7 +84,6 @@ public class ModBlocks {
                 protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
                     builder.add(LargeGraniteBaseBlock.FACING);}});
 
-
     public static final RegistryObject<Block> ANDESITE_LARGE_DORIC_COLUMN = registerBlock("andesite_large_doric_column",
             () -> new LargeAndesiteColumnBlock(BlockBehaviour.Properties.copy(Blocks.STONE)) {
                 @Override
@@ -101,7 +100,6 @@ public class ModBlocks {
                 protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
                     builder.add(LargeAndesiteBaseBlock.FACING);}});
 
-
     public static final RegistryObject<Block> DIORITE_LARGE_DORIC_COLUMN = registerBlock("diorite_large_doric_column",
             () -> new LargeDioriteColumnBlock(BlockBehaviour.Properties.copy(Blocks.STONE)) {
                 @Override
@@ -117,6 +115,70 @@ public class ModBlocks {
                 @Override
                 protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
                     builder.add(LargeDioriteBaseBlock.FACING);}});
+
+    public static final RegistryObject<Block> POLISHED_GRANITE_LARGE_DORIC_COLUMN = registerBlock("polished_granite_large_doric_column",
+            () -> new LargePolishedGraniteColumnBlock(BlockBehaviour.Properties.copy(Blocks.STONE)) {
+                @Override
+                protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+                    builder.add(LargePolishedGraniteColumnBlock.FACING);}});
+    public static final RegistryObject<Block> POLISHED_GRANITE_LARGE_DORIC_CAPITAL = registerBlock("polished_granite_large_doric_capital",
+            () -> new LargePolishedGraniteCapitalBlock(BlockBehaviour.Properties.copy(Blocks.STONE)) {
+                @Override
+                protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+                    builder.add(LargePolishedGraniteCapitalBlock.FACING);}});
+    public static final RegistryObject<Block> POLISHED_GRANITE_LARGE_DORIC_BASE = registerBlock("polished_granite_large_doric_base",
+            () -> new LargePolishedGraniteBaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)) {
+                @Override
+                protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+                    builder.add(LargePolishedGraniteBaseBlock.FACING);}});
+
+    public static final RegistryObject<Block> POLISHED_ANDESITE_LARGE_DORIC_COLUMN = registerBlock("polished_andesite_large_doric_column",
+            () -> new LargePolishedAndesiteColumnBlock(BlockBehaviour.Properties.copy(Blocks.STONE)) {
+                @Override
+                protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+                    builder.add(LargePolishedAndesiteColumnBlock.FACING);}});
+    public static final RegistryObject<Block> POLISHED_ANDESITE_LARGE_DORIC_CAPITAL = registerBlock("polished_andesite_large_doric_capital",
+            () -> new LargePolishedAndesiteCapitalBlock(BlockBehaviour.Properties.copy(Blocks.STONE)) {
+                @Override
+                protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+                    builder.add(LargePolishedAndesiteCapitalBlock.FACING);}});
+    public static final RegistryObject<Block> POLISHED_ANDESITE_LARGE_DORIC_BASE = registerBlock("polished_andesite_large_doric_base",
+            () -> new LargePolishedAndesiteBaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)) {
+                @Override
+                protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+                    builder.add(LargePolishedAndesiteBaseBlock.FACING);}});
+
+    public static final RegistryObject<Block> POLISHED_DIORITE_LARGE_DORIC_COLUMN = registerBlock("polished_diorite_large_doric_column",
+            () -> new LargePolishedDioriteColumnBlock(BlockBehaviour.Properties.copy(Blocks.STONE)) {
+                @Override
+                protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+                    builder.add(LargePolishedDioriteColumnBlock.FACING);}});
+    public static final RegistryObject<Block> POLISHED_DIORITE_LARGE_DORIC_CAPITAL = registerBlock("polished_diorite_large_doric_capital",
+            () -> new LargePolishedDioriteCapitalBlock(BlockBehaviour.Properties.copy(Blocks.STONE)) {
+                @Override
+                protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+                    builder.add(LargePolishedDioriteCapitalBlock.FACING);}});
+    public static final RegistryObject<Block> POLISHED_DIORITE_LARGE_DORIC_BASE = registerBlock("polished_diorite_large_doric_base",
+            () -> new LargePolishedDioriteBaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)) {
+                @Override
+                protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+                    builder.add(LargePolishedDioriteBaseBlock.FACING);}});
+
+    public static final RegistryObject<Block> CALCITE_LARGE_DORIC_COLUMN = registerBlock("calcite_large_doric_column",
+            () -> new LargeCalciteColumnBlock(BlockBehaviour.Properties.copy(Blocks.STONE)) {
+                @Override
+                protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+                    builder.add(LargeCalciteColumnBlock.FACING);}});
+    public static final RegistryObject<Block> CALCITE_LARGE_DORIC_CAPITAL = registerBlock("calcite_large_doric_capital",
+            () -> new LargeCalciteCapitalBlock(BlockBehaviour.Properties.copy(Blocks.STONE)) {
+                @Override
+                protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+                    builder.add(LargeCalciteCapitalBlock.FACING);}});
+    public static final RegistryObject<Block> CALCITE_LARGE_DORIC_BASE = registerBlock("calcite_large_doric_base",
+            () -> new LargeCalciteBaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)) {
+                @Override
+                protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+                    builder.add(LargeCalciteBaseBlock.FACING);}});
 
 
 //  LEAVE BLOCKS:

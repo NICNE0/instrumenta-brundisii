@@ -43,6 +43,22 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.DIORITE_LARGE_DORIC_CAPITAL.get());
                         pOutput.accept(ModBlocks.DIORITE_LARGE_DORIC_BASE.get());
 
+                        pOutput.accept(ModBlocks.POLISHED_GRANITE_LARGE_DORIC_COLUMN.get());
+                        pOutput.accept(ModBlocks.POLISHED_GRANITE_LARGE_DORIC_CAPITAL.get());
+                        pOutput.accept(ModBlocks.POLISHED_GRANITE_LARGE_DORIC_BASE.get());
+
+                        pOutput.accept(ModBlocks.POLISHED_ANDESITE_LARGE_DORIC_COLUMN.get());
+                        pOutput.accept(ModBlocks.POLISHED_ANDESITE_LARGE_DORIC_CAPITAL.get());
+                        pOutput.accept(ModBlocks.POLISHED_ANDESITE_LARGE_DORIC_BASE.get());
+
+                        pOutput.accept(ModBlocks.POLISHED_DIORITE_LARGE_DORIC_COLUMN.get());
+                        pOutput.accept(ModBlocks.POLISHED_DIORITE_LARGE_DORIC_CAPITAL.get());
+                        pOutput.accept(ModBlocks.POLISHED_DIORITE_LARGE_DORIC_BASE.get());
+
+                        pOutput.accept(ModBlocks.CALCITE_LARGE_DORIC_COLUMN.get());
+                        pOutput.accept(ModBlocks.CALCITE_LARGE_DORIC_CAPITAL.get());
+                        pOutput.accept(ModBlocks.CALCITE_LARGE_DORIC_BASE.get());
+
 //                      RETICULAS:
                         pOutput.accept(ModBlocks.RETICULA.get());
                         pOutput.accept(ModBlocks.LIGHT_RETICULA.get());
