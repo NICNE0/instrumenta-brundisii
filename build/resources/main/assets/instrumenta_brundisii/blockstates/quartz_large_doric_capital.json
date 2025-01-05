@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "instrumenta_brundisii:block/quartz_large_doric_capital",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "instrumenta_brundisii:block/quartz_large_doric_capital",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "instrumenta_brundisii:block/quartz_large_doric_capital"
+    },
+    "facing=west": {
+      "model": "instrumenta_brundisii:block/quartz_large_doric_capital",
+      "y": 90
+    }
+  }
+}

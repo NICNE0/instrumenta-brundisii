@@ -1,7 +1,6 @@
 package net.nicneo.instrumenta_brundisii.datagen;
 
 import net.minecraft.core.Direction;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -9,11 +8,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.SlabType;
-import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -32,15 +29,80 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-        getVariantBuilder(ModBlocks.SIMPLE_LARGE_QUARTZ_COLUMN.get())
-                .forAllStates(state -> {
-                    Direction facing = state.getValue(BigDoricColumn.FACING);
-                    return ConfiguredModel.builder()
-                            .modelFile(models().getExistingFile(modLoc("block/simple_large_quartz_column")))
-                            .rotationY((int) facing.toYRot()) // Rotate based on the facing direction
-                            .build();
-                });
+//      LARGE COLUMN BLOCKS
+//      ================================================================================================================
+        getVariantBuilder(ModBlocks.SIMPLE_LARGE_QUARTZ_COLUMN.get()).forAllStates(state -> {
+            Direction facing = state.getValue(BigSimpleColumnBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/simple_large_quartz_column")))
+                    .rotationY((int) facing.toYRot()).build();});
 
+        getVariantBuilder(ModBlocks.QUARTZ_LARGE_DORIC_COLUMN.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeQuartzColumnBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/quartz_large_doric_column")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.QUARTZ_LARGE_DORIC_CAPITAL.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeQuartzCapitalBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/quartz_large_doric_capital")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.QUARTZ_LARGE_DORIC_BASE.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeQuartzBaseBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/quartz_large_doric_base")))
+                    .rotationY((int) facing.toYRot()).build();});
+
+        getVariantBuilder(ModBlocks.TUFF_LARGE_DORIC_COLUMN.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeTuffColumnBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/tuff_large_doric_column")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.TUFF_LARGE_DORIC_CAPITAL.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeTuffCapitalBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/tuff_large_doric_capital")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.TUFF_LARGE_DORIC_BASE.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeTuffBaseBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/tuff_large_doric_base")))
+                    .rotationY((int) facing.toYRot()).build();});
+
+        getVariantBuilder(ModBlocks.GRANITE_LARGE_DORIC_COLUMN.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeGraniteColumnBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/granite_large_doric_column")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.GRANITE_LARGE_DORIC_CAPITAL.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeGraniteCapitalBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/granite_large_doric_capital")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.GRANITE_LARGE_DORIC_BASE.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeGraniteBaseBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/granite_large_doric_base")))
+                    .rotationY((int) facing.toYRot()).build();});
+
+        getVariantBuilder(ModBlocks.ANDESITE_LARGE_DORIC_COLUMN.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeAndesiteColumnBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/andesite_large_doric_column")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.ANDESITE_LARGE_DORIC_CAPITAL.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeAndesiteCapitalBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/andesite_large_doric_capital")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.ANDESITE_LARGE_DORIC_BASE.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeAndesiteBaseBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/andesite_large_doric_base")))
+                    .rotationY((int) facing.toYRot()).build();});
+
+        getVariantBuilder(ModBlocks.DIORITE_LARGE_DORIC_COLUMN.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeDioriteColumnBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/diorite_large_doric_column")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.DIORITE_LARGE_DORIC_CAPITAL.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeDioriteCapitalBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/diorite_large_doric_capital")))
+                    .rotationY((int) facing.toYRot()).build();});
+        getVariantBuilder(ModBlocks.DIORITE_LARGE_DORIC_BASE.get()).forAllStates(state -> {
+            Direction facing = state.getValue(LargeDioriteBaseBlock.FACING);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/diorite_large_doric_base")))
+                    .rotationY((int) facing.toYRot()).build();});
+
+//      LEAVES LIKE BLOCKS
+//      ================================================================================================================
         blockWithItemCustom(ModBlocks.BOUGAINVILLEA_BLOCK, "bougainvillea_leaves");
 
         blockWithItemCustom(ModBlocks.PINK_BOUGAINVILLEA_BLOCK, "pink_bougainvillea");
@@ -61,7 +123,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItemCustom(ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_BLOCK_1, "white_flowering_bougainvillea_1");
         blockWithItemCustom(ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_BLOCK_2, "white_flowering_bougainvillea_2");
 
-//      ===================== LICHEN LIKE BLOCKS ====================
+//      LICHEN LIKE BLOCKS
+//      ================================================================================================================
         makeLichenLikeBlock(ModBlocks.BOUGAINVILLEA_LEAVES, "bougainvillea_leaves");
 
         makeLichenLikeBlock(ModBlocks.PINK_BOUGAINVILLEA, "pink_bougainvillea");
@@ -82,7 +145,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeLichenLikeBlock(ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_1, "white_flowering_bougainvillea_1");
         makeLichenLikeBlock(ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_2, "white_flowering_bougainvillea_2");
 
-//      ========================== PLASTER ==========================
+//      PLASTER
+//      ================================================================================================================
         blockWithItem(ModBlocks.PLASTER_BLOCK);
         stairsBlock(((StairBlock) ModBlocks.PLASTER_STAIRS.get()), blockTexture(ModBlocks.PLASTER_BLOCK.get()));
         slabBlock(((SlabBlock) ModBlocks.PLASTER_SLAB.get()), blockTexture(ModBlocks.PLASTER_BLOCK.get()), blockTexture(ModBlocks.PLASTER_BLOCK.get()));
@@ -173,7 +237,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock(((FenceGateBlock) ModBlocks.LIGHT_YELLOW_PLASTER_FENCE_DOOR.get()), blockTexture(ModBlocks.LIGHT_YELLOW_PLASTER_BLOCK.get()));
         wallBlock(((WallBlock) ModBlocks.LIGHT_YELLOW_PLASTER_WALL.get()), blockTexture(ModBlocks.LIGHT_YELLOW_PLASTER_BLOCK.get()));
 
-//      ============================= TUFF =============================
+//      TUFF
+//      ================================================================================================================
         stairsBlock(((StairBlock) ModBlocks.TUFF_STAIRS.get()), blockTexture(Blocks.TUFF));
         slabBlock(((SlabBlock) ModBlocks.TUFF_SLAB.get()), blockTexture(Blocks.TUFF), blockTexture(Blocks.TUFF));
         buttonBlock(((ButtonBlock) ModBlocks.TUFF_BUTTON.get()), blockTexture(Blocks.TUFF));
@@ -182,12 +247,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock(((FenceGateBlock) ModBlocks.TUFF_FENCE_DOOR.get()), blockTexture(Blocks.TUFF));
         wallBlock(((WallBlock) ModBlocks.TUFF_WALL.get()), blockTexture(Blocks.TUFF));
 
-//      ============================= SMOOTH SANDSTONE =============================
+//      SMOOTH SANDSTONE
+//      ================================================================================================================
         wallBlock(((WallBlock) ModBlocks.SMOOTH_SANDSTONE_WALL.get()), new ResourceLocation("minecraft", "block/sandstone_top"));
         wallBlock(((WallBlock) ModBlocks.SMOOTH_RED_SANDSTONE_WALL.get()), new ResourceLocation("minecraft", "block/red_sandstone_top"));
 
 
-//      ========================== LIMESTONE ==========================
+//      LIMESTONE
+//      ================================================================================================================
         blockWithItem(ModBlocks.LIMESTONE_BRICKS);
         stairsBlock(((StairBlock) ModBlocks.LIMESTONE_STAIRS.get()), blockTexture(ModBlocks.LIMESTONE_BRICKS.get()));
         slabBlock(((SlabBlock) ModBlocks.LIMESTONE_SLAB.get()), blockTexture(ModBlocks.LIMESTONE_BRICKS.get()), blockTexture(ModBlocks.LIMESTONE_BRICKS.get()));
@@ -197,7 +264,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock(((FenceGateBlock) ModBlocks.LIMESTONE_FENCE_DOOR.get()), blockTexture(ModBlocks.LIMESTONE_BRICKS.get()));
         wallBlock(((WallBlock) ModBlocks.LIMESTONE_WALL.get()), blockTexture(ModBlocks.LIMESTONE_BRICKS.get()));
 
-//      ========================== TERRACOTTA ==========================
+//      TERRACOTTA
+//      ================================================================================================================
         stairsBlock(((StairBlock) ModBlocks.TERRACOTTA_STAIRS.get()), blockTexture(Blocks.TERRACOTTA));
         slabBlock(((SlabBlock) ModBlocks.TERRACOTTA_SLAB.get()), blockTexture(Blocks.TERRACOTTA), blockTexture(Blocks.TERRACOTTA));
         fenceBlock(((FenceBlock) ModBlocks.TERRACOTTA_FENCE.get()), blockTexture(Blocks.TERRACOTTA));
@@ -240,7 +308,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock(((FenceGateBlock) ModBlocks.BLACK_TERRACOTTA_FENCE_DOOR.get()), blockTexture(Blocks.BLACK_TERRACOTTA));
         wallBlock(((WallBlock) ModBlocks.BLACK_TERRACOTTA_WALL.get()), blockTexture(Blocks.BLACK_TERRACOTTA));
 
-//      ========================== RETICULAS ==========================
+//      RETICULAS
+//      ================================================================================================================
         blockWithItem(ModBlocks.RETICULA);
         blockWithItem(ModBlocks.LIGHT_RETICULA);
         blockWithItem(ModBlocks.MIXED_RETICULA);
@@ -252,7 +321,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SMALL_LIGHT_DEEPSLATE_RETICULA);
         blockWithItem(ModBlocks.SMALL_LIGHT_STONE_RETICULA);
 
-//      ========================== OTHERS ==========================
+//      OTHERS
+//      ================================================================================================================
         blockWithItem(ModBlocks.TEST_BLOCK_1);
 
         makeMultiFacedBlock(ModBlocks.LIME_BRICK_MIX, "lime_brick_mix");
@@ -375,7 +445,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(ModBlocks.PLASTER_BLOCK.get()));
         hangingSignBlock(ModBlocks.GRANITE_HANGING_SIGN.get(), ModBlocks.GRANITE_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.PLASTER_BLOCK.get()));
 
-//      ========================== WOOD SLABS ==========================
+//     WOOD SLABS:
+//      ================================================================================================================
         getVariantBuilder(ModBlocks.OAK_WOOD_SLAB.get()).forAllStates(state -> {
             SlabType type = state.getValue(SlabBlock.TYPE);
             Direction.Axis axis = state.getValue(OrientableSlabBlock.AXIS);
