@@ -418,6 +418,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         makeSweetPotatoCrop((CropBlock) ModBlocks.SWEET_POTATO_CROP.get(), "sweet_potato_stage_", "sweet_potato_stage_");
 
+        makeCottonCrop((CropBlock) ModBlocks.COTTON_CROP.get(), "cotton_stage_", "cotton_stage_");
+
 //      SIMPLE CROPS:
 //      ================================================================================================================
         makeFlaxCrop((CropBlock) ModBlocks.FLAX_CROP.get(), "flax_stage", "flax_stage");
@@ -992,6 +994,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((TurnipCropBlock) block).getAgeProperty()),
                 new ResourceLocation(instrumentaBrundisii.MOD_ID, "block/" + textureName + state.getValue(((TurnipCropBlock) block).getAgeProperty()))).renderType("cutout"));
         return models;
+    }
+
+    //  COTTON
+    public void makeCottonCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> cottonStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] cottonStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        int age = state.getValue(CottonCropBlock.AGE);
+        ModelFile model = models().withExistingParent(modelName + age, mcLoc("block/cross"))
+                .texture("cross", modLoc("block/" + textureName + age)).renderType("cutout");
+        return new ConfiguredModel[] { new ConfiguredModel(model, 0, 0, true) };
     }
 
     private void makePlayerFacingBlock(RegistryObject<Block> blockRegistryObject, String textureBase) {

@@ -410,6 +410,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.SWEET_POTATO_CROP.get(), createCropDrops(ModBlocks.SWEET_POTATO_CROP.get(), ModItems.SWEET_POTATO.get(),
                 ModItems.SWEET_POTATO_SEEDS.get(), lootitemcondition$builder_sweet_potato));
 
+//      COTTON CROP:
+        LootItemCondition.Builder lootitemcondition$builder_cotton = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.COTTON_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CottonCropBlock.AGE, 8));
+
+        this.add(ModBlocks.COTTON_CROP.get(), createCropDrops(ModBlocks.COTTON_CROP.get(), ModItems.COTTON.get(),
+                ModItems.COTTON_SEEDS.get(), lootitemcondition$builder_cotton));
+
 //      SIMPLE CROPS
 //      ================================================================================================================
 

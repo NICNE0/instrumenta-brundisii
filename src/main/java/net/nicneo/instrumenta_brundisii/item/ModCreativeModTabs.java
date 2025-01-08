@@ -393,6 +393,10 @@ public class ModCreativeModTabs {
 //                      FROM MOBS:
                         pOutput.accept(ModItems.COMMON_TAILED_EGG.get());
 
+//                      COTTON:
+                        pOutput.accept(ModItems.COTTON.get());
+                        pOutput.accept(ModItems.COTTON_SEEDS.get());
+
 
                     })
                     .build());
