@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-05T12:00:14.9576029	Loot Tables
+// 1.20.1	2025-01-07T22:04:45.4342856	Loot Tables
 51c74e580581bf3fe7b813c70b8843bd62fb65c5 data/instrumenta_brundisii/loot_tables/blocks/acacia_wood_slab.json
 b0a83d4355265124cb4251954169faa6d9b0c0a9 data/instrumenta_brundisii/loot_tables/blocks/andesite_hanging_sign.json
 d20f7674358eea2b829e5e6ec064fe0ac440bcf8 data/instrumenta_brundisii/loot_tables/blocks/andesite_large_doric_base.json
@@ -37,6 +37,7 @@ b694169e7472df99838211bebe3b5dae9d6b4e2d data/instrumenta_brundisii/loot_tables/
 0ebe045da18e317f3f50ddae2d56eacfea409829 data/instrumenta_brundisii/loot_tables/blocks/circle_white_tile.json
 0d90e4467ec306e5a8b3f090f1c33af48ff48f21 data/instrumenta_brundisii/loot_tables/blocks/circle_white_tile_corner.json
 a55b0af0bcfcdf9af0a3a9de9dace66579dfb9a4 data/instrumenta_brundisii/loot_tables/blocks/corn_crop.json
+cf70b3ee49c1426fda81a8a63c8f5d43a25f9c48 data/instrumenta_brundisii/loot_tables/blocks/cotton_crop.json
 73f16923e79c86696de66c76bfd63ecbe3c54261 data/instrumenta_brundisii/loot_tables/blocks/dark_blue_plaster_block.json
 406cc697b53d6ef034b813621beabf1d7e91350d data/instrumenta_brundisii/loot_tables/blocks/dark_blue_plaster_button.json
 e1d5312610743e4619394f7b09cb1872694ee75e data/instrumenta_brundisii/loot_tables/blocks/dark_blue_plaster_fence.json

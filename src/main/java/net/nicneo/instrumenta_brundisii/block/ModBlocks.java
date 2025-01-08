@@ -335,7 +335,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> SWEET_POTATO_CROP = BLOCKS.register("sweet_potato_crop",
             () -> new SweetPotatoCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
-//  SIMPLE CROPS:
+    public static final RegistryObject<Block> COTTON_CROP = BLOCKS.register("cotton_crop",
+            () -> new CottonCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    //  SIMPLE CROPS:
 //  ====================================================================================================================
     public static final RegistryObject<Block> FLAX_CROP = BLOCKS.register("flax_crop",
             () -> new FlaxCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));

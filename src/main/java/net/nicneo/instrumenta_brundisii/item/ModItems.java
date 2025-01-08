@@ -140,6 +140,11 @@ public class ModItems{
     public static final RegistryObject<Item> TURNIP = ITEMS.register("turnip",
             () -> new Item(new Item.Properties().stacksTo(64)));
 
+    public static final RegistryObject<Item> COTTON_SEEDS = ITEMS.register("cotton_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.COTTON_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> COTTON = ITEMS.register("cotton",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

@@ -21,17 +21,17 @@
   "block.instrumenta_brundisii.diorite_large_doric_capital": "Diorite Large Doric Capital",
   "block.instrumenta_brundisii.diorite_large_doric_base": "Diorite Large Doric Base",
 
-  "block.instrumenta_brundisii.polished_granite_large_doric_column": "PolishedGranite Large Doric Column",
-  "block.instrumenta_brundisii.polished_granite_large_doric_capital": "PolishedGranite Large Doric Capital",
-  "block.instrumenta_brundisii.polished_granite_large_doric_base": "PolishedGranite Large Doric Base",
+  "block.instrumenta_brundisii.polished_granite_large_doric_column": "Polished Granite Large Doric Column",
+  "block.instrumenta_brundisii.polished_granite_large_doric_capital": "Polished Granite Large Doric Capital",
+  "block.instrumenta_brundisii.polished_granite_large_doric_base": "Polished Granite Large Doric Base",
 
-  "block.instrumenta_brundisii.polished_andesite_large_doric_column": "PolishedAndesite Large Doric Column",
-  "block.instrumenta_brundisii.polished_andesite_large_doric_capital": "PolishedAndesite Large Doric Capital",
-  "block.instrumenta_brundisii.polished_andesite_large_doric_base": "PolishedAndesite Large Doric Base",
+  "block.instrumenta_brundisii.polished_andesite_large_doric_column": "Polished Andesite Large Doric Column",
+  "block.instrumenta_brundisii.polished_andesite_large_doric_capital": "Polished Andesite Large Doric Capital",
+  "block.instrumenta_brundisii.polished_andesite_large_doric_base": "Polished Andesite Large Doric Base",
 
-  "block.instrumenta_brundisii.polished_diorite_large_doric_column": "PolishedDiorite Large Doric Column",
-  "block.instrumenta_brundisii.polished_diorite_large_doric_capital": "PolishedDiorite Large Doric Capital",
-  "block.instrumenta_brundisii.polished_diorite_large_doric_base": "PolishedDiorite Large Doric Base",
+  "block.instrumenta_brundisii.polished_diorite_large_doric_column": "Polished Diorite Large Doric Column",
+  "block.instrumenta_brundisii.polished_diorite_large_doric_capital": "Polished Diorite Large Doric Capital",
+  "block.instrumenta_brundisii.polished_diorite_large_doric_base": "Polished Diorite Large Doric Base",
 
   "block.instrumenta_brundisii.calcite_large_doric_column": "Calcite Large Doric Column",
   "block.instrumenta_brundisii.calcite_large_doric_capital": "Calcite Large Doric Capital",
@@ -375,6 +375,9 @@
 
   "item.instrumenta_brundisii.turnip": "Turnip",
   "item.instrumenta_brundisii.turnip_seeds": "Turnip Seeds",
+
+  "item.instrumenta_brundisii.cotton": "Cotton",
+  "item.instrumenta_brundisii.cotton_seeds": "Cotton Seeds",
 
   "item.instrumenta_brundisii.common_tailed_spawn_egg": "Common Tailed Spawn Egg",
   "item.instrumenta_brundisii.common_tailed_egg": "Common Tailed Egg",
