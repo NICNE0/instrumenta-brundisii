@@ -4,13 +4,13 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
+import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile;
 import net.nicneo.instrumenta_brundisii.entity.ModEntities;
 import net.nicneo.instrumenta_brundisii.item.ModItems;
 
@@ -21,7 +21,7 @@ public class ThrownCommonTailedEgg extends ThrowableItemProjectile {
     }
 
     public ThrownCommonTailedEgg(Level level, Player player) {
-        super(ModEntities.THROWN_COMMON_TAILED_EGG.get(), player, level);
+        super(ModEntities.THROWN_COMMON_TAILED_EGG.get(), player, level, player.getMainHandItem());
     }
 
     @Override
@@ -42,15 +42,15 @@ public class ThrownCommonTailedEgg extends ThrowableItemProjectile {
         super.onHit(hitResult);
         Level level = this.level();
 
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             // Random chance to spawn one or two Common Tailed entities
             if (level.random.nextInt(8) == 0) { // 1 in 8 chance
                 int count = level.random.nextInt(4) == 0 ? 2 : 1; // 25% chance to spawn two
                 for (int i = 0; i < count; ++i) {
-                    CommonTailedEntity entity = ModEntities.COMMON_TAILED.get().create(level);
+                    CommonTailedEntity entity = ModEntities.COMMON_TAILED.get().create(level, EntitySpawnReason.SPAWN_ITEM_USE);
                     if (entity != null) {
                         entity.setAge(-24000); // Spawn as a baby
-                        entity.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+                        entity.moveOrInterpolateTo(this.position(), this.getYRot(), 0.0F);
                         level.addFreshEntity(entity);
                     }
                 }

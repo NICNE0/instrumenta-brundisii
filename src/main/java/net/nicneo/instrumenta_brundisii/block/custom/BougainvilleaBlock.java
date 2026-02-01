@@ -4,14 +4,15 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.MultifaceBlock;
-import net.minecraft.world.level.block.MultifaceSpreader;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.util.RandomSource;
 
 import javax.annotation.Nullable;
 
@@ -19,15 +20,6 @@ public class BougainvilleaBlock extends MultifaceBlock {
 
     public BougainvilleaBlock(Properties properties) {
         super(properties);
-    }
-
-    /**
-     * Provides the spreader for this block, which defines how the block spreads
-     * when bonemealed or otherwise triggered.
-     */
-    @Override
-    public MultifaceSpreader getSpreader() {
-        return new MultifaceSpreader(this);
     }
 
     /**
@@ -48,14 +40,14 @@ public class BougainvilleaBlock extends MultifaceBlock {
      * Adjusts how the block behaves when the shape updates in the world.
      */
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
+    public BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess tickAccess, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, RandomSource random) {
         // Check if the face is no longer valid
         if (hasFace(state, direction) && !canAttachTo(level, direction, neighborPos, neighborState)) {
             // Remove the invalid face
             return removeFaceManually(state, getFaceProperty(direction));
         }
 
-        return super.updateShape(state, direction, neighborState, level, pos, neighborPos);
+        return super.updateShape(state, level, tickAccess, pos, direction, neighborPos, neighborState, random);
     }
 
     /**

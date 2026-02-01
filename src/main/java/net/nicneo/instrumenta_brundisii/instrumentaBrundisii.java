@@ -8,11 +8,10 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
 import net.nicneo.instrumenta_brundisii.block.entity.ModBlockEntities;
@@ -34,31 +33,22 @@ public class instrumentaBrundisii {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public instrumentaBrundisii() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        BusGroup modBusGroup = FMLJavaModLoadingContext.get().getModBusGroup();
 
-        ModCreativeModTabs.register(modEventBus);
+        ModCreativeModTabs.register(modBusGroup);
 
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
+        ModItems.register(modBusGroup);
+        ModBlocks.register(modBusGroup);
 
-        ModSounds.register(modEventBus);
-        ModEntities.register(modEventBus);
+        ModSounds.register(modBusGroup);
+        ModEntities.register(modBusGroup);
 
-        ModBlockEntities.register(modEventBus);
-
-        modEventBus.addListener(BougainvilleaInteractionHandler::registerVariants);
-
-        modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(ClientSetup::onClientSetup);
+        ModBlockEntities.register(modBusGroup);
 
         MinecraftForge.EVENT_BUS.register(this);
-        modEventBus.addListener(this::addCreative);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
-
-    }
-
+    @SubscribeEvent
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.AURI);

@@ -4,7 +4,7 @@ import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.nicneo.instrumenta_brundisii.block.entity.ModBlockEntities;
 import net.nicneo.instrumenta_brundisii.entity.ModEntities;
 import net.nicneo.instrumenta_brundisii.entity.client.CommonTailedModel;
@@ -14,7 +14,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = instrumentaBrundisii.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = instrumentaBrundisii.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {

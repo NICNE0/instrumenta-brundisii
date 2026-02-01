@@ -1,16 +1,12 @@
 package net.nicneo.instrumenta_brundisii.entity.client;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.minecraft.client.model.HierarchicalModel;
+import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
 
-public class CommonTailedModel<T extends Entity> extends HierarchicalModel<T> {
+public class CommonTailedModel extends EntityModel<CommonTailedRenderState> {
 	private final ModelPart common_tailed;
 	private final ModelPart head;
 	private final ModelPart right_leg;
@@ -20,6 +16,7 @@ public class CommonTailedModel<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart bill;
 
 	public CommonTailedModel(ModelPart root) {
+		super(root);
 		this.common_tailed = root.getChild("common_tailed");
 		this.head = common_tailed.getChild("head");
 		this.right_leg = common_tailed.getChild("right_leg");
@@ -57,7 +54,13 @@ public class CommonTailedModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 	@Override
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(CommonTailedRenderState state) {
+		float limbSwing = state.walkAnimationPos;
+		float limbSwingAmount = state.walkAnimationSpeed;
+		float ageInTicks = state.ageInTicks;
+		float netHeadYaw = state.yRot;
+		float headPitch = state.xRot;
+
 		// Feet movement (Walking/Running)
 		this.right_leg.xRot = Mth.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
 		this.left_leg.xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * 1.4F * limbSwingAmount;
@@ -71,8 +74,8 @@ public class CommonTailedModel<T extends Entity> extends HierarchicalModel<T> {
 		this.bill.xRot = this.head.xRot;
 
 		// Wing movement (Flapping while jumping or falling)
-		double verticalVelocity = entity.getDeltaMovement().y;
-		if (verticalVelocity > 0.1 || verticalVelocity < -0.1) { // Flap wings only during significant vertical motion
+		float verticalVelocity = state.verticalVelocity;
+		if (verticalVelocity > 0.1F || verticalVelocity < -0.1F) { // Flap wings only during significant vertical motion
 			this.right_wing.zRot = Mth.cos(ageInTicks * 2.0F) * (float) Math.PI * 0.25F;
 			this.left_wing.zRot = -this.right_wing.zRot;
 		} else {
@@ -82,13 +85,4 @@ public class CommonTailedModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 
-	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-		common_tailed.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-	}
-
-	@Override
-	public ModelPart root() {
-		return common_tailed;
-	}
 }

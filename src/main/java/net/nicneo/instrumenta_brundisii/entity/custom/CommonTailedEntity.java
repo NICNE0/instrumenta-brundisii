@@ -6,6 +6,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -48,13 +49,14 @@ public class CommonTailedEntity extends Animal {
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 5.0D)
                 .add(Attributes.FOLLOW_RANGE, 16.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.25D);
+                .add(Attributes.MOVEMENT_SPEED, 0.25D)
+                .add(Attributes.TEMPT_RANGE, 10.0D);
     }
 
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob otherParent) {
-        return ModEntities.COMMON_TAILED.get().create(level);
+        return ModEntities.COMMON_TAILED.get().create(level, EntitySpawnReason.BREEDING);
     }
 
     @Override
@@ -72,9 +74,11 @@ public class CommonTailedEntity extends Animal {
         }
 
         // Egg-laying logic
-        if (!this.level().isClientSide && !this.isBaby() && --this.eggTime <= 0) {
+        if (!this.level().isClientSide() && !this.isBaby() && --this.eggTime <= 0) {
             this.playSound(SoundEvents.CHICKEN_EGG, 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
-            this.spawnAtLocation(ModItems.COMMON_TAILED_EGG.get());
+            if (this.level() instanceof ServerLevel serverLevel) {
+                this.spawnAtLocation(serverLevel, ModItems.COMMON_TAILED_EGG.get());
+            }
             this.eggTime = this.random.nextInt(6000) + 3000; // Reset egg timer
         }
     }
