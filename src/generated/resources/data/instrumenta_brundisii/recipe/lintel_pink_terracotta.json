@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:oak_log",
+    "O": "minecraft:pink_terracotta"
+  },
+  "pattern": [
+    "   ",
+    "  O",
+    "  #"
+  ],
+  "result": {
+    "count": 1,
+    "id": "instrumenta_brundisii:lintel_pink_terracotta"
+  }
+}

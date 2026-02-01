@@ -1,7 +1,7 @@
 package net.nicneo.instrumenta_brundisii.util;
 
 import net.nicneo.instrumenta_brundisii.instrumentaBrundisii;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -17,7 +17,7 @@ public class ModTags {
 
 //        This is the helper for the class to add block tags
         private static TagKey<Block> tag(String name){
-            return BlockTags.create(new ResourceLocation(instrumentaBrundisii.MOD_ID, name));
+            return BlockTags.create(Identifier.fromNamespaceAndPath(instrumentaBrundisii.MOD_ID, name));
         }
     }
 
@@ -25,7 +25,7 @@ public class ModTags {
 //  This is The class to register custom item tags
     public static class Items {
         private static TagKey<Item> tag(String name) {
-            return ItemTags.create(new ResourceLocation(instrumentaBrundisii.MOD_ID, name));
+            return ItemTags.create(Identifier.fromNamespaceAndPath(instrumentaBrundisii.MOD_ID, name));
         }
     }
 }

@@ -12,59 +12,26 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraftforge.common.util.Result;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.nicneo.instrumenta_brundisii.block.ModBlocks;
 import net.nicneo.instrumenta_brundisii.item.ModItems;
 
 import java.util.HashMap;
 import java.util.Map;
 
-@Mod.EventBusSubscriber(modid = "instrumenta_brundisii")
+@Mod.EventBusSubscriber(modid = "instrumenta_brundisii", bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class BougainvilleaInteractionHandler {
 
     // Store Bougainvillea block variants by color
     private static final Map<String, BougainvilleaVariants> VARIANT_MAP = new HashMap<>();
 
-    /**
-     * Register the variants during the common setup phase to ensure all blocks are initialized.
-     */
-    public static void registerVariants(FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            registerColor("PINK",
-                    ModBlocks.PINK_BOUGAINVILLEA.get(),
-                    ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_1.get(),
-                    ModBlocks.PINK_BLOOMING_BOUGAINVILLEA_2.get(),
-                    ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_1.get(),
-                    ModBlocks.PINK_FLOWERING_BOUGAINVILLEA_2.get()
-            );
-
-            registerColor("ORANGE",
-                    ModBlocks.ORANGE_BOUGAINVILLEA.get(),
-                    ModBlocks.ORANGE_BLOOMING_BOUGAINVILLEA_1.get(),
-                    ModBlocks.ORANGE_BLOOMING_BOUGAINVILLEA_2.get(),
-                    ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_1.get(),
-                    ModBlocks.ORANGE_FLOWERING_BOUGAINVILLEA_2.get()
-            );
-
-            registerColor("WHITE",
-                    ModBlocks.WHITE_BOUGAINVILLEA.get(),
-                    ModBlocks.WHITE_BLOOMING_BOUGAINVILLEA_1.get(),
-                    ModBlocks.WHITE_BLOOMING_BOUGAINVILLEA_2.get(),
-                    ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_1.get(),
-                    ModBlocks.WHITE_FLOWERING_BOUGAINVILLEA_2.get()
-            );
-
-            // Add more colors here if needed
-        });
-    }
-
     @SubscribeEvent
     public static void onBlockRightClick(PlayerInteractEvent.RightClickBlock event) {
         Level level = event.getLevel();
-        if (level.isClientSide) return; // Only run on the server side
+        if (level.isClientSide()) return; // Only run on the server side
 
         Player player = event.getEntity();
         BlockPos pos = event.getPos();
@@ -111,7 +78,8 @@ public class BougainvilleaInteractionHandler {
         }
 
         event.setCancellationResult(InteractionResult.SUCCESS);
-        event.setCanceled(true);
+        event.setUseBlock(Result.DENY);
+        event.setUseItem(Result.DENY);
     }
 
     private static void handleStickInteraction(String color, ServerLevel level, BlockState state, BlockPos pos, Player player, PlayerInteractEvent.RightClickBlock event) {
@@ -135,7 +103,8 @@ public class BougainvilleaInteractionHandler {
         player.addItem(drop);
 
         event.setCancellationResult(InteractionResult.SUCCESS);
-        event.setCanceled(true);
+        event.setUseBlock(Result.DENY);
+        event.setUseItem(Result.DENY);
     }
 
     private static BlockState copyProperties(BlockState oldState, BlockState newState) {
@@ -151,7 +120,7 @@ public class BougainvilleaInteractionHandler {
         return newState.setValue(property, oldState.getValue(property));
     }
 
-    private static void registerColor(String color, Block base, Block blooming1, Block blooming2, Block flowering1, Block flowering2) {
+    static void registerColor(String color, Block base, Block blooming1, Block blooming2, Block flowering1, Block flowering2) {
         VARIANT_MAP.put(color, new BougainvilleaVariants(base, blooming1, blooming2, flowering1, flowering2));
     }
 

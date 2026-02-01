@@ -9,7 +9,7 @@ import net.nicneo.instrumenta_brundisii.block.entity.ModSignBlockEntity;
 
 public class ModStandingSignBlock extends StandingSignBlock {
     public ModStandingSignBlock(Properties pProperties, WoodType pType) {
-        super(pProperties, pType);
+        super(pType, pProperties);
     }
 
     @Override
