@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "minecraft:block/cherry_log",
-    "side": "instrumenta_brundisii:block/cherry_log_slab_side",
-    "top": "minecraft:block/cherry_log"
-  }
-}

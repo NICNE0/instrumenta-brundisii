@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "bottom": "instrumenta_brundisii:block/diamond_black_and_yellow_tile_corner_bottom",
-    "side": "instrumenta_brundisii:block/diamond_black_and_yellow_tile_corner",
-    "top": "instrumenta_brundisii:block/diamond_black_and_yellow_tile_corner_top"
-  }
-}

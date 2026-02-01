@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "instrumenta_brundisii:block/large_dark_stone_reticula"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "instrumenta_brundisii:block/corn_stage_0"
-  }
-}

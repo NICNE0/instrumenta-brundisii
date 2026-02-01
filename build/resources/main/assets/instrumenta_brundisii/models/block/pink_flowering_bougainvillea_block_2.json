@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "instrumenta_brundisii:block/pink_flowering_bougainvillea_2"
-  }
-}

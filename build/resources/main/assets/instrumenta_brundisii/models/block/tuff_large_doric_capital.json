@@ -1,8 +1,0 @@
-{
-  "parent": "instrumenta_brundisii:block/large_doric_capital",
-  "textures": {
-    "bottom": "minecraft:block/tuff",
-    "side": "minecraft:block/tuff",
-    "top": "minecraft:block/tuff"
-  }
-}

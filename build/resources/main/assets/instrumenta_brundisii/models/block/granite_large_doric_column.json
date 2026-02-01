@@ -1,8 +1,0 @@
-{
-    "parent": "instrumenta_brundisii:block/large_doric",
-    "textures": {
-        "bottom": "minecraft:block/granite",
-        "side": "minecraft:block/granite",
-        "top": "minecraft:block/granite"
-    }
-}

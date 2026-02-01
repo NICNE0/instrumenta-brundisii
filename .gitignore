@@ -28,3 +28,10 @@ replay_pid*
 
 # Mac
 **/.DS_Store
+
+.gradle/
+build/
+run/**
+!run/config/**
+run-data/**
+!run-data/config/**
