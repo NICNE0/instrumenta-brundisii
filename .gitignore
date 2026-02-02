@@ -31,7 +31,12 @@ replay_pid*
 
 .gradle/
 build/
-run/**
-!run/config/**
-run-data/**
-!run-data/config/**
+
+# Runtime outputs (keep world saves)
+run/logs/
+run/crash-reports/
+run/downloads/
+run/mods/
+
+run-data/logs/
+run-data/crash-reports/
